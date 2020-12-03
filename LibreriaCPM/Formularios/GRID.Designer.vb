@@ -23,17 +23,18 @@ Partial Class GRID
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Titulo = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Tabla = New System.Windows.Forms.DataGridView()
+        Me.Image = New System.Windows.Forms.PictureBox()
         Me.Btn_Crear = New System.Windows.Forms.Button()
         Me.Btn_Modificar = New System.Windows.Forms.Button()
         Me.Btn_Ver = New System.Windows.Forms.Button()
-        Me.Btn_Anular = New System.Windows.Forms.Button()
+        Me.Btn_Eliminar = New System.Windows.Forms.Button()
         Me.Btn_Cerrar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Cb_Columnas = New System.Windows.Forms.ComboBox()
+        Me.Txt_Filtrar = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        CType(Me.Tabla, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titulo
@@ -45,25 +46,25 @@ Partial Class GRID
         Me.Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Titulo.Size = New System.Drawing.Size(152, 34)
         Me.Titulo.TabIndex = 0
-        Me.Titulo.Text = "Gird-Crud"
+        Me.Titulo.Text = "Grid-Crud"
         '
-        'DataGridView1
+        'Tabla
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 158)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(875, 552)
-        Me.DataGridView1.TabIndex = 1
+        Me.Tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Tabla.Location = New System.Drawing.Point(12, 158)
+        Me.Tabla.Name = "Tabla"
+        Me.Tabla.RowHeadersWidth = 51
+        Me.Tabla.RowTemplate.Height = 24
+        Me.Tabla.Size = New System.Drawing.Size(875, 552)
+        Me.Tabla.TabIndex = 1
         '
-        'PictureBox1
+        'Image
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(917, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 143)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.Image.Location = New System.Drawing.Point(917, 31)
+        Me.Image.Name = "Image"
+        Me.Image.Size = New System.Drawing.Size(206, 143)
+        Me.Image.TabIndex = 2
+        Me.Image.TabStop = False
         '
         'Btn_Crear
         '
@@ -98,16 +99,16 @@ Partial Class GRID
         Me.Btn_Ver.Text = "Ver Detalle"
         Me.Btn_Ver.UseVisualStyleBackColor = True
         '
-        'Btn_Anular
+        'Btn_Eliminar
         '
-        Me.Btn_Anular.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Anular.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Anular.Location = New System.Drawing.Point(931, 460)
-        Me.Btn_Anular.Name = "Btn_Anular"
-        Me.Btn_Anular.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Anular.TabIndex = 6
-        Me.Btn_Anular.Text = "Anular"
-        Me.Btn_Anular.UseVisualStyleBackColor = True
+        Me.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Btn_Eliminar.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Eliminar.Location = New System.Drawing.Point(931, 460)
+        Me.Btn_Eliminar.Name = "Btn_Eliminar"
+        Me.Btn_Eliminar.Size = New System.Drawing.Size(176, 44)
+        Me.Btn_Eliminar.TabIndex = 6
+        Me.Btn_Eliminar.Text = "Eliminar"
+        Me.Btn_Eliminar.UseVisualStyleBackColor = True
         '
         'Btn_Cerrar
         '
@@ -120,57 +121,69 @@ Partial Class GRID
         Me.Btn_Cerrar.Text = "Cerrar"
         Me.Btn_Cerrar.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'Cb_Columnas
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.ComboBox1.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(28, 105)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(192, 23)
-        Me.ComboBox1.TabIndex = 8
+        Me.Cb_Columnas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Cb_Columnas.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Cb_Columnas.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cb_Columnas.FormattingEnabled = True
+        Me.Cb_Columnas.Location = New System.Drawing.Point(28, 105)
+        Me.Cb_Columnas.Name = "Cb_Columnas"
+        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 23)
+        Me.Cb_Columnas.TabIndex = 8
         '
-        'TextBox1
+        'Txt_Filtrar
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(241, 107)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(580, 21)
-        Me.TextBox1.TabIndex = 9
+        Me.Txt_Filtrar.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Filtrar.Location = New System.Drawing.Point(312, 107)
+        Me.Txt_Filtrar.Name = "Txt_Filtrar"
+        Me.Txt_Filtrar.Size = New System.Drawing.Size(500, 21)
+        Me.Txt_Filtrar.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(235, 107)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(71, 22)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Buscar:"
         '
         'GRID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1148, 727)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Txt_Filtrar)
+        Me.Controls.Add(Me.Cb_Columnas)
         Me.Controls.Add(Me.Btn_Cerrar)
-        Me.Controls.Add(Me.Btn_Anular)
+        Me.Controls.Add(Me.Btn_Eliminar)
         Me.Controls.Add(Me.Btn_Ver)
         Me.Controls.Add(Me.Btn_Modificar)
         Me.Controls.Add(Me.Btn_Crear)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Image)
+        Me.Controls.Add(Me.Tabla)
         Me.Controls.Add(Me.Titulo)
         Me.Name = "GRID"
         Me.Text = "GRID"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tabla, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Titulo As Windows.Forms.Label
-    Friend WithEvents DataGridView1 As Windows.Forms.DataGridView
-    Friend WithEvents PictureBox1 As Windows.Forms.PictureBox
+    Friend WithEvents Tabla As Windows.Forms.DataGridView
+    Friend WithEvents Image As Windows.Forms.PictureBox
     Friend WithEvents Btn_Crear As Windows.Forms.Button
     Friend WithEvents Btn_Modificar As Windows.Forms.Button
     Friend WithEvents Btn_Ver As Windows.Forms.Button
-    Friend WithEvents Btn_Anular As Windows.Forms.Button
+    Friend WithEvents Btn_Eliminar As Windows.Forms.Button
     Friend WithEvents Btn_Cerrar As Windows.Forms.Button
-    Friend WithEvents ComboBox1 As Windows.Forms.ComboBox
-    Friend WithEvents TextBox1 As Windows.Forms.TextBox
+    Friend WithEvents Cb_Columnas As Windows.Forms.ComboBox
+    Friend WithEvents Txt_Filtrar As Windows.Forms.TextBox
+    Friend WithEvents Label1 As Windows.Forms.Label
 End Class
