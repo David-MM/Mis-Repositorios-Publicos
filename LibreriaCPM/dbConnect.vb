@@ -2,6 +2,7 @@
 Public Class dbConnect
     Private conexion As SqlConnection
     Private conexionActiva As Boolean
+    Private comando As SqlCommand
 
     Public ReadOnly Property ConexionSQLServer As SqlConnection
         Get
@@ -38,5 +39,25 @@ Public Class dbConnect
                 MsgBox(Err.Message, MsgBoxStyle.Critical, "Error -" & Err.Number)
             Next
         End Try
+    End Sub
+
+    Public Sub Insert(conexion As SqlConnection, TablaColumnas As String, Lts_Datos As ArrayList)
+        Dim cadena As String = "insert into " & TablaColumnas & " values ("
+        For index = 0 To (Lts_Datos.Count - 1)
+            cadena += (IIf(Lts_Datos(index).GetType().Name = "String" Or "Char", "'", "")) & Lts_Datos(index).ToString & (IIf(Lts_Datos(index).GetType().Name = "String" Or "Char", "'", "")) & IIf(index = (Lts_Datos.Count - 1), ")", ",")
+            'cadena += (IIf(Lts_Datos(index).GetType().Name = "String" Or Lts_Datos(index).GetType().Name = "Char", "'", "")) & Lts_Datos(index).ToString & (IIf(Lts_Datos(index).GetType().Name = "String" Or Lts_Datos(index).GetType().Name = "Char", "'", "")) & IIf(index = (Lts_Datos.Count - 1), ")", ",")
+        Next
+        comando = New SqlCommand(cadena, conexion)
+        comando.ExecuteNonQuery()
+    End Sub
+
+    Public Sub Update(conexion As SqlConnection, Tabla As String, Lts_Columnas As ArrayList, Lts_Datos As ArrayList, where As String)
+        Dim cadena As String = "update " & Tabla & " set "
+        For index = 0 To (Lts_Datos.Count - 1)
+            cadena += Lts_Columnas(index).ToString & " = " & (IIf(Lts_Datos(index).GetType().Name = "String" Or "Char", "'", "")) & Lts_Datos(index).ToString & (IIf(Lts_Datos(index).GetType().Name = "String" Or "Char", "'", "")) & IIf(index = (Lts_Datos.Count - 1), where, ",")
+            'cadena += Lts_Columnas(index).ToString & " = " & (IIf(Lts_Datos(index).GetType().Name = "String" Or Lts_Datos(index).GetType().Name = "Char", "'", "")) & Lts_Datos(index).ToString & (IIf(Lts_Datos(index).GetType().Name = "String" Or Lts_Datos(index).GetType().Name = "Char", "'", "")) & IIf(index = (Lts_Datos.Count - 1), where, ",")
+        Next
+        comando = New SqlCommand(cadena, conexion)
+        comando.ExecuteNonQuery()
     End Sub
 End Class
