@@ -88,10 +88,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Formularios\PlantillaCliente.Designer.vb">
+      <DependentUpon>PlantillaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PlantillaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\GRID.resx">
-      <DependentUpon>GRID.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\PlantillaCliente.resx">
+      <DependentUpon>PlantillaCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
