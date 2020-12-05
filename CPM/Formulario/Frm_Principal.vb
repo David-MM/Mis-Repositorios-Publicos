@@ -1,8 +1,14 @@
 ﻿Imports System.Windows.Forms
+Imports System.Data.SqlClient
 
 Public Class Frm_Principal
 
+    Private cnx As SqlConnection
+    Private db As New LibreriaCPM.dbConnect("", "", "", "")
+
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
+        cnx = db.ConexionSQLServer
+
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
@@ -86,8 +92,10 @@ Public Class Frm_Principal
     Private m_ChildFormNumber As Integer
 
     Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
-        Dim grid As New LibreriaCPM.GRID()
-        grid.MdiParent = Me
-        grid.Show()
+        If db.Activa Then
+            Dim grid As New LibreriaCPM.GRID(db)
+            grid.MdiParent = Me
+            grid.Show()
+        End If
     End Sub
 End Class

@@ -11,7 +11,7 @@ CREATE TABLE [Cliente] (
   [Telefono] nvarchar(255),
   [E_Mail] nvarchar(255),
   [Direccion] nvarchar(255),
-  [Estado_Delete] bit not null
+  [Estado_Delete] int not null
 )
 GO
 
@@ -22,7 +22,7 @@ CREATE TABLE [Produto] (
   [P_Sugerido] float not null,
   [Isv_Sugerido] float not null,
   [Descripcion] nvarchar(255),
-  [Estado_Delete] bit not null
+  [Estado_Delete] int not null
 )
 GO
 
@@ -59,7 +59,7 @@ CREATE TABLE [User] (
   [NickName] nvarchar(255) not null,
   [Password] nvarchar(255) not null,
   [Roll] char not null,
-  [Estado_Delete] bit not null
+  [Estado_Delete] int not null
 )
 GO
 
@@ -67,7 +67,7 @@ CREATE TABLE [Pago] (
   [idPago] int PRIMARY KEY IDENTITY(1, 1),
   [FacturaID] int not null,
   [Fecha] datetime not null,
-  [Estado_Delete] bit not null
+  [Estado_Delete] int not null
 )
 GO
 
