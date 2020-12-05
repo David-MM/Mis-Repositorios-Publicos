@@ -54,21 +54,26 @@ Partial Class Frm_Principal
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstadoDeCuentaClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EstadoDeFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerRequisicionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearRequisicionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CrearFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VerRequisicionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CrearRequisicionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -81,11 +86,7 @@ Partial Class Frm_Principal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.VerFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AnularFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AnularFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EstadoDeFacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PruebasEnElGridToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -306,6 +307,24 @@ Partial Class Frm_Principal
         Me.CrearFacturasToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
         Me.CrearFacturasToolStripMenuItem.Text = "Crear Facturas"
         '
+        'AnularFacturasToolStripMenuItem1
+        '
+        Me.AnularFacturasToolStripMenuItem1.Name = "AnularFacturasToolStripMenuItem1"
+        Me.AnularFacturasToolStripMenuItem1.Size = New System.Drawing.Size(264, 26)
+        Me.AnularFacturasToolStripMenuItem1.Text = "Anular Facturas"
+        '
+        'EstadoDeFacturasToolStripMenuItem
+        '
+        Me.EstadoDeFacturasToolStripMenuItem.Name = "EstadoDeFacturasToolStripMenuItem"
+        Me.EstadoDeFacturasToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
+        Me.EstadoDeFacturasToolStripMenuItem.Text = "Estado de Facturas..."
+        '
+        'PagosToolStripMenuItem
+        '
+        Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
+        Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
+        Me.PagosToolStripMenuItem.Text = "Pagos"
+        '
         'WindowsMenu
         '
         Me.WindowsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.CascadeToolStripMenuItem, Me.TileHorizontalToolStripMenuItem, Me.CloseAllToolStripMenuItem})
@@ -316,71 +335,30 @@ Partial Class Frm_Principal
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.NewWindowToolStripMenuItem.Text = "Clientes"
         '
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.CascadeToolStripMenuItem.Text = "Inventario"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.TileHorizontalToolStripMenuItem.Text = "Cierre Diario"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.CloseAllToolStripMenuItem.Text = "C&errar todo"
-        '
-        'HelpMenu
-        '
-        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
-        Me.HelpMenu.Name = "HelpMenu"
-        Me.HelpMenu.Size = New System.Drawing.Size(65, 24)
-        Me.HelpMenu.Text = "Ay&uda"
-        '
-        'ContentsToolStripMenuItem
-        '
-        Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
-        Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ContentsToolStripMenuItem.Text = "&Contenido"
-        '
-        'IndexToolStripMenuItem
-        '
-        Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.IndexToolStripMenuItem.Text = "&Índice"
-        '
-        'SearchToolStripMenuItem
-        '
-        Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.SearchToolStripMenuItem.Text = "&Buscar"
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(221, 6)
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AboutToolStripMenuItem.Text = "&Acerca de..."
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.VerRequisicionesToolStripMenuItem, Me.CrearRequisicionesToolStripMenuItem, Me.VerFacturasToolStripMenuItem, Me.AnularFacturasToolStripMenuItem})
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.VerRequisicionesToolStripMenuItem, Me.CrearRequisicionesToolStripMenuItem, Me.VerFacturasToolStripMenuItem, Me.AnularFacturasToolStripMenuItem, Me.PruebasEnElGridToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
         Me.VentasToolStripMenuItem.Text = "Ventas"
@@ -402,6 +380,59 @@ Partial Class Frm_Principal
         Me.CrearRequisicionesToolStripMenuItem.Name = "CrearRequisicionesToolStripMenuItem"
         Me.CrearRequisicionesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.CrearRequisicionesToolStripMenuItem.Text = "Ver Requisiciones"
+        '
+        'VerFacturasToolStripMenuItem
+        '
+        Me.VerFacturasToolStripMenuItem.Name = "VerFacturasToolStripMenuItem"
+        Me.VerFacturasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.VerFacturasToolStripMenuItem.Text = "Ver Facturas"
+        '
+        'AnularFacturasToolStripMenuItem
+        '
+        Me.AnularFacturasToolStripMenuItem.Name = "AnularFacturasToolStripMenuItem"
+        Me.AnularFacturasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AnularFacturasToolStripMenuItem.Text = "Anular Facturas"
+        '
+        'HelpMenu
+        '
+        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
+        Me.HelpMenu.Name = "HelpMenu"
+        Me.HelpMenu.Size = New System.Drawing.Size(65, 24)
+        Me.HelpMenu.Text = "Ay&uda"
+        '
+        'ContentsToolStripMenuItem
+        '
+        Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
+        Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.ContentsToolStripMenuItem.Text = "&Contenido"
+        '
+        'IndexToolStripMenuItem
+        '
+        Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
+        Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.IndexToolStripMenuItem.Text = "&Índice"
+        '
+        'SearchToolStripMenuItem
+        '
+        Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
+        Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.SearchToolStripMenuItem.Text = "&Buscar"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(215, 6)
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.AboutToolStripMenuItem.Text = "&Acerca de..."
         '
         'ToolStrip
         '
@@ -494,35 +525,11 @@ Partial Class Frm_Principal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'VerFacturasToolStripMenuItem
+        'PruebasEnElGridToolStripMenuItem
         '
-        Me.VerFacturasToolStripMenuItem.Name = "VerFacturasToolStripMenuItem"
-        Me.VerFacturasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.VerFacturasToolStripMenuItem.Text = "Ver Facturas"
-        '
-        'AnularFacturasToolStripMenuItem
-        '
-        Me.AnularFacturasToolStripMenuItem.Name = "AnularFacturasToolStripMenuItem"
-        Me.AnularFacturasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AnularFacturasToolStripMenuItem.Text = "Anular Facturas"
-        '
-        'AnularFacturasToolStripMenuItem1
-        '
-        Me.AnularFacturasToolStripMenuItem1.Name = "AnularFacturasToolStripMenuItem1"
-        Me.AnularFacturasToolStripMenuItem1.Size = New System.Drawing.Size(264, 26)
-        Me.AnularFacturasToolStripMenuItem1.Text = "Anular Facturas"
-        '
-        'EstadoDeFacturasToolStripMenuItem
-        '
-        Me.EstadoDeFacturasToolStripMenuItem.Name = "EstadoDeFacturasToolStripMenuItem"
-        Me.EstadoDeFacturasToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
-        Me.EstadoDeFacturasToolStripMenuItem.Text = "Estado de Facturas..."
-        '
-        'PagosToolStripMenuItem
-        '
-        Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
-        Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
-        Me.PagosToolStripMenuItem.Text = "Pagos"
+        Me.PruebasEnElGridToolStripMenuItem.Name = "PruebasEnElGridToolStripMenuItem"
+        Me.PruebasEnElGridToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PruebasEnElGridToolStripMenuItem.Text = "Pruebas en el Grid"
         '
         'Frm_Principal
         '
@@ -608,4 +615,5 @@ Partial Class Frm_Principal
     Friend WithEvents PagosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerFacturasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AnularFacturasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PruebasEnElGridToolStripMenuItem As ToolStripMenuItem
 End Class
