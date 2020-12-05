@@ -96,6 +96,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\GRID.resx">
+      <DependentUpon>GRID.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PlantillaCliente.resx">
       <DependentUpon>PlantillaCliente.vb</DependentUpon>
     </EmbeddedResource>

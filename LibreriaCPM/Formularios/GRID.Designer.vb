@@ -40,11 +40,11 @@ Partial Class GRID
         'Titulo
         '
         Me.Titulo.AutoSize = True
-        Me.Titulo.Font = New System.Drawing.Font("Modern No. 20", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Titulo.Location = New System.Drawing.Point(40, 31)
         Me.Titulo.Name = "Titulo"
         Me.Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Titulo.Size = New System.Drawing.Size(152, 34)
+        Me.Titulo.Size = New System.Drawing.Size(161, 38)
         Me.Titulo.TabIndex = 0
         Me.Titulo.Text = "Grid-Crud"
         '
@@ -69,7 +69,7 @@ Partial Class GRID
         'Btn_Crear
         '
         Me.Btn_Crear.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Crear.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Crear.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Crear.Location = New System.Drawing.Point(931, 235)
         Me.Btn_Crear.Name = "Btn_Crear"
         Me.Btn_Crear.Size = New System.Drawing.Size(176, 44)
@@ -80,7 +80,7 @@ Partial Class GRID
         'Btn_Modificar
         '
         Me.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Modificar.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Modificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Modificar.Location = New System.Drawing.Point(931, 310)
         Me.Btn_Modificar.Name = "Btn_Modificar"
         Me.Btn_Modificar.Size = New System.Drawing.Size(176, 44)
@@ -91,7 +91,7 @@ Partial Class GRID
         'Btn_Ver
         '
         Me.Btn_Ver.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Ver.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Ver.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Ver.Location = New System.Drawing.Point(931, 385)
         Me.Btn_Ver.Name = "Btn_Ver"
         Me.Btn_Ver.Size = New System.Drawing.Size(176, 44)
@@ -102,7 +102,7 @@ Partial Class GRID
         'Btn_Eliminar
         '
         Me.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Eliminar.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Eliminar.Location = New System.Drawing.Point(931, 460)
         Me.Btn_Eliminar.Name = "Btn_Eliminar"
         Me.Btn_Eliminar.Size = New System.Drawing.Size(176, 44)
@@ -113,7 +113,7 @@ Partial Class GRID
         'Btn_Cerrar
         '
         Me.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Btn_Cerrar.Font = New System.Drawing.Font("Modern No. 20", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cerrar.Location = New System.Drawing.Point(931, 533)
         Me.Btn_Cerrar.Name = "Btn_Cerrar"
         Me.Btn_Cerrar.Size = New System.Drawing.Size(176, 44)
@@ -125,28 +125,28 @@ Partial Class GRID
         '
         Me.Cb_Columnas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cb_Columnas.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Cb_Columnas.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cb_Columnas.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cb_Columnas.FormattingEnabled = True
         Me.Cb_Columnas.Location = New System.Drawing.Point(28, 105)
         Me.Cb_Columnas.Name = "Cb_Columnas"
-        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 23)
+        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 24)
         Me.Cb_Columnas.TabIndex = 8
         '
         'Txt_Filtrar
         '
-        Me.Txt_Filtrar.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Filtrar.Location = New System.Drawing.Point(312, 107)
+        Me.Txt_Filtrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Filtrar.Location = New System.Drawing.Point(316, 107)
         Me.Txt_Filtrar.Name = "Txt_Filtrar"
-        Me.Txt_Filtrar.Size = New System.Drawing.Size(500, 21)
+        Me.Txt_Filtrar.Size = New System.Drawing.Size(500, 22)
         Me.Txt_Filtrar.TabIndex = 9
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(235, 107)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 22)
+        Me.Label1.Size = New System.Drawing.Size(79, 25)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Buscar:"
         '

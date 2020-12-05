@@ -26,3 +26,19 @@ C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCP
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.pdb
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.xml
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe.config
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Resources.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.exe
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.pdb
