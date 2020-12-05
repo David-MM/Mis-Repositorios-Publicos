@@ -1,3 +1,7 @@
+CREATE DATABASE CPM
+GO
+USE CPM
+GO
 CREATE TABLE [Cliente] (
   [idCliente] int PRIMARY KEY IDENTITY(1, 1),
   [RTN] nvarchar(255) not null,
@@ -6,7 +10,8 @@ CREATE TABLE [Cliente] (
   [L_Credito] float not null,
   [Telefono] nvarchar(255),
   [E_Mail] nvarchar(255),
-  [Direccion] nvarchar(255)
+  [Direccion] nvarchar(255),
+  [Estado_Delete] bit not null
 )
 GO
 
@@ -16,7 +21,8 @@ CREATE TABLE [Produto] (
   [Nombre] nvarchar(255) not null,
   [P_Sugerido] float not null,
   [Isv_Sugerido] float not null,
-  [Descripcion] nvarchar(255)
+  [Descripcion] nvarchar(255),
+  [Estado_Delete] bit not null
 )
 GO
 
@@ -50,16 +56,18 @@ GO
 
 CREATE TABLE [User] (
   [idUser] int PRIMARY KEY IDENTITY(1, 1),
-  [NickName] nvarchar(255),
-  [Password] nvarchar(255),
-  [Roll] char
+  [NickName] nvarchar(255) not null,
+  [Password] nvarchar(255) not null,
+  [Roll] char not null,
+  [Estado_Delete] bit not null
 )
 GO
 
 CREATE TABLE [Pago] (
   [idPago] int PRIMARY KEY IDENTITY(1, 1),
-  [FacturaID] int,
-  [Fecha] datetime
+  [FacturaID] int not null,
+  [Fecha] datetime not null,
+  [Estado_Delete] bit not null
 )
 GO
 
