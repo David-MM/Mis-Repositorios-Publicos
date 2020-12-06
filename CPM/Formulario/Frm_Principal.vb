@@ -1,8 +1,14 @@
 ﻿Imports System.Windows.Forms
+Imports System.Data.SqlClient
 
 Public Class Frm_Principal
 
-    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
+    Private cnx As SqlConnection
+    Private db As New LibreriaCPM.dbConnect("", "", "", "")
+
+    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
+        cnx = db.ConexionSQLServer
+
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
@@ -14,7 +20,7 @@ Public Class Frm_Principal
         ChildForm.Show()
     End Sub
 
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
         Dim OpenFileDialog As New OpenFileDialog
         OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         OpenFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
@@ -24,7 +30,7 @@ Public Class Frm_Principal
         End If
     End Sub
 
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         Dim SaveFileDialog As New SaveFileDialog
         SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         SaveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
@@ -36,23 +42,31 @@ Public Class Frm_Principal
     End Sub
 
 
-    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
 
-    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CutToolStripMenuItem.Click
         ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
     End Sub
 
-    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CopyToolStripMenuItem.Click
         ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
     End Sub
 
-    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles PasteToolStripMenuItem.Click
         'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
     End Sub
 
-    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
+        Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
+    End Sub
+
+    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
+        Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
+    End Sub
+
+    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CascadeToolStripMenuItem.Click
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
 
@@ -60,7 +74,7 @@ Public Class Frm_Principal
         Me.LayoutMdi(MdiLayout.TileVertical)
     End Sub
 
-    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileHorizontalToolStripMenuItem.Click
         Me.LayoutMdi(MdiLayout.TileHorizontal)
     End Sub
 
@@ -68,7 +82,7 @@ Public Class Frm_Principal
         Me.LayoutMdi(MdiLayout.ArrangeIcons)
     End Sub
 
-    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseAllToolStripMenuItem.Click
         ' Cierre todos los formularios secundarios del principal.
         For Each ChildForm As Form In Me.MdiChildren
             ChildForm.Close()
@@ -78,8 +92,10 @@ Public Class Frm_Principal
     Private m_ChildFormNumber As Integer
 
     Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
-        Dim grid As New LibreriaCPM.GRID()
-        grid.MdiParent = Me
-        grid.Show()
+        If db.Activa Then
+            Dim grid As New LibreriaCPM.GRID(db)
+            grid.MdiParent = Me
+            grid.Show()
+        End If
     End Sub
 End Class
