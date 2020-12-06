@@ -15,8 +15,8 @@ Public Class dbConnect
     End Property
     Function Conectar()
         Try
-            'Dim url = "Server=" & "localhost" & "; DataBase=" & "CPM" & "; Integrated Security = True"
-            Dim url = "Server= 192.168.0.57; DataBase=HCF; UID=ExportacionesUser; pwd=aZLjIilAON" 'Server
+            Dim url = "Server=" & "localhost" & "; DataBase=" & "CPM" & "; Integrated Security = True"
+
             conexion = New SqlConnection(url)
             conexionActiva = False
             conexion.Open()
