@@ -92,10 +92,6 @@ Public Class Frm_Principal
     Private m_ChildFormNumber As Integer
 
     Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
-        If db.Activa Then
-            Dim grid As New LibreriaCPM.GRID(db)
-            grid.MdiParent = Me
-            grid.Show()
-        End If
+
     End Sub
 End Class

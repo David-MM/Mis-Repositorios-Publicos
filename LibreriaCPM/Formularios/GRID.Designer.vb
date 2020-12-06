@@ -22,6 +22,7 @@ Partial Class GRID
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Titulo = New System.Windows.Forms.Label()
         Me.Tabla = New System.Windows.Forms.DataGridView()
         Me.Image = New System.Windows.Forms.PictureBox()
@@ -33,6 +34,7 @@ Partial Class GRID
         Me.Cb_Columnas = New System.Windows.Forms.ComboBox()
         Me.Txt_Filtrar = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Btn_Find = New System.Windows.Forms.Button()
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,9 +52,25 @@ Partial Class GRID
         '
         'Tabla
         '
+        Me.Tabla.AllowUserToAddRows = False
+        Me.Tabla.AllowUserToDeleteRows = False
+        Me.Tabla.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Tabla.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Tabla.GridColor = System.Drawing.SystemColors.Control
         Me.Tabla.Location = New System.Drawing.Point(12, 158)
         Me.Tabla.Name = "Tabla"
+        Me.Tabla.ReadOnly = True
         Me.Tabla.RowHeadersWidth = 51
         Me.Tabla.RowTemplate.Height = 24
         Me.Tabla.Size = New System.Drawing.Size(875, 552)
@@ -125,11 +143,11 @@ Partial Class GRID
         '
         Me.Cb_Columnas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cb_Columnas.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Cb_Columnas.Font = New System.Drawing.Font("Modern No. 20", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cb_Columnas.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cb_Columnas.FormattingEnabled = True
         Me.Cb_Columnas.Location = New System.Drawing.Point(28, 105)
         Me.Cb_Columnas.Name = "Cb_Columnas"
-        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 23)
+        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 29)
         Me.Cb_Columnas.TabIndex = 8
         '
         'Txt_Filtrar
@@ -150,11 +168,20 @@ Partial Class GRID
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Buscar:"
         '
+        'Btn_Find
+        '
+        Me.Btn_Find.Location = New System.Drawing.Point(838, 97)
+        Me.Btn_Find.Name = "Btn_Find"
+        Me.Btn_Find.Size = New System.Drawing.Size(40, 36)
+        Me.Btn_Find.TabIndex = 11
+        Me.Btn_Find.UseVisualStyleBackColor = True
+        '
         'GRID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1148, 727)
+        Me.Controls.Add(Me.Btn_Find)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Txt_Filtrar)
         Me.Controls.Add(Me.Cb_Columnas)
@@ -176,7 +203,6 @@ Partial Class GRID
     End Sub
 
     Friend WithEvents Titulo As Windows.Forms.Label
-    Friend WithEvents Tabla As Windows.Forms.DataGridView
     Friend WithEvents Image As Windows.Forms.PictureBox
     Friend WithEvents Btn_Crear As Windows.Forms.Button
     Friend WithEvents Btn_Modificar As Windows.Forms.Button
@@ -186,4 +212,6 @@ Partial Class GRID
     Friend WithEvents Cb_Columnas As Windows.Forms.ComboBox
     Friend WithEvents Txt_Filtrar As Windows.Forms.TextBox
     Friend WithEvents Label1 As Windows.Forms.Label
+    Friend WithEvents Btn_Find As Windows.Forms.Button
+    Friend WithEvents Tabla As Windows.Forms.DataGridView
 End Class
