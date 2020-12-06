@@ -18,13 +18,10 @@ Public Class GRID
 
     End Sub
 
-    Public Property DGV As DataGridView
+    Public ReadOnly Property DATABASE As dbConnect
         Get
-            Return Tabla
+            Return claseConexion
         End Get
-        Set(value As DataGridView)
-            Tabla = value
-        End Set
     End Property
 
     Public Property NOMBRETABLA As String
@@ -69,7 +66,7 @@ Public Class GRID
 
     Public Overridable Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
         Eliminar(nametabla, 0, campo_where)
-        CargarInterfaz(sender, e)
+        CargarDatos()
     End Sub
 
     Private Sub Eliminar(ntabla As String, valor As Integer, campo_where As String)
@@ -115,6 +112,10 @@ Public Class GRID
 
     Private Sub CargarInterfaz(sender As Object, e As EventArgs) Handles MyBase.Load
         Cb_Columnas.DataSource = ListaColumnas
+        CargarDatos()
+    End Sub
+
+    Public Sub CargarDatos()
         Tabla.DataSource = claseConexion.Read(claseConexion.ConexionSQLServer, nametabla, ListaColumnas, "where Estado_Delete = 1 " & cuandoiniciar)
     End Sub
 End Class
