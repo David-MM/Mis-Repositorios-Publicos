@@ -79,22 +79,46 @@
     <Compile Include="Formulario\Formularios Padres\Frm_GRID_Padre.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\Factura\Frm_CrearFactura.Designer.vb">
+      <DependentUpon>Frm_CrearFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Factura\Frm_CrearFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Factura\Frm_EditarFactura.Designer.vb">
+      <DependentUpon>Frm_EditarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Factura\Frm_EditarFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\Frm_GRID_Cliente.Designer.vb">
       <DependentUpon>Frm_GRID_Cliente.vb</DependentUpon>
     </Compile>
     <Compile Include="Formulario\Frm_GRID_Cliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Factura.Designer.vb">
+    <Compile Include="Formulario\Factura\Frm_GRID_Factura.Designer.vb">
       <DependentUpon>Frm_GRID_Factura.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Factura.vb">
+    <Compile Include="Formulario\Factura\Frm_GRID_Factura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Inventario.Designer.vb">
+    <Compile Include="Formulario\Inventario\Frm_CrearCliente.Designer.vb">
+      <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_CrearCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_EditarCliente.Designer.vb">
+      <DependentUpon>Frm_EditarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_EditarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_GRID_Inventario.Designer.vb">
       <DependentUpon>Frm_GRID_Inventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Inventario.vb">
+    <Compile Include="Formulario\Inventario\Frm_GRID_Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario\Frm_GRID_Producto.Designer.vb">
@@ -107,6 +131,12 @@
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </Compile>
     <Compile Include="Formulario\Frm_Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_MostrarCliente.Designer.vb">
+      <DependentUpon>Frm_MostrarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_MostrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases\" />
-    <Folder Include="Imagenes\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +191,12 @@
       <Project>{11d1edeb-a8eb-4730-bac5-2f2ae4dd2472}</Project>
       <Name>LibreriaCPM</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\inventario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

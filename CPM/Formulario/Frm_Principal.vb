@@ -1,6 +1,7 @@
 ﻿Imports System.Windows.Forms
 Imports System.Data.SqlClient
 Imports LibreriaCPM
+Imports System.IO
 
 Public Class Frm_Principal
 
@@ -84,12 +85,12 @@ Public Class Frm_Principal
     Private m_ChildFormNumber As Integer
 
     Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
-        Dim grid As New Frm_GRID_Padre()
+        Dim grid As New Frm_GRID_Producto()
         grid.MdiParent = Me
         grid.LISTA.Add("*")
-        grid.NOMBRETABLA = "CPM.Cliente"
-        grid.CAMPODELETE = "idCliente"
-        grid.WHERELOAD = ""
+        grid.NOMBRETABLA = "CPM.Produto"
+        grid.CAMPODELETE = "idProducto"
+        grid.WHERELOAD = "Estado_Delete=1"
         grid.Show()
     End Sub
 
@@ -97,5 +98,23 @@ Public Class Frm_Principal
         Dim f As New Plantilla_Facturacion()
         f.MdiParent = Me
         f.Show()
+    End Sub
+
+    Private Sub WindowsMenu_Click(sender As Object, e As EventArgs) Handles WindowsMenu.Click
+        Dim grid As New Frm_GRID_Inventario()
+        grid.Text = "Inventario"
+        grid.Titulo.Text = "Inventario de Productos"
+        grid.Botones.Visible = False
+        grid.MdiParent = Me
+        grid.Image.Image = CPM.My.Resources.Resources.inventario1
+        grid.LISTA.Add("P.Codigo As 'Codigo Barra'")
+        grid.LISTA.Add("P.Nombre As Producto")
+        grid.LISTA.Add("I.Cantidad AS Existencia")
+        grid.ListCombo.Add("Codigo de Barra")
+        grid.ListCombo.Add("Nombre Producto")
+        grid.NOMBRETABLA = "CPM.Inventario AS I INNER JOIN CPM.Produto AS P ON P.idProducto=I.idProducto"
+        grid.CAMPODELETE = "I.idInventario"
+        grid.WHERELOAD = "I.Estado_Delete=1"
+        grid.Show()
     End Sub
 End Class

@@ -8,6 +8,7 @@ Public Class Frm_GRID_Padre
     Private campo_where As String
     Private cuandoiniciar As String
     Private ListaColumnas As New ArrayList
+    Private ListaCombo As New ArrayList
 
     Public ReadOnly Property DATABASE As dbConnect
         Get
@@ -23,7 +24,14 @@ Public Class Frm_GRID_Padre
             nametabla = value
         End Set
     End Property
-
+    Public Property ListCombo As ArrayList
+        Get
+            Return ListaCombo
+        End Get
+        Set(value As ArrayList)
+            ListaCombo = value
+        End Set
+    End Property
     Public Property CAMPODELETE As String
         Get
             Return campo_where
@@ -55,7 +63,7 @@ Public Class Frm_GRID_Padre
         Me.Dispose()
     End Sub
 
-    Public Overridable Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
+    Public Overridable Sub Btn_Eliminar_Click(sender As Object, e As EventArgs)
         Eliminar(nametabla, 0, campo_where)
         CargarDatos()
     End Sub
@@ -89,12 +97,17 @@ Public Class Frm_GRID_Padre
     End Function
 
     Public Sub CargarDatos()
-        Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where Estado_Delete = 1 " & cuandoiniciar)
+        Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where " & cuandoiniciar)
     End Sub
 
     Private Sub Frm_GRID_Padre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Cb_Columnas.DataSource = ListaColumnas
+        Cb_Columnas.DataSource = ListaCombo
         CargarDatos()
-
+    End Sub
+    Public Overridable Function Buscar(busca As String)
+        Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where " & cuandoiniciar & busca)
+    End Function
+    Private Sub Txt_Filtrar_TextChanged(sender As Object, e As EventArgs) Handles Txt_Filtrar.TextChanged
+        Buscar(Txt_Filtrar.Text)
     End Sub
 End Class
