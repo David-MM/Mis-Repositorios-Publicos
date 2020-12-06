@@ -1,6 +1,15 @@
 ﻿Imports System.Windows.Forms
 
 Public Class Plantilla_Facturacion
+    Private claseConexion As New dbConnect
+    Private ListaColumnas As ArrayList
+    Private dt As DataTable
+
+    Public Sub New(db As dbConnect)
+        claseConexion = db
+        InitializeComponent()
+    End Sub
+
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
         Me.Close()
     End Sub
@@ -13,8 +22,20 @@ Public Class Plantilla_Facturacion
         ValidarInsercionProducto()
     End Sub
 
+    Private Sub Plantilla_Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ListaColumnas = New ArrayList
+        ListaColumnas.Add("IDcliente")
+        ListaColumnas.Add("R_Social")
+        LlenarCombo(cmbCli, claseConexion.Read(claseConexion.ConexionSQLServer, "Cliente", ListaColumnas, "where Estado_Delete = 1 "))
 
-#Region "Funciones herededaas sobreescribibles"
+        Dim ListaColumnas2 As New ArrayList
+        ListaColumnas2.Add("IdProducto")
+        ListaColumnas2.Add("Codigo")
+        LlenarCombo(cmbCodBarra, claseConexion.Read(claseConexion.ConexionSQLServer, "Producto", ListaColumnas2, "where Estado_Delete = 1 "))
+
+    End Sub
+
+#Region "Funciones herededas sobreescribibles"
     Public Overridable Function Limpiar()
         If (MessageBox.Show("Se borrará toda la data" & vbCrLf & "¿Desea limpiar?", "Limpiar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
             cmbCli.Text = ""
@@ -29,6 +50,12 @@ Public Class Plantilla_Facturacion
             txtTotal.Text = ""
             cmbCli.Focus()
         End If
+    End Function
+
+    Public Overridable Function LlenarCombo(cmb As ComboBox, dt As DataTable)
+        cmb.DataSource = dt
+        cmb.DisplayMember = dt.Columns(1).ColumnName
+        cmb.ValueMember = dt.Columns(0).ColumnName
     End Function
 
     Public Overridable Function ValidarInsercionProducto()
@@ -66,13 +93,6 @@ Public Class Plantilla_Facturacion
             End If
         Next
     End Function
-
-    Private Sub Plantilla_Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
 #End Region
-
-
 
 End Class
