@@ -73,6 +73,36 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formulario\Formularios Padres\Frm_GRID_Padre.Designer.vb">
+      <DependentUpon>Frm_GRID_Padre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Formularios Padres\Frm_GRID_Padre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Cliente.Designer.vb">
+      <DependentUpon>Frm_GRID_Cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Factura.Designer.vb">
+      <DependentUpon>Frm_GRID_Factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Inventario.Designer.vb">
+      <DependentUpon>Frm_GRID_Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Producto.Designer.vb">
+      <DependentUpon>Frm_GRID_Producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Frm_GRID_Producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\Frm_Principal.Designer.vb">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </Compile>
@@ -97,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formulario\Formularios Padres\Frm_GRID_Padre.resx">
+      <DependentUpon>Frm_GRID_Padre.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>

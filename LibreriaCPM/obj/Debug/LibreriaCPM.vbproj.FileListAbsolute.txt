@@ -36,3 +36,4 @@ C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources

@@ -1,12 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Windows.Forms
+Imports LibreriaCPM
 
-Public Class GRID
+Public Class Frm_GRID_Padre
     Private claseConexion As New dbConnect
     Private nametabla As String
     Private campo_where As String
     Private cuandoiniciar As String
     Private ListaColumnas As New ArrayList
+
     Public ReadOnly Property DATABASE As dbConnect
         Get
             Return claseConexion
@@ -71,15 +73,6 @@ Public Class GRID
             claseConexion.Delete(ntabla, valor, "where " & campo_where & " = " & i)
         End If
     End Sub
-
-    Public Overridable Sub Btn_Crear_Click(sender As Object, e As EventArgs) Handles Btn_Crear.Click
-
-    End Sub
-
-    Public Overridable Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
-
-    End Sub
-
     Public Function Modificara() As Integer
         If Tabla.SelectedRows.Count = 0 Then
             MsgBox("Selecciona una fila para Modificarla.", MsgBoxStyle.Critical, "Warnig")
@@ -95,16 +88,13 @@ Public Class GRID
         End If
     End Function
 
-    Public Overridable Sub Btn_Ver_Click(sender As Object, e As EventArgs) Handles Btn_Ver.Click
-
-    End Sub
-
-    Private Sub CargarInterfaz(sender As Object, e As EventArgs) Handles MyBase.Load
-        Cb_Columnas.DataSource = ListaColumnas
-        CargarDatos()
-    End Sub
-
     Public Sub CargarDatos()
         Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where Estado_Delete = 1 " & cuandoiniciar)
+    End Sub
+
+    Private Sub Frm_GRID_Padre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Cb_Columnas.DataSource = ListaColumnas
+        CargarDatos()
+
     End Sub
 End Class

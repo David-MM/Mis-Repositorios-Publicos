@@ -4,12 +4,6 @@ Public Class Plantilla_Facturacion
     Private claseConexion As New dbConnect
     Private ListaColumnas As ArrayList
     Private dt As DataTable
-
-    Public Sub New(db As dbConnect)
-        claseConexion = db
-        InitializeComponent()
-    End Sub
-
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
         Me.Close()
     End Sub
@@ -26,12 +20,13 @@ Public Class Plantilla_Facturacion
         ListaColumnas = New ArrayList
         ListaColumnas.Add("IDcliente")
         ListaColumnas.Add("R_Social")
-        LlenarCombo(cmbCli, claseConexion.Read(claseConexion.ConexionSQLServer, "Cliente", ListaColumnas, "where Estado_Delete = 1 "))
+        LlenarCombo(cmbCli, claseConexion.Read("CPM.Cliente", ListaColumnas, "where Estado_Delete = 1 "))
 
-        Dim ListaColumnas2 As New ArrayList
-        ListaColumnas2.Add("IdProducto")
-        ListaColumnas2.Add("Codigo")
-        LlenarCombo(cmbCodBarra, claseConexion.Read(claseConexion.ConexionSQLServer, "Producto", ListaColumnas2, "where Estado_Delete = 1 "))
+        'Dim ListaColumnas2 As New ArrayList
+        ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+        ListaColumnas.Add("IdProducto")
+        ListaColumnas.Add("Codigo")
+        LlenarCombo(cmbCodBarra, claseConexion.Read("CPM.Produto", ListaColumnas, "where Estado_Delete = 1 "))
 
     End Sub
 

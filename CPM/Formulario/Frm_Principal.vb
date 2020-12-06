@@ -1,14 +1,13 @@
 ﻿Imports System.Windows.Forms
 Imports System.Data.SqlClient
+Imports LibreriaCPM
 
 Public Class Frm_Principal
 
     Private cnx As SqlConnection
-    Private db As New LibreriaCPM.dbConnect("", "", "", "")
+    Private db As New dbConnect()
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
-        cnx = db.ConexionSQLServer
-
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
@@ -85,20 +84,18 @@ Public Class Frm_Principal
     Private m_ChildFormNumber As Integer
 
     Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
-        Dim grid As New LibreriaCPM.GRID(db)
+        Dim grid As New Frm_GRID_Padre()
         grid.MdiParent = Me
         grid.LISTA.Add("*")
-        grid.NOMBRETABLA = "Cliente"
+        grid.NOMBRETABLA = "CPM.Cliente"
         grid.CAMPODELETE = "idCliente"
         grid.WHERELOAD = ""
         grid.Show()
     End Sub
 
     Private Sub Facturacion_Click(sender As Object, e As EventArgs) Handles Facturacion.Click
-        If db.Activa Then
-            Dim f As New LibreriaCPM.Plantilla_Facturacion(db)
-            f.MdiParent = Me
-            f.Show()
-        End If
+        Dim f As New Plantilla_Facturacion()
+        f.MdiParent = Me
+        f.Show()
     End Sub
 End Class
