@@ -51,54 +51,54 @@ Partial Class Frm_Principal
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
+        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
         'WindowsMenu
         '
         Me.WindowsMenu.Name = "WindowsMenu"
-        Me.WindowsMenu.Size = New System.Drawing.Size(72, 20)
+        Me.WindowsMenu.Size = New System.Drawing.Size(89, 24)
         Me.WindowsMenu.Text = "Inventario"
         '
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.Facturacion, Me.PruebasEnElGridToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'CrearFacturasToolStripMenuItem1
         '
         Me.CrearFacturasToolStripMenuItem1.Name = "CrearFacturasToolStripMenuItem1"
-        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.CrearFacturasToolStripMenuItem1.Text = "Clientes"
         '
         'Facturacion
         '
         Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Size = New System.Drawing.Size(180, 22)
+        Me.Facturacion.Size = New System.Drawing.Size(224, 26)
         Me.Facturacion.Text = "Facturación"
         '
         'PruebasEnElGridToolStripMenuItem
         '
         Me.PruebasEnElGridToolStripMenuItem.Name = "PruebasEnElGridToolStripMenuItem"
-        Me.PruebasEnElGridToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PruebasEnElGridToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PruebasEnElGridToolStripMenuItem.Text = "Pruebas en el Grid"
         '
         'HelpMenu
         '
         Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
         Me.HelpMenu.Name = "HelpMenu"
-        Me.HelpMenu.Size = New System.Drawing.Size(53, 20)
+        Me.HelpMenu.Size = New System.Drawing.Size(65, 24)
         Me.HelpMenu.Text = "Ay&uda"
         '
         'ContentsToolStripMenuItem
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.ContentsToolStripMenuItem.Text = "&Contenido"
         '
         'IndexToolStripMenuItem
@@ -106,7 +106,7 @@ Partial Class Frm_Principal
         Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.IndexToolStripMenuItem.Text = "&Índice"
         '
         'SearchToolStripMenuItem
@@ -114,45 +114,47 @@ Partial Class Frm_Principal
         Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.SearchToolStripMenuItem.Text = "&Buscar"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(173, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(215, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.AboutToolStripMenuItem.Text = "&Acerca de..."
         '
         'StatusStrip
         '
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 532)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(632, 22)
+        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
+        Me.StatusStrip.Size = New System.Drawing.Size(843, 26)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
         'Frm_Principal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 453)
+        Me.ClientSize = New System.Drawing.Size(843, 558)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_Principal"
         Me.Text = "CPM_Modulo Ventas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
