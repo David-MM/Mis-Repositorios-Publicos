@@ -1,0 +1,38 @@
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.dll
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.GRID.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CoreCompileInputs.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.GRID.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CoreCompileInputs.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.dll
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.GRID.resources
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CoreCompileInputs.cache
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources

@@ -124,5 +124,11 @@
     <Folder Include="Imagenes\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriaCPM\LibreriaCPM.vbproj">
+      <Project>{11d1edeb-a8eb-4730-bac5-2f2ae4dd2472}</Project>
+      <Name>LibreriaCPM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
