@@ -91,4 +91,12 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
+
+    Private Sub Facturacion_Click(sender As Object, e As EventArgs) Handles Facturacion.Click
+        If db.Activa Then
+            Dim f As New LibreriaCPM.Plantilla_Facturacion
+            f.MdiParent = Me
+            f.Show()
+        End If
+    End Sub
 End Class
