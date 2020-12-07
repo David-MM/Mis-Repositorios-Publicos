@@ -9,11 +9,21 @@ Public Class Frm_GRID_Padre
     Private cuandoiniciar As String
     Private ListaColumnas As New ArrayList
     Private ListaCombo As New ArrayList
+    Private factura As Boolean
 
     Public ReadOnly Property DATABASE As dbConnect
         Get
             Return claseConexion
         End Get
+    End Property
+
+    Public Property FACTURAS As Boolean
+        Get
+            Return factura
+        End Get
+        Set(value As Boolean)
+            factura = value
+        End Set
     End Property
 
     Public Property NOMBRETABLA As String
@@ -64,7 +74,11 @@ Public Class Frm_GRID_Padre
     End Sub
 
     Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
-        Eliminar(nametabla, 0, campo_where)
+        If factura Then
+            CambiarEstado("'A'", campo_where)
+        Else
+            Eliminar(nametabla, 0, campo_where)
+        End If
         CargarDatos()
     End Sub
 
@@ -117,6 +131,7 @@ Public Class Frm_GRID_Padre
     End Sub
 
     Private Sub Frm_GRID_Padre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        factura = False
         Cb_Columnas.DataSource = ListaCombo
         CargarDatos()
     End Sub

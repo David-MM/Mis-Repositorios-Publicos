@@ -119,6 +119,7 @@ Public Class Frm_Principal
             grid.Btn_Eliminar.Text = "Anular"
             grid.CAMPODELETE = "idFactura"
             grid.Show()
+            grid.FACTURAS = True
         End If
     End Sub
 

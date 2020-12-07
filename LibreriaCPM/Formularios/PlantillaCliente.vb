@@ -75,10 +75,10 @@ Public Class PlantillaCliente
 
         If Len(Trim(txtTelefono.Text)) = 0 Then
             txtTelefono.Select()
-            Label6.ForeColor = Drawing.Color.Red
+            Label8.ForeColor = Drawing.Color.Red
             chequeo = False
         Else
-            Label6.ForeColor = Drawing.Color.Black
+            Label8.ForeColor = Drawing.Color.Black
         End If
 
         If Len(Trim(txtCorreo.Text)) = 0 Then
@@ -91,10 +91,10 @@ Public Class PlantillaCliente
 
         If Len(Trim(txtDireccion.Text)) = 0 Then
             txtDireccion.Select()
-            Label8.ForeColor = Drawing.Color.Red
+            Label6.ForeColor = Drawing.Color.Red
             chequeo = False
         Else
-            Label8.ForeColor = Drawing.Color.Black
+            Label6.ForeColor = Drawing.Color.Black
         End If
 
         Return chequeo

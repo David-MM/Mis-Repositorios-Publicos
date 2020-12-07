@@ -28,6 +28,7 @@
         Nuevo.PADRE = Me
         Nuevo.UPDATES = False
         Nuevo.MdiParent = contedor
+        Nuevo.Text = "Nuevo Usuario"
         Nuevo.Show()
         MyBase.CrearInsert()
     End Sub
