@@ -109,7 +109,7 @@ Public Class Plantilla_Facturacion
         ListaColumnas = New ArrayList
         ListaColumnas.Add("max(idFactura)+1 as campo")
         FactN = claseConexion.Read("Factura", ListaColumnas, "").Rows(0)(0).ToString
-        lblIDFact.Text = "Factura No. " & claseConexion.Read("Factura", ListaColumnas, "").Rows(0)(0).ToString
+        lblIDFact1.Text = "Factura No. " & claseConexion.Read("Factura", ListaColumnas, "").Rows(0)(0).ToString
 
         'Numero de Factura
         lblFecha.Text = "Fecha " & DateTime.Now.ToShortDateString
