@@ -80,3 +80,5 @@ C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
