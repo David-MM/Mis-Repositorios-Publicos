@@ -228,7 +228,7 @@ Partial Class PlantillaCliente
         Me.N_Credito.DecimalPlaces = 2
         Me.N_Credito.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.N_Credito.Location = New System.Drawing.Point(229, 152)
-        Me.N_Credito.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.N_Credito.Maximum = New Decimal(New Integer() {20000, 0, 0, 0})
         Me.N_Credito.Name = "N_Credito"
         Me.N_Credito.Size = New System.Drawing.Size(214, 27)
         Me.N_Credito.TabIndex = 4
@@ -278,10 +278,7 @@ Partial Class PlantillaCliente
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtDireccion As Windows.Forms.TextBox
     Friend WithEvents Label6 As Windows.Forms.Label
-    Friend WithEvents txtCorreo As Windows.Forms.TextBox
-    Friend WithEvents txtTelefono As Windows.Forms.TextBox
     Friend WithEvents Label7 As Windows.Forms.Label
     Friend WithEvents Label8 As Windows.Forms.Label
     Public WithEvents Label1 As Windows.Forms.Label
@@ -298,4 +295,7 @@ Partial Class PlantillaCliente
     Public WithEvents N_Descuento As Windows.Forms.NumericUpDown
     Public WithEvents N_Credito As Windows.Forms.NumericUpDown
     Public WithEvents Button3 As Windows.Forms.Button
+    Public WithEvents txtDireccion As Windows.Forms.TextBox
+    Public WithEvents txtCorreo As Windows.Forms.TextBox
+    Public WithEvents txtTelefono As Windows.Forms.TextBox
 End Class

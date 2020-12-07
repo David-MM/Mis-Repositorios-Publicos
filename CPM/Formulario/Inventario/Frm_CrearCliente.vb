@@ -42,6 +42,7 @@
     Public Overrides Sub Activos_Visibles()
         Label1.Visible = False
         txtClienteID.Visible = False
+        Button3.Visible = False
         'MyBase.Activos_Visibles()
     End Sub
 End Class

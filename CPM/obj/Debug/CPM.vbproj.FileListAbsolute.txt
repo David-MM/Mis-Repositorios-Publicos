@@ -10,22 +10,6 @@ C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.pdb
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.exe.config
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.exe
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.pdb
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.xml
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Resources.resources
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.exe
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.xml
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.pdb
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.dll
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.pdb
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.xml
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe.config
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.pdb
@@ -59,8 +43,6 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
-C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe.config
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.pdb
@@ -79,3 +61,22 @@ D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.vbproj
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.exe
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.xml
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.pdb
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.exe.config
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.exe
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.pdb
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\CPM.xml
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.dll
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.pdb
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\bin\Debug\LibreriaCPM.xml
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Resources.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.exe
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.xml
+C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.pdb

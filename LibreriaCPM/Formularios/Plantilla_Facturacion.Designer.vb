@@ -30,15 +30,22 @@ Partial Class Plantilla_Facturacion
         Me.cmbCli = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grpProducto = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.cmbCodBarra = New System.Windows.Forms.ComboBox()
-        Me.cmbProducto = New System.Windows.Forms.ComboBox()
-        Me.spnCantidad = New System.Windows.Forms.NumericUpDown()
-        Me.spnPrecio = New System.Windows.Forms.NumericUpDown()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.spnPrecio = New System.Windows.Forms.NumericUpDown()
+        Me.spnCantidad = New System.Windows.Forms.NumericUpDown()
+        Me.cmbProducto = New System.Windows.Forms.ComboBox()
+        Me.cmbCodBarra = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Datos = New System.Windows.Forms.DataGridView()
+        Me.No = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -54,16 +61,9 @@ Partial Class Plantilla_Facturacion
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.No = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpProducto.SuspendLayout()
-        CType(Me.spnCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.spnPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.spnCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Datos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -154,66 +154,15 @@ Partial Class Plantilla_Facturacion
         Me.grpProducto.TabStop = False
         Me.grpProducto.Text = "Producto"
         '
-        'Label6
+        'btnAgregar
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(237, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 20)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Producto"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(421, 23)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(75, 20)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Cantidad"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(576, 23)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 20)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Precio"
-        '
-        'cmbCodBarra
-        '
-        Me.cmbCodBarra.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCodBarra.FormattingEnabled = True
-        Me.cmbCodBarra.Location = New System.Drawing.Point(6, 46)
-        Me.cmbCodBarra.Name = "cmbCodBarra"
-        Me.cmbCodBarra.Size = New System.Drawing.Size(117, 28)
-        Me.cmbCodBarra.TabIndex = 1
-        Me.cmbCodBarra.Tag = "Producto"
-        '
-        'cmbProducto
-        '
-        Me.cmbProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbProducto.FormattingEnabled = True
-        Me.cmbProducto.Location = New System.Drawing.Point(129, 46)
-        Me.cmbProducto.Name = "cmbProducto"
-        Me.cmbProducto.Size = New System.Drawing.Size(272, 28)
-        Me.cmbProducto.TabIndex = 2
-        Me.cmbProducto.Tag = "Producto"
-        '
-        'spnCantidad
-        '
-        Me.spnCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.spnCantidad.Location = New System.Drawing.Point(407, 47)
-        Me.spnCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.spnCantidad.Name = "spnCantidad"
-        Me.spnCantidad.Size = New System.Drawing.Size(120, 27)
-        Me.spnCantidad.TabIndex = 3
-        Me.spnCantidad.Tag = "Producto"
-        Me.spnCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.Location = New System.Drawing.Point(727, 41)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(45, 36)
+        Me.btnAgregar.TabIndex = 5
+        Me.btnAgregar.Text = "+"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'spnPrecio
         '
@@ -226,15 +175,66 @@ Partial Class Plantilla_Facturacion
         Me.spnPrecio.Tag = "Producto"
         Me.spnPrecio.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'btnAgregar
+        'spnCantidad
         '
-        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(727, 41)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(45, 36)
-        Me.btnAgregar.TabIndex = 5
-        Me.btnAgregar.Text = "+"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.spnCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.spnCantidad.Location = New System.Drawing.Point(407, 47)
+        Me.spnCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.spnCantidad.Name = "spnCantidad"
+        Me.spnCantidad.Size = New System.Drawing.Size(120, 27)
+        Me.spnCantidad.TabIndex = 3
+        Me.spnCantidad.Tag = "Producto"
+        Me.spnCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'cmbProducto
+        '
+        Me.cmbProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbProducto.FormattingEnabled = True
+        Me.cmbProducto.Location = New System.Drawing.Point(129, 46)
+        Me.cmbProducto.Name = "cmbProducto"
+        Me.cmbProducto.Size = New System.Drawing.Size(272, 28)
+        Me.cmbProducto.TabIndex = 2
+        Me.cmbProducto.Tag = "Producto"
+        '
+        'cmbCodBarra
+        '
+        Me.cmbCodBarra.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCodBarra.FormattingEnabled = True
+        Me.cmbCodBarra.Location = New System.Drawing.Point(6, 46)
+        Me.cmbCodBarra.Name = "cmbCodBarra"
+        Me.cmbCodBarra.Size = New System.Drawing.Size(117, 28)
+        Me.cmbCodBarra.TabIndex = 1
+        Me.cmbCodBarra.Tag = "Producto"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(576, 23)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(57, 20)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Precio"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(421, 23)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(75, 20)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "Cantidad"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(237, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 20)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Producto"
         '
         'Datos
         '
@@ -250,6 +250,83 @@ Partial Class Plantilla_Facturacion
         Me.Datos.RowTemplate.Height = 24
         Me.Datos.Size = New System.Drawing.Size(796, 418)
         Me.Datos.TabIndex = 9
+        '
+        'No
+        '
+        Me.No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.No.Frozen = True
+        Me.No.HeaderText = "No"
+        Me.No.MinimumWidth = 6
+        Me.No.Name = "No"
+        Me.No.ReadOnly = True
+        Me.No.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.No.Width = 55
+        '
+        'Codigo
+        '
+        Me.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Codigo.Frozen = True
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.MinimumWidth = 6
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Codigo.Width = 81
+        '
+        'Producto
+        '
+        Me.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Producto.Frozen = True
+        Me.Producto.HeaderText = "Detalle"
+        Me.Producto.MinimumWidth = 6
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        Me.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Producto.Width = 81
+        '
+        'Cantidad
+        '
+        Me.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Cantidad.Frozen = True
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.MinimumWidth = 6
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ReadOnly = True
+        Me.Cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Cantidad.Width = 93
+        '
+        'Precio
+        '
+        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Precio.Frozen = True
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.MinimumWidth = 6
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        Me.Precio.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Precio.Width = 77
+        '
+        'ISV
+        '
+        Me.ISV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ISV.Frozen = True
+        Me.ISV.HeaderText = "ISV"
+        Me.ISV.MinimumWidth = 6
+        Me.ISV.Name = "ISV"
+        Me.ISV.ReadOnly = True
+        Me.ISV.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ISV.Width = 58
+        '
+        'Total
+        '
+        Me.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Total.Frozen = True
+        Me.Total.HeaderText = "Total"
+        Me.Total.MinimumWidth = 6
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        Me.Total.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Total.Width = 69
         '
         'Label9
         '
@@ -405,83 +482,6 @@ Partial Class Plantilla_Facturacion
         Me.Button1.Text = "Imprimir"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'No
-        '
-        Me.No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.No.Frozen = True
-        Me.No.HeaderText = "No"
-        Me.No.MinimumWidth = 6
-        Me.No.Name = "No"
-        Me.No.ReadOnly = True
-        Me.No.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.No.Width = 55
-        '
-        'Codigo
-        '
-        Me.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Codigo.Frozen = True
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.MinimumWidth = 6
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Codigo.Width = 81
-        '
-        'Producto
-        '
-        Me.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Producto.Frozen = True
-        Me.Producto.HeaderText = "Detalle"
-        Me.Producto.MinimumWidth = 6
-        Me.Producto.Name = "Producto"
-        Me.Producto.ReadOnly = True
-        Me.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Producto.Width = 81
-        '
-        'Cantidad
-        '
-        Me.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Cantidad.Frozen = True
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.MinimumWidth = 6
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.ReadOnly = True
-        Me.Cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Cantidad.Width = 93
-        '
-        'Precio
-        '
-        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Precio.Frozen = True
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.MinimumWidth = 6
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        Me.Precio.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Precio.Width = 77
-        '
-        'ISV
-        '
-        Me.ISV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ISV.Frozen = True
-        Me.ISV.HeaderText = "ISV"
-        Me.ISV.MinimumWidth = 6
-        Me.ISV.Name = "ISV"
-        Me.ISV.ReadOnly = True
-        Me.ISV.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ISV.Width = 58
-        '
-        'Total
-        '
-        Me.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Total.Frozen = True
-        Me.Total.HeaderText = "Total"
-        Me.Total.MinimumWidth = 6
-        Me.Total.Name = "Total"
-        Me.Total.ReadOnly = True
-        Me.Total.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Total.Width = 69
-        '
         'Plantilla_Facturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -518,8 +518,8 @@ Partial Class Plantilla_Facturacion
         Me.Text = "Facturas"
         Me.grpProducto.ResumeLayout(False)
         Me.grpProducto.PerformLayout()
-        CType(Me.spnCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.spnPrecio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.spnCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Datos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -118,4 +118,7 @@ Public Class PlantillaCliente
         End If
     End Function
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MsgBox("En Proceso....")
+    End Sub
 End Class

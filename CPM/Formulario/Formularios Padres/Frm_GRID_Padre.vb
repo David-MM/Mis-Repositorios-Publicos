@@ -87,9 +87,9 @@ Public Class Frm_GRID_Padre
             MsgBox("Selecciona una fila para Eliminarla", MsgBoxStyle.Critical, "Warnig")
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres eliminar este registo?", MsgBoxStyle.Question, "Warnig")
+            Dim x = MsgBox("¿Seguro que quieres eliminar este registo?", MsgBoxStyle.OkCancel, "**Warnig**")
             If (x.ToString() = "Cancel") Then ' Si Then la variable x devuelver el boton Cancelar
-                MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
+                'MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
                 Return 'Retornaremos y no removeremos nada
             End If
             claseConexion.Delete(ntabla, valor, "where " & campo_where & " = " & i)
@@ -101,7 +101,7 @@ Public Class Frm_GRID_Padre
             MsgBox("Selecciona una fila para Eliminarla", MsgBoxStyle.Critical, "Warnig")
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres eliminar esta factura?", MsgBoxStyle.Question, "Warnig")
+            Dim x = MsgBox("¿Seguro que quieres eliminar esta factura?", MsgBoxStyle.OkCancel, "**Warnig**")
             If (x.ToString() = "Cancel") Then ' Si Then la variable x devuelver el boton Cancelar
                 MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
                 Return 'Retornaremos y no removeremos nada
@@ -130,6 +130,10 @@ Public Class Frm_GRID_Padre
         Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where " & cuandoiniciar)
     End Sub
 
+    Public Function BuscarDatos(where As String) As DataTable
+        Return claseConexion.Read(nametabla, ListaColumnas, "where " & where)
+    End Function
+
     Private Sub Frm_GRID_Padre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         factura = False
         Cb_Columnas.DataSource = ListaCombo
@@ -151,4 +155,19 @@ Public Class Frm_GRID_Padre
 
     End Sub
 
+    Private Sub Btn_Ver_Click(sender As Object, e As EventArgs) Handles Btn_Ver.Click
+        If Ver() = 0 Then
+            'MsgBox("No puedes ver el detalle")
+        End If
+    End Sub
+
+    Public Overridable Function Ver() As Integer
+        If Tabla.SelectedRows.Count = 0 Then
+            MsgBox("Selecciona una fila para Ver su Detalle.", MsgBoxStyle.Critical, "Warnig")
+            Return 0
+        Else
+            Dim i = Tabla.CurrentRow.Cells(0).Value
+            Return i 'Retornaremos un valor
+        End If
+    End Function
 End Class

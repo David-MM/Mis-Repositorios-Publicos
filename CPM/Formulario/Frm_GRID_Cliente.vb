@@ -1,6 +1,5 @@
 ﻿Public Class Frm_GRID_Cliente
-    Public contedor As Frm_Principal
-    Public Overrides Function Buscar(busca As String) As Object
+    Public Overrides Function Buscar(busca As String)
         Select Case Cb_Columnas.SelectedIndex
             Case 0
                 Return MyBase.Buscar(" AND idCliente Like'%" & Txt_Filtrar.Text & "%'")
@@ -27,9 +26,31 @@
         Dim Nuevo As New Frm_CrearCliente()
         Nuevo.PADRE = Me
         Nuevo.UPDATES = False
-        Nuevo.MdiParent = contedor
-        Nuevo.Text = "Nuevo Usuario"
+        Nuevo.MdiParent = Me.MdiParent
+        Nuevo.Text = "Nuevo Cliente"
         Nuevo.Show()
         MyBase.CrearInsert()
     End Sub
+
+    Public Overrides Function Ver() As Integer
+        Dim Nuevo As New Frm_MostrarCliente()
+        Dim tmp As DataTable
+        Nuevo.MdiParent = Me.MdiParent
+        Nuevo.Text = "Detalle de Cliente # "
+        If MyBase.Ver() <> 0 Then
+            tmp = BuscarDatos("idCliente =" & MyBase.Ver())
+            Nuevo.txtClienteID.Text = tmp.Rows(0)(0).ToString
+            Nuevo.Text += tmp.Rows(0)(0).ToString
+            Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString
+            Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
+            Nuevo.N_Descuento.Value = (tmp.Rows(0)(3) * 100).ToString
+            Nuevo.N_Credito.Value = tmp.Rows(0)(4).ToString
+            Nuevo.txtTelefono.Text = tmp.Rows(0)(5).ToString
+            Nuevo.txtCorreo.Text = tmp.Rows(0)(6).ToString
+            Nuevo.txtDireccion.Text = tmp.Rows(0)(7).ToString
+            Nuevo.Show()
+            Return 1
+        End If
+        Return 0
+    End Function
 End Class

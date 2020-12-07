@@ -19,7 +19,23 @@ Partial Class Frm_MostrarCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Frm_MostrarCliente
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.ClientSize = New System.Drawing.Size(475, 453)
+        Me.Name = "Frm_MostrarCliente"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
 End Class

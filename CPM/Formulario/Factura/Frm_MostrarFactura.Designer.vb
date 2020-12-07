@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Frm_EditarFactura
+Partial Class Frm_MostrarFactura
     Inherits LibreriaCPM.Plantilla_Facturacion
 
     'Form invalida a Dispose para limpiar la lista de componentes.

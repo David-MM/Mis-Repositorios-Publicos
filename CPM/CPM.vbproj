@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formulario\Factura\Frm_MostrarFactura.Designer.vb">
+      <DependentUpon>Frm_MostrarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Factura\Frm_MostrarFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\Formularios Padres\Frm_GRID_Padre.Designer.vb">
       <DependentUpon>Frm_GRID_Padre.vb</DependentUpon>
     </Compile>
@@ -83,12 +89,6 @@
       <DependentUpon>Frm_CrearFactura.vb</DependentUpon>
     </Compile>
     <Compile Include="Formulario\Factura\Frm_CrearFactura.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario\Factura\Frm_EditarFactura.Designer.vb">
-      <DependentUpon>Frm_EditarFactura.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario\Factura\Frm_EditarFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario\Frm_GRID_Cliente.Designer.vb">
@@ -165,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Inventario\Frm_CrearCliente.resx">
       <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Inventario\Frm_MostrarCliente.resx">
+      <DependentUpon>Frm_MostrarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

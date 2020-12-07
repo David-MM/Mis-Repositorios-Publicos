@@ -5,7 +5,7 @@ Public Class Plantilla_Facturacion
     Private ListaColumnas As ArrayList
     Private dt As DataTable
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -87,6 +87,10 @@ Public Class Plantilla_Facturacion
             End If
         Next
     End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("En Proceso....")
+    End Sub
 #End Region
 
 End Class

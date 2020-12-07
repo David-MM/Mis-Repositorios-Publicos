@@ -43,20 +43,19 @@ Partial Class Frm_GRID_Padre
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(174, 70)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(232, 86)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 20)
+        Me.Label1.Size = New System.Drawing.Size(86, 25)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Buscar:"
         '
         'Txt_Filtrar
         '
         Me.Txt_Filtrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Filtrar.Location = New System.Drawing.Point(239, 66)
-        Me.Txt_Filtrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Filtrar.Location = New System.Drawing.Point(319, 81)
+        Me.Txt_Filtrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Txt_Filtrar.Name = "Txt_Filtrar"
-        Me.Txt_Filtrar.Size = New System.Drawing.Size(526, 29)
+        Me.Txt_Filtrar.Size = New System.Drawing.Size(700, 34)
         Me.Txt_Filtrar.TabIndex = 31
         '
         'Cb_Columnas
@@ -65,10 +64,10 @@ Partial Class Frm_GRID_Padre
         Me.Cb_Columnas.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Cb_Columnas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cb_Columnas.FormattingEnabled = True
-        Me.Cb_Columnas.Location = New System.Drawing.Point(14, 63)
-        Me.Cb_Columnas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cb_Columnas.Location = New System.Drawing.Point(19, 78)
+        Me.Cb_Columnas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cb_Columnas.Name = "Cb_Columnas"
-        Me.Cb_Columnas.Size = New System.Drawing.Size(145, 32)
+        Me.Cb_Columnas.Size = New System.Drawing.Size(192, 37)
         Me.Cb_Columnas.TabIndex = 30
         '
         'Btn_Cerrar
@@ -76,10 +75,10 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Cerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Btn_Cerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Cerrar.Location = New System.Drawing.Point(796, 511)
-        Me.Btn_Cerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Cerrar.Location = New System.Drawing.Point(1061, 629)
+        Me.Btn_Cerrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Cerrar.Name = "Btn_Cerrar"
-        Me.Btn_Cerrar.Size = New System.Drawing.Size(132, 36)
+        Me.Btn_Cerrar.Size = New System.Drawing.Size(176, 44)
         Me.Btn_Cerrar.TabIndex = 29
         Me.Btn_Cerrar.Text = "Cerrar"
         Me.Btn_Cerrar.UseVisualStyleBackColor = True
@@ -91,24 +90,23 @@ Partial Class Frm_GRID_Padre
         Me.Tabla.AllowUserToResizeRows = False
         Me.Tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Tabla.Location = New System.Drawing.Point(14, 99)
-        Me.Tabla.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Tabla.Location = New System.Drawing.Point(19, 122)
+        Me.Tabla.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Tabla.Name = "Tabla"
         Me.Tabla.ReadOnly = True
         Me.Tabla.RowHeadersWidth = 51
         Me.Tabla.RowTemplate.Height = 24
-        Me.Tabla.Size = New System.Drawing.Size(750, 448)
+        Me.Tabla.Size = New System.Drawing.Size(1000, 551)
         Me.Tabla.TabIndex = 23
         '
         'Titulo
         '
         Me.Titulo.AutoSize = True
         Me.Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Titulo.Location = New System.Drawing.Point(14, 9)
-        Me.Titulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Titulo.Location = New System.Drawing.Point(19, 11)
         Me.Titulo.Name = "Titulo"
         Me.Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Titulo.Size = New System.Drawing.Size(184, 31)
+        Me.Titulo.Size = New System.Drawing.Size(222, 38)
         Me.Titulo.TabIndex = 22
         Me.Titulo.Text = "GRID PADRE"
         '
@@ -118,19 +116,20 @@ Partial Class Frm_GRID_Padre
         Me.Botones.Controls.Add(Me.Btn_Ver)
         Me.Botones.Controls.Add(Me.Btn_Modificar)
         Me.Botones.Controls.Add(Me.Btn_Crear)
-        Me.Botones.Location = New System.Drawing.Point(794, 179)
+        Me.Botones.Location = New System.Drawing.Point(1059, 220)
+        Me.Botones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Botones.Name = "Botones"
-        Me.Botones.Size = New System.Drawing.Size(141, 327)
+        Me.Botones.Size = New System.Drawing.Size(188, 402)
         Me.Botones.TabIndex = 33
         '
         'Btn_Eliminar
         '
         Me.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Btn_Eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Eliminar.Location = New System.Drawing.Point(2, 257)
-        Me.Btn_Eliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Eliminar.Location = New System.Drawing.Point(3, 316)
+        Me.Btn_Eliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Eliminar.Name = "Btn_Eliminar"
-        Me.Btn_Eliminar.Size = New System.Drawing.Size(132, 36)
+        Me.Btn_Eliminar.Size = New System.Drawing.Size(176, 44)
         Me.Btn_Eliminar.TabIndex = 32
         Me.Btn_Eliminar.Text = "Eliminar"
         Me.Btn_Eliminar.UseVisualStyleBackColor = True
@@ -139,10 +138,10 @@ Partial Class Frm_GRID_Padre
         '
         Me.Btn_Ver.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Btn_Ver.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Ver.Location = New System.Drawing.Point(2, 166)
-        Me.Btn_Ver.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Ver.Location = New System.Drawing.Point(3, 204)
+        Me.Btn_Ver.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Ver.Name = "Btn_Ver"
-        Me.Btn_Ver.Size = New System.Drawing.Size(132, 36)
+        Me.Btn_Ver.Size = New System.Drawing.Size(176, 44)
         Me.Btn_Ver.TabIndex = 31
         Me.Btn_Ver.Text = "Ver Detalle"
         Me.Btn_Ver.UseVisualStyleBackColor = True
@@ -151,10 +150,10 @@ Partial Class Frm_GRID_Padre
         '
         Me.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Btn_Modificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Modificar.Location = New System.Drawing.Point(2, 91)
-        Me.Btn_Modificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Modificar.Location = New System.Drawing.Point(3, 112)
+        Me.Btn_Modificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Modificar.Name = "Btn_Modificar"
-        Me.Btn_Modificar.Size = New System.Drawing.Size(132, 36)
+        Me.Btn_Modificar.Size = New System.Drawing.Size(176, 44)
         Me.Btn_Modificar.TabIndex = 30
         Me.Btn_Modificar.Text = "Modificar"
         Me.Btn_Modificar.UseVisualStyleBackColor = True
@@ -163,31 +162,31 @@ Partial Class Frm_GRID_Padre
         '
         Me.Btn_Crear.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Btn_Crear.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Crear.Location = New System.Drawing.Point(2, 8)
-        Me.Btn_Crear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Crear.Location = New System.Drawing.Point(3, 10)
+        Me.Btn_Crear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Crear.Name = "Btn_Crear"
-        Me.Btn_Crear.Size = New System.Drawing.Size(132, 36)
+        Me.Btn_Crear.Size = New System.Drawing.Size(176, 44)
         Me.Btn_Crear.TabIndex = 29
         Me.Btn_Crear.Text = "Crear"
         Me.Btn_Crear.UseVisualStyleBackColor = True
         '
         'Image
         '
-        Me.Image.Location = New System.Drawing.Point(769, 20)
-        Me.Image.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Image.Location = New System.Drawing.Point(1025, 25)
+        Me.Image.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Image.Name = "Image"
-        Me.Image.Size = New System.Drawing.Size(171, 154)
+        Me.Image.Size = New System.Drawing.Size(228, 190)
         Me.Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Image.TabIndex = 24
         Me.Image.TabStop = False
         '
         'Frm_GRID_Padre
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Btn_Cerrar
         Me.CausesValidation = False
-        Me.ClientSize = New System.Drawing.Size(952, 552)
+        Me.ClientSize = New System.Drawing.Size(1269, 679)
         Me.Controls.Add(Me.Txt_Filtrar)
         Me.Controls.Add(Me.Botones)
         Me.Controls.Add(Me.Label1)
@@ -197,6 +196,7 @@ Partial Class Frm_GRID_Padre
         Me.Controls.Add(Me.Tabla)
         Me.Controls.Add(Me.Titulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_GRID_Padre"
         Me.Text = "Frm_GRID_Padre"
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).EndInit()
