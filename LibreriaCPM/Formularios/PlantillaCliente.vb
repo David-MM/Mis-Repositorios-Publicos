@@ -23,11 +23,9 @@ Public Class PlantillaCliente
     End Property
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LlenarDatos()
         If Validaciones() Then
+            LlenarDatos()
             Insersion()
-        Else
-            MsgBox("Imposible Guardar los Datos." & vbCrLf & "Tiene Campos Vacios.", MsgBoxStyle.Exclamation, "Warnig")
         End If
     End Sub
 
@@ -56,37 +54,51 @@ Public Class PlantillaCliente
     End Sub
 
     Public Function Validacion_Vacias() As Boolean
+
+        Dim chequeo As Boolean = True
+
         If Len(Trim(txtRTN.Text)) = 0 Then
             txtRTN.Select()
             Label2.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(txtNombre.Text)) = 0 Then
+            chequeo = False
+        Else
+            Label2.ForeColor = Drawing.Color.Black
+        End If
+
+        If Len(Trim(txtNombre.Text)) = 0 Then
             txtNombre.Select()
             Label3.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(N_Descuento.Value)) = 0 Then
-            N_Descuento.Select()
-            Label4.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(N_Credito.Value)) = 0 Then
-            N_Credito.Select()
-            Label5.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(txtTelefono.Text)) = 0 Then
+            chequeo = False
+        Else
+            Label3.ForeColor = Drawing.Color.Black
+        End If
+
+        If Len(Trim(txtTelefono.Text)) = 0 Then
             txtTelefono.Select()
             Label6.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(txtCorreo.Text)) = 0 Then
+            chequeo = False
+        Else
+            Label6.ForeColor = Drawing.Color.Black
+        End If
+
+        If Len(Trim(txtCorreo.Text)) = 0 Then
             txtCorreo.Select()
             Label7.ForeColor = Drawing.Color.Red
-            Return False
-        ElseIf Len(Trim(txtDireccion.Text)) = 0 Then
+            chequeo = False
+        Else
+            Label7.ForeColor = Drawing.Color.Black
+        End If
+
+        If Len(Trim(txtDireccion.Text)) = 0 Then
             txtDireccion.Select()
             Label8.ForeColor = Drawing.Color.Red
-            Return False
+            chequeo = False
         Else
-            Return True
+            Label8.ForeColor = Drawing.Color.Black
         End If
+
+        Return chequeo
+
     End Function
 
     Public Overridable Sub Activos_Visibles()
@@ -95,10 +107,9 @@ Public Class PlantillaCliente
 
     Public Function Validaciones() As Boolean
         If Validacion_Vacias() Then
-            If N_Descuento.Value <= 70 And N_Descuento.Value > 0 And N_Credito.Value > 0 And N_Credito.Value <= 10000 Then
+            If N_Descuento.Value <= 70 And N_Descuento.Value >= 0 And N_Credito.Value >= 0 And N_Credito.Value <= 10000 Then
                 Return True
             Else
-                MsgBox("Imposible Guardar los Datos. " & vbCrLf & "Datos Negativos o Fuera de Limite.", MsgBoxStyle.Exclamation, "Warnig")
                 Return False
             End If
         Else

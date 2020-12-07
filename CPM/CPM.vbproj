@@ -204,5 +204,8 @@
   <ItemGroup>
     <None Include="Resources\Clientes2version2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011-to_do_list.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

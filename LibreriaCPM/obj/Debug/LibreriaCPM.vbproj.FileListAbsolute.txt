@@ -35,3 +35,15 @@ C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Deb
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.dll
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Plantilla_Facturacion.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CoreCompileInputs.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb

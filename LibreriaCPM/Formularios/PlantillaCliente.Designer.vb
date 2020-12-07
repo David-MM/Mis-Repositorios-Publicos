@@ -41,6 +41,7 @@ Partial Class PlantillaCliente
         Me.Button2 = New System.Windows.Forms.Button()
         Me.N_Descuento = New System.Windows.Forms.NumericUpDown()
         Me.N_Credito = New System.Windows.Forms.NumericUpDown()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,9 +50,10 @@ Partial Class PlantillaCliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 23)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label1.Location = New System.Drawing.Point(27, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 17)
+        Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ClienteID"
         '
@@ -63,153 +65,185 @@ Partial Class PlantillaCliente
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 172)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(21, 198)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(385, 130)
-        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.Size = New System.Drawing.Size(421, 149)
+        Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de Contacto"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(170, 88)
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtDireccion.Location = New System.Drawing.Point(224, 98)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(191, 22)
-        Me.txtDireccion.TabIndex = 12
+        Me.txtDireccion.Size = New System.Drawing.Size(176, 27)
+        Me.txtDireccion.TabIndex = 8
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(16, 91)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label6.Location = New System.Drawing.Point(24, 101)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(67, 17)
+        Me.Label6.Size = New System.Drawing.Size(81, 20)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Direccion"
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(170, 60)
+        Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtCorreo.Location = New System.Drawing.Point(224, 65)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(191, 22)
-        Me.txtCorreo.TabIndex = 11
+        Me.txtCorreo.Size = New System.Drawing.Size(176, 27)
+        Me.txtCorreo.TabIndex = 7
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(170, 32)
+        Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtTelefono.Location = New System.Drawing.Point(224, 32)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(191, 22)
-        Me.txtTelefono.TabIndex = 10
+        Me.txtTelefono.Size = New System.Drawing.Size(176, 27)
+        Me.txtTelefono.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(16, 63)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label7.Location = New System.Drawing.Point(24, 68)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 17)
+        Me.Label7.Size = New System.Drawing.Size(149, 20)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Correo Electronico"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(16, 35)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label8.Location = New System.Drawing.Point(24, 35)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 17)
+        Me.Label8.Size = New System.Drawing.Size(73, 20)
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "Telefono"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(56, 308)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(85, 353)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(145, 43)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 9
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'txtClienteID
         '
-        Me.txtClienteID.Location = New System.Drawing.Point(182, 20)
+        Me.txtClienteID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtClienteID.Location = New System.Drawing.Point(227, 20)
         Me.txtClienteID.Name = "txtClienteID"
-        Me.txtClienteID.Size = New System.Drawing.Size(215, 22)
+        Me.txtClienteID.ReadOnly = True
+        Me.txtClienteID.Size = New System.Drawing.Size(215, 27)
         Me.txtClienteID.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 51)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label2.Location = New System.Drawing.Point(27, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 17)
+        Me.Label2.Size = New System.Drawing.Size(43, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "RTN"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 79)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label3.Location = New System.Drawing.Point(27, 89)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(153, 17)
+        Me.Label3.Size = New System.Drawing.Size(182, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Razon Social / Nombre"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 107)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label4.Location = New System.Drawing.Point(27, 121)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 17)
+        Me.Label4.Size = New System.Drawing.Size(122, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Descuento (&%)"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 135)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Label5.Location = New System.Drawing.Point(27, 154)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(114, 17)
+        Me.Label5.Size = New System.Drawing.Size(137, 20)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Limite de Credito"
         '
         'txtRTN
         '
-        Me.txtRTN.Location = New System.Drawing.Point(182, 48)
+        Me.txtRTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtRTN.Location = New System.Drawing.Point(227, 53)
         Me.txtRTN.Name = "txtRTN"
-        Me.txtRTN.Size = New System.Drawing.Size(215, 22)
-        Me.txtRTN.TabIndex = 8
+        Me.txtRTN.Size = New System.Drawing.Size(215, 27)
+        Me.txtRTN.TabIndex = 1
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(182, 76)
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.txtNombre.Location = New System.Drawing.Point(227, 86)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(215, 22)
-        Me.txtNombre.TabIndex = 9
+        Me.txtNombre.Size = New System.Drawing.Size(215, 27)
+        Me.txtNombre.TabIndex = 2
         '
         'Button2
         '
         Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button2.Location = New System.Drawing.Point(216, 308)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(245, 353)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(145, 43)
-        Me.Button2.TabIndex = 12
+        Me.Button2.TabIndex = 10
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'N_Descuento
         '
-        Me.N_Descuento.Location = New System.Drawing.Point(183, 107)
+        Me.N_Descuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.N_Descuento.Location = New System.Drawing.Point(229, 119)
         Me.N_Descuento.Maximum = New Decimal(New Integer() {70, 0, 0, 0})
         Me.N_Descuento.Name = "N_Descuento"
-        Me.N_Descuento.Size = New System.Drawing.Size(214, 22)
-        Me.N_Descuento.TabIndex = 13
+        Me.N_Descuento.Size = New System.Drawing.Size(214, 27)
+        Me.N_Descuento.TabIndex = 3
+        Me.N_Descuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'N_Credito
         '
         Me.N_Credito.DecimalPlaces = 2
-        Me.N_Credito.Location = New System.Drawing.Point(184, 135)
+        Me.N_Credito.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.N_Credito.Location = New System.Drawing.Point(229, 152)
         Me.N_Credito.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.N_Credito.Name = "N_Credito"
-        Me.N_Credito.Size = New System.Drawing.Size(214, 22)
-        Me.N_Credito.TabIndex = 14
+        Me.N_Credito.Size = New System.Drawing.Size(214, 27)
+        Me.N_Credito.TabIndex = 4
+        Me.N_Credito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Button3
+        '
+        Me.Button3.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(85, 402)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(305, 33)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Estado de cuentas"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'PlantillaCliente
         '
@@ -217,7 +251,8 @@ Partial Class PlantillaCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Button2
-        Me.ClientSize = New System.Drawing.Size(419, 376)
+        Me.ClientSize = New System.Drawing.Size(475, 453)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.N_Credito)
         Me.Controls.Add(Me.N_Descuento)
         Me.Controls.Add(Me.Button2)
@@ -231,7 +266,9 @@ Partial Class PlantillaCliente
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "PlantillaCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PlantillaCliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -260,4 +297,5 @@ Partial Class PlantillaCliente
     Public WithEvents Button2 As Windows.Forms.Button
     Public WithEvents N_Descuento As Windows.Forms.NumericUpDown
     Public WithEvents N_Credito As Windows.Forms.NumericUpDown
+    Public WithEvents Button3 As Windows.Forms.Button
 End Class

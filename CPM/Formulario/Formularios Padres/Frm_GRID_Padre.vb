@@ -82,6 +82,20 @@ Public Class Frm_GRID_Padre
         End If
     End Sub
 
+    Private Sub CambiarEstado(valor As String, campo_where As String)
+        If Tabla.SelectedRows.Count = 0 Then
+            MsgBox("Selecciona una fila para Eliminarla", MsgBoxStyle.Critical, "Warnig")
+        Else
+            Dim i = Tabla.CurrentRow.Cells(0).Value
+            Dim x = MsgBox("¿Seguro que quieres eliminar esta factura?", MsgBoxStyle.Question, "Warnig")
+            If (x.ToString() = "Cancel") Then ' Si Then la variable x devuelver el boton Cancelar
+                MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
+                Return 'Retornaremos y no removeremos nada
+            End If
+            claseConexion.CambiodeEstado(valor, "where " & campo_where & " = " & i)
+        End If
+    End Sub
+
     Public Function Modificara(modificar As Boolean) As Integer
         'Tabla.SelectedRows.Count = 0
         If modificar Then

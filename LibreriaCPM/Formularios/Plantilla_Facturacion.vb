@@ -27,7 +27,6 @@ Public Class Plantilla_Facturacion
         ListaColumnas.Add("IdProducto")
         ListaColumnas.Add("Codigo")
         LlenarCombo(cmbCodBarra, claseConexion.Read("Producto", ListaColumnas, "where Estado_Delete = 1 "))
-
     End Sub
 
 #Region "Funciones herededas sobreescribibles"

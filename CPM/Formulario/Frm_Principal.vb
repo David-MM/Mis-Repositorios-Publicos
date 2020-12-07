@@ -99,6 +99,7 @@ Public Class Frm_Principal
         If EstaAbierto("Factura") Then
         Else
             grid = New Frm_GRID_Factura()
+            grid.Image.Image = CPM.My.Resources.factura
             grid.Text = "Factura"
             grid.Titulo.Text = "Listado de Facturas"
             grid.MdiParent = Me
@@ -114,7 +115,9 @@ Public Class Frm_Principal
             grid.ListCombo.Add("Cliente")
             grid.NOMBRETABLA = "Factura AS F"
             grid.WHERELOAD = " F.Estado <> 'A'"
-            grid.Btn_Eliminar.Visible = False
+            grid.Btn_Modificar.Visible = False
+            grid.Btn_Eliminar.Text = "Anular"
+            grid.CAMPODELETE = "idFactura"
             grid.Show()
         End If
     End Sub

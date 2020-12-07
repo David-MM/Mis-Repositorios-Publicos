@@ -61,3 +61,21 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe.config
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.pdb
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.xml
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\LibreriaCPM.dll
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\LibreriaCPM.pdb
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\LibreriaCPM.xml
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Resources.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.exe
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.xml
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.pdb
