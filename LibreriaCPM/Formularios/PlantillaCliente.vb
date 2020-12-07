@@ -1,5 +1,8 @@
 ﻿Public Class PlantillaCliente
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
         If Len(Trim(txtClienteID.Text)) = 0 Then
             MsgBox("Ingrese un ID", MsgBoxStyle.Exclamation)
             txtClienteID.Focus()
@@ -25,7 +28,9 @@
             MsgBox("Ingrese la direccion del cliente", MsgBoxStyle.Exclamation)
             txtDireccion.Focus()
         End If
+    End Sub
 
+    Public Overridable Sub Insertar()
 
     End Sub
 End Class

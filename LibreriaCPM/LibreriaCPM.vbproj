@@ -67,12 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnect.vb" />
-    <Compile Include="Formularios\GRID.Designer.vb">
-      <DependentUpon>GRID.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\GRID.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Plantilla_Facturacion.Designer.vb">
       <DependentUpon>Plantilla_Facturacion.vb</DependentUpon>
     </Compile>
@@ -102,9 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\GRID.resx">
-      <DependentUpon>GRID.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PlantillaCliente.resx">
       <DependentUpon>PlantillaCliente.vb</DependentUpon>
     </EmbeddedResource>

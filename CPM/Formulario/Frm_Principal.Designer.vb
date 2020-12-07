@@ -30,7 +30,6 @@ Partial Class Frm_Principal
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Facturacion = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PruebasEnElGridToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,6 +39,7 @@ Partial Class Frm_Principal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.InventarioMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class Frm_Principal
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.VentasToolStripMenuItem, Me.HelpMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.InventarioMenuItem, Me.VentasToolStripMenuItem, Me.HelpMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -59,15 +59,15 @@ Partial Class Frm_Principal
         'WindowsMenu
         '
         Me.WindowsMenu.Name = "WindowsMenu"
-        Me.WindowsMenu.Size = New System.Drawing.Size(89, 24)
-        Me.WindowsMenu.Text = "Inventario"
+        Me.WindowsMenu.Size = New System.Drawing.Size(141, 24)
+        Me.WindowsMenu.Text = "&Ventanas Abiertas"
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.Facturacion, Me.PruebasEnElGridToolStripMenuItem})
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.Facturacion})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
+        Me.VentasToolStripMenuItem.Text = "&Ventas"
         '
         'CrearFacturasToolStripMenuItem1
         '
@@ -80,12 +80,6 @@ Partial Class Frm_Principal
         Me.Facturacion.Name = "Facturacion"
         Me.Facturacion.Size = New System.Drawing.Size(224, 26)
         Me.Facturacion.Text = "Facturación"
-        '
-        'PruebasEnElGridToolStripMenuItem
-        '
-        Me.PruebasEnElGridToolStripMenuItem.Name = "PruebasEnElGridToolStripMenuItem"
-        Me.PruebasEnElGridToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.PruebasEnElGridToolStripMenuItem.Text = "Pruebas en el Grid"
         '
         'HelpMenu
         '
@@ -145,6 +139,12 @@ Partial Class Frm_Principal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
+        'InventarioMenuItem
+        '
+        Me.InventarioMenuItem.Name = "InventarioMenuItem"
+        Me.InventarioMenuItem.Size = New System.Drawing.Size(89, 24)
+        Me.InventarioMenuItem.Text = "Inventario"
+        '
         'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -154,7 +154,7 @@ Partial Class Frm_Principal
         Me.Controls.Add(Me.StatusStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Principal"
         Me.Text = "CPM_Modulo Ventas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -174,11 +174,11 @@ Partial Class Frm_Principal
     Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CrearFacturasToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Facturacion As ToolStripMenuItem
-    Friend WithEvents PruebasEnElGridToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpMenu As ToolStripMenuItem
     Friend WithEvents ContentsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IndexToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioMenuItem As ToolStripMenuItem
 End Class

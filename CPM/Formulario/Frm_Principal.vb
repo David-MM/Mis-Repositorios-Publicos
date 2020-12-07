@@ -84,7 +84,7 @@ Public Class Frm_Principal
 
     Private m_ChildFormNumber As Integer
 
-    Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasEnElGridToolStripMenuItem.Click
+    Private Sub PruebasEnElGridToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim grid As New Frm_GRID_Producto()
         grid.MdiParent = Me
         grid.LISTA.Add("*")
@@ -100,25 +100,68 @@ Public Class Frm_Principal
         f.Show()
     End Sub
 
-    Private Sub WindowsMenu_Click(sender As Object, e As EventArgs) Handles WindowsMenu.Click
-        Dim grid As New Frm_GRID_Inventario()
-        grid.Text = "Inventario"
-        grid.Titulo.Text = "Inventario de Productos"
-        grid.Botones.Visible = False
-        grid.MdiParent = Me
-        grid.Image.Image = CPM.My.Resources.Resources.inventario1
-        grid.LISTA.Add("P.Codigo As 'Codigo Barra'")
-        grid.LISTA.Add("P.Nombre As Producto")
-        grid.LISTA.Add("I.Cantidad AS Existencia")
-        grid.ListCombo.Add("Codigo de Barra")
-        grid.ListCombo.Add("Nombre Producto")
-        grid.NOMBRETABLA = "Inventario AS I INNER JOIN Produto AS P ON P.idProducto=I.idProducto"
-        grid.CAMPODELETE = "I.idInventario"
-        grid.WHERELOAD = "I.Estado_Delete=1"
-        grid.Show()
+    Private Sub CrearFacturasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CrearFacturasToolStripMenuItem1.Click
+        Dim grid As Frm_GRID_Cliente
+        If EstaAbierto("Clientes") Then
+        Else
+            grid = New Frm_GRID_Cliente()
+            grid.Text = "Clientes"
+            grid.Titulo.Text = "Listado de Clientes"
+            grid.Image.Image = CPM.My.Resources.Clientes2version2
+            grid.MdiParent = Me
+            grid.LISTA.Add("idCliente As '# Cliente'")
+            grid.LISTA.Add("RTN")
+            grid.LISTA.Add("R_Social As Nombre")
+            grid.LISTA.Add("Descuento_Sugerido As Descuento")
+            grid.LISTA.Add("L_Credito As 'Limite-Credito'")
+            grid.LISTA.Add("Telefono")
+            grid.LISTA.Add("E_Mail")
+            grid.LISTA.Add("Direccion")
+            grid.ListCombo.Add("# Cliente")
+            grid.ListCombo.Add("Nombre")
+            grid.ListCombo.Add("Descuento")
+            grid.ListCombo.Add("Limite-Credito")
+            grid.ListCombo.Add("Telefono")
+            grid.ListCombo.Add("E_Mail")
+            grid.ListCombo.Add("Direccion")
+            grid.NOMBRETABLA = "Cliente"
+            grid.CAMPODELETE = "idCliente"
+            grid.WHERELOAD = "Estado_Delete=1"
+            grid.Show()
+        End If
     End Sub
 
-    Private Sub CrearFacturasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CrearFacturasToolStripMenuItem1.Click
+    Public Function EstaAbierto(Myform As String) As Boolean
+        Dim objForm As Form
+        Dim blnAbierto As Boolean = False
+        For Each objForm In My.Application.OpenForms
+            If (Trim(objForm.Text) = Trim(Myform)) Then
+                objForm.BringToFront()
+                blnAbierto = True
+            End If
+        Next
+        Return blnAbierto
+    End Function
 
+    Private Sub Inicio_Inventario(sender As Object, e As EventArgs) Handles InventarioMenuItem.Click
+        Dim grid As Frm_GRID_Inventario
+        If EstaAbierto("Inventario") Then
+        Else
+            grid = New Frm_GRID_Inventario()
+            grid.Text = "Inventario"
+            grid.Titulo.Text = "Inventario de Productos"
+            grid.Botones.Visible = False
+            grid.MdiParent = Me
+            grid.Image.Image = CPM.My.Resources.Resources.inventario
+            grid.LISTA.Add("P.Codigo As 'Codigo Barra'")
+            grid.LISTA.Add("P.Nombre As Producto")
+            grid.LISTA.Add("I.Cantidad AS Existencia")
+            grid.ListCombo.Add("Codigo de Barra")
+            grid.ListCombo.Add("Nombre Producto")
+            grid.NOMBRETABLA = "Inventario AS I INNER JOIN Produto AS P ON P.idProducto=I.idProducto"
+            grid.CAMPODELETE = "I.idInventario"
+            grid.WHERELOAD = "I.Estado_Delete=1"
+            grid.Show()
+        End If
     End Sub
 End Class

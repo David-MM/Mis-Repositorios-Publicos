@@ -63,7 +63,7 @@ Public Class Frm_GRID_Padre
         Me.Dispose()
     End Sub
 
-    Public Overridable Sub Btn_Eliminar_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs)
         Eliminar(nametabla, 0, campo_where)
         CargarDatos()
     End Sub
@@ -109,5 +109,22 @@ Public Class Frm_GRID_Padre
     End Function
     Private Sub Txt_Filtrar_TextChanged(sender As Object, e As EventArgs) Handles Txt_Filtrar.TextChanged
         Buscar(Txt_Filtrar.Text)
+    End Sub
+
+    Private Sub Btn_Crear_Click(sender As Object, e As EventArgs) Handles Btn_Crear.Click
+        CrearInsert()
+        CargarDatos()
+    End Sub
+
+    Public Overridable Sub CrearInsert()
+
+    End Sub
+
+    Private Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
+
+    End Sub
+
+    Private Sub Btn_Ver_Click(sender As Object, e As EventArgs) Handles Btn_Ver.Click
+
     End Sub
 End Class
