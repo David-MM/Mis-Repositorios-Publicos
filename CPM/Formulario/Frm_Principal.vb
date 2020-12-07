@@ -105,6 +105,7 @@ Public Class Frm_Principal
         If EstaAbierto("Clientes") Then
         Else
             grid = New Frm_GRID_Cliente()
+            grid.contedor = Me
             grid.Text = "Clientes"
             grid.Titulo.Text = "Listado de Clientes"
             grid.Image.Image = CPM.My.Resources.Clientes2version2
@@ -158,7 +159,7 @@ Public Class Frm_Principal
             grid.LISTA.Add("I.Cantidad AS Existencia")
             grid.ListCombo.Add("Codigo de Barra")
             grid.ListCombo.Add("Nombre Producto")
-            grid.NOMBRETABLA = "Inventario AS I INNER JOIN Produto AS P ON P.idProducto=I.idProducto"
+            grid.NOMBRETABLA = "Inventario AS I INNER JOIN Producto AS P ON P.idProducto=I.idProducto"
             grid.CAMPODELETE = "I.idInventario"
             grid.WHERELOAD = "I.Estado_Delete=1"
             grid.Show()

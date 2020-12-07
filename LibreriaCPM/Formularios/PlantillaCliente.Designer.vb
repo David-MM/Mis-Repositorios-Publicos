@@ -38,10 +38,12 @@ Partial Class PlantillaCliente
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtRTN = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtCredito = New System.Windows.Forms.TextBox()
-        Me.txtDescuento = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.N_Descuento = New System.Windows.Forms.NumericUpDown()
+        Me.N_Credito = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -155,9 +157,9 @@ Partial Class PlantillaCliente
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(12, 107)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 17)
+        Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Descuento"
+        Me.Label4.Text = "Descuento (&%)"
         '
         'Label5
         '
@@ -182,22 +184,9 @@ Partial Class PlantillaCliente
         Me.txtNombre.Size = New System.Drawing.Size(215, 22)
         Me.txtNombre.TabIndex = 9
         '
-        'txtCredito
-        '
-        Me.txtCredito.Location = New System.Drawing.Point(182, 132)
-        Me.txtCredito.Name = "txtCredito"
-        Me.txtCredito.Size = New System.Drawing.Size(215, 22)
-        Me.txtCredito.TabIndex = 11
-        '
-        'txtDescuento
-        '
-        Me.txtDescuento.Location = New System.Drawing.Point(182, 104)
-        Me.txtDescuento.Name = "txtDescuento"
-        Me.txtDescuento.Size = New System.Drawing.Size(215, 22)
-        Me.txtDescuento.TabIndex = 10
-        '
         'Button2
         '
+        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button2.Location = New System.Drawing.Point(216, 308)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(145, 43)
@@ -205,14 +194,33 @@ Partial Class PlantillaCliente
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'N_Descuento
+        '
+        Me.N_Descuento.Location = New System.Drawing.Point(183, 107)
+        Me.N_Descuento.Maximum = New Decimal(New Integer() {70, 0, 0, 0})
+        Me.N_Descuento.Name = "N_Descuento"
+        Me.N_Descuento.Size = New System.Drawing.Size(214, 22)
+        Me.N_Descuento.TabIndex = 13
+        '
+        'N_Credito
+        '
+        Me.N_Credito.DecimalPlaces = 2
+        Me.N_Credito.Location = New System.Drawing.Point(184, 135)
+        Me.N_Credito.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.N_Credito.Name = "N_Credito"
+        Me.N_Credito.Size = New System.Drawing.Size(214, 22)
+        Me.N_Credito.TabIndex = 14
+        '
         'PlantillaCliente
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Button2
         Me.ClientSize = New System.Drawing.Size(419, 376)
+        Me.Controls.Add(Me.N_Credito)
+        Me.Controls.Add(Me.N_Descuento)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.txtCredito)
-        Me.Controls.Add(Me.txtDescuento)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtRTN)
         Me.Controls.Add(Me.Label5)
@@ -227,28 +235,29 @@ Partial Class PlantillaCliente
         Me.Text = "PlantillaCliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Windows.Forms.Label
-    Friend WithEvents GroupBox1 As Windows.Forms.GroupBox
     Friend WithEvents txtDireccion As Windows.Forms.TextBox
     Friend WithEvents Label6 As Windows.Forms.Label
     Friend WithEvents txtCorreo As Windows.Forms.TextBox
     Friend WithEvents txtTelefono As Windows.Forms.TextBox
     Friend WithEvents Label7 As Windows.Forms.Label
     Friend WithEvents Label8 As Windows.Forms.Label
-    Friend WithEvents Button1 As Windows.Forms.Button
-    Friend WithEvents txtClienteID As Windows.Forms.TextBox
-    Friend WithEvents Label2 As Windows.Forms.Label
-    Friend WithEvents Label3 As Windows.Forms.Label
-    Friend WithEvents Label4 As Windows.Forms.Label
-    Friend WithEvents Label5 As Windows.Forms.Label
-    Friend WithEvents txtRTN As Windows.Forms.TextBox
-    Friend WithEvents txtNombre As Windows.Forms.TextBox
-    Friend WithEvents txtCredito As Windows.Forms.TextBox
-    Friend WithEvents txtDescuento As Windows.Forms.TextBox
-    Friend WithEvents Button2 As Windows.Forms.Button
+    Public WithEvents Label1 As Windows.Forms.Label
+    Public WithEvents GroupBox1 As Windows.Forms.GroupBox
+    Public WithEvents Button1 As Windows.Forms.Button
+    Public WithEvents txtClienteID As Windows.Forms.TextBox
+    Public WithEvents Label2 As Windows.Forms.Label
+    Public WithEvents Label3 As Windows.Forms.Label
+    Public WithEvents Label4 As Windows.Forms.Label
+    Public WithEvents Label5 As Windows.Forms.Label
+    Public WithEvents txtRTN As Windows.Forms.TextBox
+    Public WithEvents txtNombre As Windows.Forms.TextBox
+    Public WithEvents Button2 As Windows.Forms.Button
+    Public WithEvents N_Descuento As Windows.Forms.NumericUpDown
+    Public WithEvents N_Credito As Windows.Forms.NumericUpDown
 End Class

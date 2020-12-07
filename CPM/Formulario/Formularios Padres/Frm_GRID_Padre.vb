@@ -63,7 +63,7 @@ Public Class Frm_GRID_Padre
         Me.Dispose()
     End Sub
 
-    Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
         Eliminar(nametabla, 0, campo_where)
         CargarDatos()
     End Sub
@@ -81,8 +81,10 @@ Public Class Frm_GRID_Padre
             claseConexion.Delete(ntabla, valor, "where " & campo_where & " = " & i)
         End If
     End Sub
-    Public Function Modificara() As Integer
-        If Tabla.SelectedRows.Count = 0 Then
+
+    Public Function Modificara(modificar As Boolean) As Integer
+        'Tabla.SelectedRows.Count = 0
+        If modificar Then
             MsgBox("Selecciona una fila para Modificarla.", MsgBoxStyle.Critical, "Warnig")
             Return 0
         Else
@@ -107,13 +109,13 @@ Public Class Frm_GRID_Padre
     Public Overridable Function Buscar(busca As String)
         Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where " & cuandoiniciar & busca)
     End Function
+
     Private Sub Txt_Filtrar_TextChanged(sender As Object, e As EventArgs) Handles Txt_Filtrar.TextChanged
         Buscar(Txt_Filtrar.Text)
     End Sub
 
     Private Sub Btn_Crear_Click(sender As Object, e As EventArgs) Handles Btn_Crear.Click
         CrearInsert()
-        CargarDatos()
     End Sub
 
     Public Overridable Sub CrearInsert()
