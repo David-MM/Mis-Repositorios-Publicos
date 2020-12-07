@@ -178,7 +178,7 @@ Public Class Plantilla_Facturacion
         For Each Fila As DataGridViewRow In Datos.Rows
             If Not Fila Is Nothing Then
                 ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-                ListaColumnas.Add(FactN)    'Pendiente
+                ListaColumnas.Add(FactN)
                 Dim A As New ArrayList
                 A.Add("idProducto")
                 A.Add("ISV_Sugerido")
@@ -188,6 +188,14 @@ Public Class Plantilla_Facturacion
                 ListaColumnas.Add(claseConexion.Read("Producto", A, "where Codigo='" & Fila.Cells(0).Value & "'").Rows(0)(1).ToString)
 
                 claseConexion.Insert("FacturaDetalle ", ListaColumnas)
+
+                'Actualizar Inventario
+                Dim Cambio As New ArrayList
+                Cambio.Add("Cantidad")
+                ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+                ListaColumnas.Add(claseConexion.Read("Inventario", Cambio, "where idProducto=" & cmbCodBarra.SelectedValue).Rows(0)(0).ToString() - Fila.Cells(3).Value)
+                claseConexion.Update("Inventario", Cambio, ListaColumnas, "where idProducto=" & cmbCodBarra.SelectedValue)
+
             End If
         Next
         MessageBox.Show("Datos almacenados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)

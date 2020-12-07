@@ -82,3 +82,6 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
