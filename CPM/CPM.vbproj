@@ -198,5 +198,8 @@
   <ItemGroup>
     <None Include="Imagenes\inventario.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clientes2version2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

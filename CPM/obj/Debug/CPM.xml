@@ -22,12 +22,12 @@ CPM
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
-<member name="P:CPM.My.Resources.Resources.inventario">
+<member name="P:CPM.My.Resources.Resources.Clientes2version2">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:CPM.My.Resources.Resources.inventario1">
+<member name="P:CPM.My.Resources.Resources.inventario">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
