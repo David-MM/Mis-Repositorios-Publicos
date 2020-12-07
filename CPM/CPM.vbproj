@@ -163,6 +163,9 @@
     <EmbeddedResource Include="Formulario\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Inventario\Frm_CrearCliente.resx">
+      <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

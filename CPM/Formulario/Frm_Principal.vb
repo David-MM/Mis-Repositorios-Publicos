@@ -124,6 +124,7 @@ Public Class Frm_Principal
         If EstaAbierto("Clientes") Then
         Else
             grid = New Frm_GRID_Cliente()
+            grid.contedor = Me
             grid.Text = "Clientes"
             grid.Titulo.Text = "Listado de Clientes"
             grid.Image.Image = CPM.My.Resources.Clientes2version2

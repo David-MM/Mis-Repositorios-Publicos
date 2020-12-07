@@ -19,7 +19,16 @@ Partial Class Frm_CrearCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'Frm_CrearCliente
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.ClientSize = New System.Drawing.Size(419, 376)
+        Me.Name = "Frm_CrearCliente"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
 End Class

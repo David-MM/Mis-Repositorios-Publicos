@@ -1,5 +1,5 @@
 ﻿Public Class Frm_GRID_Cliente
-
+    Public contedor As Frm_Principal
     Public Overrides Function Buscar(busca As String) As Object
         Select Case Cb_Columnas.SelectedIndex
             Case 0
@@ -25,6 +25,9 @@
 
     Public Overrides Sub CrearInsert()
         Dim Nuevo As New Frm_CrearCliente()
+        Nuevo.PADRE = Me
+        Nuevo.UPDATES = False
+        Nuevo.MdiParent = contedor
         Nuevo.Show()
         MyBase.CrearInsert()
     End Sub

@@ -2,7 +2,6 @@ C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\Li
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
-C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.GRID.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
 C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CoreCompileInputs.cache
