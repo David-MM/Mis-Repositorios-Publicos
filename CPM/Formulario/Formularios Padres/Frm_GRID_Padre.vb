@@ -63,7 +63,7 @@ Public Class Frm_GRID_Padre
         Me.Dispose()
     End Sub
 
-    Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
         Eliminar(nametabla, 0, campo_where)
         CargarDatos()
     End Sub
@@ -120,11 +120,4 @@ Public Class Frm_GRID_Padre
 
     End Sub
 
-    Private Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
-
-    End Sub
-
-    Private Sub Btn_Ver_Click(sender As Object, e As EventArgs) Handles Btn_Ver.Click
-
-    End Sub
 End Class

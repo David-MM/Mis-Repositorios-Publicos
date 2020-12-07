@@ -95,9 +95,28 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub Facturacion_Click(sender As Object, e As EventArgs) Handles Facturacion.Click
-        Dim f As New Plantilla_Facturacion()
-        f.MdiParent = Me
-        f.Show()
+        Dim grid As Frm_GRID_Factura
+        If EstaAbierto("Factura") Then
+        Else
+            grid = New Frm_GRID_Factura()
+            grid.Text = "Factura"
+            grid.Titulo.Text = "Listado de Facturas"
+            grid.MdiParent = Me
+            grid.LISTA.Add("F.idFactura As '# Factura'")
+            grid.LISTA.Add("F.Fecha")
+            grid.LISTA.Add("(SELECT C.RTN FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS RTN")
+            grid.LISTA.Add("(SELECT C.R_Social FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS Cliente")
+            grid.LISTA.Add("(SELECT ROUND(sum((FD.Precio*FD.Cantidad)*(FD.Isv+1))*(1-F.Descuento),2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as Total")
+
+            grid.ListCombo.Add("# Factura")
+            grid.ListCombo.Add("Fecha")
+            grid.ListCombo.Add("RTN")
+            grid.ListCombo.Add("Cliente")
+            grid.NOMBRETABLA = "Factura AS F"
+            grid.WHERELOAD = " F.Estado <> 'A'"
+            grid.Btn_Eliminar.Visible = False
+            grid.Show()
+        End If
     End Sub
 
     Private Sub CrearFacturasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CrearFacturasToolStripMenuItem1.Click
@@ -118,6 +137,7 @@ Public Class Frm_Principal
             grid.LISTA.Add("E_Mail")
             grid.LISTA.Add("Direccion")
             grid.ListCombo.Add("# Cliente")
+            grid.ListCombo.Add("RTN")
             grid.ListCombo.Add("Nombre")
             grid.ListCombo.Add("Descuento")
             grid.ListCombo.Add("Limite-Credito")
@@ -158,7 +178,7 @@ Public Class Frm_Principal
             grid.LISTA.Add("I.Cantidad AS Existencia")
             grid.ListCombo.Add("Codigo de Barra")
             grid.ListCombo.Add("Nombre Producto")
-            grid.NOMBRETABLA = "Inventario AS I INNER JOIN Produto AS P ON P.idProducto=I.idProducto"
+            grid.NOMBRETABLA = "Inventario AS I INNER JOIN Producto AS P ON P.idProducto=I.idProducto"
             grid.CAMPODELETE = "I.idInventario"
             grid.WHERELOAD = "I.Estado_Delete=1"
             grid.Show()

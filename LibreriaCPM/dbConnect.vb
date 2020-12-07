@@ -64,6 +64,7 @@ Public Class dbConnect
         For index = 0 To (Lts_Columnas.Count - 1)
             cadena += Lts_Columnas(index).ToString & IIf(index = (Lts_Columnas.Count - 1), " ", ",")
         Next
+
         cadena += "From " & Tabla & " " & where
         comando = New SqlCommand(cadena, Conectar)
         Dim adapter As New SqlDataAdapter(comando)

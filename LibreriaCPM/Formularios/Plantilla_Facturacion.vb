@@ -20,13 +20,13 @@ Public Class Plantilla_Facturacion
         ListaColumnas = New ArrayList
         ListaColumnas.Add("IDcliente")
         ListaColumnas.Add("R_Social")
-        LlenarCombo(cmbCli, claseConexion.Read("CPM.Cliente", ListaColumnas, "where Estado_Delete = 1 "))
+        LlenarCombo(cmbCli, claseConexion.Read("Cliente", ListaColumnas, "where Estado_Delete = 1 "))
 
         'Dim ListaColumnas2 As New ArrayList
         ListaColumnas.RemoveRange(0, ListaColumnas.Count)
         ListaColumnas.Add("IdProducto")
         ListaColumnas.Add("Codigo")
-        LlenarCombo(cmbCodBarra, claseConexion.Read("CPM.Produto", ListaColumnas, "where Estado_Delete = 1 "))
+        LlenarCombo(cmbCodBarra, claseConexion.Read("Producto", ListaColumnas, "where Estado_Delete = 1 "))
 
     End Sub
 
