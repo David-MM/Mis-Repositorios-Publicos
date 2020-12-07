@@ -26,23 +26,6 @@ C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.v
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.exe
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.xml
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.pdb
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.exe.config
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.exe
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.pdb
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.xml
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.dll
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.pdb
-C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.xml
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Resources.resources
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.exe
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe.config
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.pdb
@@ -80,5 +63,22 @@ C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.exe.config
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.exe
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\CPM.xml
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.dll
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.pdb
+C:\Users\aleon\Documents\GitHub\CPM\CPM\bin\Debug\LibreriaCPM.xml
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Resources.resources
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.exe
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
