@@ -9,38 +9,49 @@
                 Return MyBase.Buscar(" AND (SELECT C.RTN FROM Cliente as C WHERE C.idCliente=F.ClientesID) Like'%" & Txt_Filtrar.Text & "%'")
             Case 3
                 Return MyBase.Buscar(" AND (SELECT C.R_Social FROM Cliente as C WHERE C.idCliente=F.ClientesID) Like'%" & Txt_Filtrar.Text & "%'")
+            Case 4
+                Return MyBase.Buscar(" AND Tipo Like'%" & Txt_Filtrar.Text & "%'") 'Falta arreglar
             Case Else
                 MsgBox("La cago en el switch compa xD", MsgBoxStyle.Critical, "Switch-Cliente")
         End Select
     End Function
 
     Public Overrides Sub CrearInsert()
-        Dim Nuevo As New Frm_CrearFactura()
-        Nuevo.MdiParent = Me.MdiParent
-        Nuevo.Text = "Nueva Factura"
-        Nuevo.Show()
-        MyBase.CrearInsert()
+        If EstaAbierto("Nueva Factura") Then
+        Else
+            Dim Nuevo As New Frm_CrearFactura()
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.Text = "Nueva Factura"
+            Nuevo.PADRE = Me
+            Nuevo.Show()
+            'MyBase.CrearInsert()
+        End If
     End Sub
 
     Public Overrides Function Ver() As Integer
-        Dim Nuevo As New Frm_MostrarCliente()
-        Dim tmp As DataTable
-        Nuevo.MdiParent = Me.MdiParent
-        Nuevo.Text = "Detalle de Factura # "
+        MsgBox("En Proceso...")
+        'Dim Nuevo As New Frm_MostrarFactura()
+        'Dim tmp As DataTable
+        'Nuevo.MdiParent = Me.MdiParent
+        'Nuevo.Text = "Factura # "
         'If MyBase.Ver() <> 0 Then
         '    tmp = BuscarDatos("idFactura =" & MyBase.Ver())
-        '    Nuevo.txtClienteID.Text = tmp.Rows(0)(0).ToString
-        '    Nuevo.Text += tmp.Rows(0)(0).ToString
-        '    Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString
-        '    Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
-        '    Nuevo.N_Descuento.Value = (tmp.Rows(0)(3) * 100).ToString
-        '    Nuevo.N_Credito.Value = tmp.Rows(0)(4).ToString
-        '    Nuevo.txtTelefono.Text = tmp.Rows(0)(5).ToString
-        '    Nuevo.txtCorreo.Text = tmp.Rows(0)(6).ToString
-        '    Nuevo.txtDireccion.Text = tmp.Rows(0)(7).ToString
+        '    Nuevo.DATOS = tmp
         '    Nuevo.Show()
         '    Return 1
         'End If
-        Return 0
+        'Return 0
+    End Function
+
+    Public Function EstaAbierto(Myform As String) As Boolean
+        Dim objForm As Form
+        Dim blnAbierto As Boolean = False
+        For Each objForm In My.Application.OpenForms
+            If (Trim(objForm.Text) = Trim(Myform)) Then
+                objForm.BringToFront()
+                blnAbierto = True
+            End If
+        Next
+        Return blnAbierto
     End Function
 End Class

@@ -8,35 +8,39 @@ Public Class Plantilla_Facturacion
     Public FactN As String
 
 #Region "Eventos de Formulario"
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
+    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click, Button5.Click
         Me.Close()
     End Sub
 
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click, Button4.Click
         Limpiar()
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click, Button2.Click
         ValidarInsercionProducto()
     End Sub
 
     Private Sub Plantilla_Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Visibles_Activos()
         LlenarDatos()
     End Sub
 
-    Private Sub cmbCodBarra_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCodBarra.SelectedIndexChanged
+    Private Sub cmbCodBarra_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCodBarra.SelectedIndexChanged, ComboBox3.SelectedIndexChanged
         SeleccionarCombo(cmbProducto, cmbCodBarra)
     End Sub
 
-    Private Sub cmbProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProducto.SelectedIndexChanged
+    Private Sub cmbProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProducto.SelectedIndexChanged, ComboBox2.SelectedIndexChanged
         SeleccionarCombo(cmbCodBarra, cmbProducto)
     End Sub
 
-    Private Sub cmbCli_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCli.SelectedIndexChanged
+    Private Sub cmbCli_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCli.SelectedIndexChanged, ComboBox1.SelectedIndexChanged
         If Not (cmbCli.SelectedValue.ToString = "System.Data.DataRowView") And Not (cmbCli.SelectedValue.ToString = "0") Then
             ListaColumnas.RemoveRange(0, ListaColumnas.Count)
             ListaColumnas.Add("RTN")
+            ListaColumnas.Add("Descuento_Sugerido")
             txtRTN.Text = claseConexion.Read("Cliente", ListaColumnas, "where idcliente=" & CStr(cmbCli.SelectedValue)).Rows(0)(0).ToString
+            DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(1).ToString
+            CalcularResultados()
         End If
     End Sub
 #End Region
@@ -66,13 +70,13 @@ Public Class Plantilla_Facturacion
 
     Public Overridable Function ValidarInsercionProducto()
         Dim Validar As Boolean = True
-        Dim Subtotal As Double = 0
-        Dim Impu As Double = 0
-        Dim Descuento As Double = 0
-        If Datos.Rows.Count > 0 Then
+        'Dim Subtotal As Double = 0
+        'Dim Impu As Double = 0
+        'Dim Descuento As Double = 0
+        If Datos.Rows.Count > 0 Then 'Recorre el Grid y compara si el codigo ya esta agregado
             For Each Fila As DataGridViewRow In Datos.Rows
                 If Not Fila Is Nothing Then
-                    Validar = IIf(Fila.Cells(1).Value = cmbCodBarra.Text, False, Validar)
+                    Validar = IIf(Fila.Cells(0).Value = cmbCodBarra.Text, False, Validar)
                 End If
             Next
         End If
@@ -85,20 +89,21 @@ Public Class Plantilla_Facturacion
                            claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value,
                            claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value + spnCantidad.Value * spnPrecio.Value)
 
-            For Each Fila As DataGridViewRow In Datos.Rows
-                If Not Fila Is Nothing Then
-                    Subtotal += Convert.ToDouble(Fila.Cells(4).Value) * Convert.ToDouble(Fila.Cells(3).Value)
-                    Impu += Convert.ToDouble(Fila.Cells(5).Value)
-                End If
-            Next
-            ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-            ListaColumnas.Add("Descuento_Sugerido")
-            Descuento += Subtotal * claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-            DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-            txtSubtotal.Text = Subtotal
-            txtISV.Text = Impu
-            txtDesc.Text = Descuento
-            txtTotal.Text = Subtotal + Impu - Descuento
+            'For Each Fila As DataGridViewRow In Datos.Rows
+            '    If Not Fila Is Nothing Then
+            '        Subtotal += Convert.ToDouble(Fila.Cells(4).Value) * Convert.ToDouble(Fila.Cells(3).Value)
+            '        Impu += Convert.ToDouble(Fila.Cells(5).Value)
+            '    End If
+            'Next
+            ''ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+            ''ListaColumnas.Add("Descuento_Sugerido")
+            'Descuento += Subtotal * DescuentoCli 'claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
+            ''DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
+            'txtSubtotal.Text = Subtotal
+            'txtISV.Text = Impu
+            'txtDesc.Text = Descuento
+            'txtTotal.Text = Subtotal + Impu - Descuento
+            CalcularResultados()
         Else
             MessageBox.Show("Articulo ya añadido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -133,6 +138,14 @@ Public Class Plantilla_Facturacion
         ListaColumnas.Add("Nombre")
         LlenarCombo(cmbProducto, claseConexion.Read("Producto", ListaColumnas, "where Estado_Delete = 1"))
     End Function
+
+    Public Overridable Sub ActualizarTabla()
+
+    End Sub
+
+    Public Overridable Sub Visibles_Activos()
+
+    End Sub
 
     Public Overridable Function SeleccionarCombo(cmbC As ComboBox, cmb As ComboBox)
         If cmbC.Items.Count > 0 And cmb.Items.Count > 0 Then
@@ -180,6 +193,7 @@ Public Class Plantilla_Facturacion
         MessageBox.Show("Datos almacenados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Datos.Rows.Clear()
         LlenarDatos()
+        ActualizarTabla()
     End Function
 
 #End Region
@@ -203,9 +217,33 @@ Public Class Plantilla_Facturacion
         Next
     End Function
 
-    Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
+    Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click, Button3.Click
         Guardar()
     End Sub
+
+    Public Sub CalcularResultados()
+        Dim Subtotal As Double = 0
+        Dim Impu As Double = 0
+        Dim Descuento As Double = 0
+        For Each Fila As DataGridViewRow In Datos.Rows
+            If Not Fila Is Nothing Then
+                Subtotal += Convert.ToDouble(Fila.Cells(4).Value) * Convert.ToDouble(Fila.Cells(3).Value)
+                Impu += Convert.ToDouble(Fila.Cells(5).Value)
+            End If
+        Next
+        'ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+        'ListaColumnas.Add("Descuento_Sugerido")
+        Descuento += Subtotal * DescuentoCli 'claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
+        'DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
+        txtSubtotal.Text = Subtotal
+        txtISV.Text = Impu
+        txtDesc.Text = Descuento
+        txtTotal.Text = Subtotal + Impu - Descuento
+    End Sub
+
+    Public Function Consultar(Tabla As String, Columnas As ArrayList, where As String) As DataTable
+        Return claseConexion.Read(Tabla, Columnas, "where " & where)
+    End Function
 #End Region
 
 End Class
