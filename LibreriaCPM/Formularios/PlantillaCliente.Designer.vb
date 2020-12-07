@@ -228,7 +228,7 @@ Partial Class PlantillaCliente
         Me.N_Credito.DecimalPlaces = 2
         Me.N_Credito.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.N_Credito.Location = New System.Drawing.Point(229, 152)
-        Me.N_Credito.Maximum = New Decimal(New Integer() {20000, 0, 0, 0})
+        Me.N_Credito.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.N_Credito.Name = "N_Credito"
         Me.N_Credito.Size = New System.Drawing.Size(214, 27)
         Me.N_Credito.TabIndex = 4

@@ -75,7 +75,8 @@ Public Class Frm_GRID_Padre
 
     Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
         If factura Then
-            CambiarEstado("'A'", campo_where)
+            'CambiarEstado("'A'", campo_where)
+            MsgBox("En Proceso...")
         Else
             Eliminar(nametabla, 0, campo_where)
         End If
