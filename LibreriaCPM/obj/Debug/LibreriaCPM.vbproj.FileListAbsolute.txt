@@ -2,7 +2,6 @@ C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Deb
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.pdb
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\LibreriaCPM.xml
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.GRID.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaCliente.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.Resources.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.GenerateResource.cache
