@@ -1,16 +1,6 @@
 ﻿Public Class Frm_CrearCliente
     Private father As Frm_GRID_Cliente
     Private claseConexion As New LibreriaCPM.dbConnect()
-    Private modificar As Boolean
-
-    Public Property UPDATES As Boolean
-        Get
-            Return modificar
-        End Get
-        Set(ByVal value As Boolean)
-            modificar = value
-        End Set
-    End Property
 
     Public Property PADRE As Frm_GRID_Cliente
         Get
@@ -26,17 +16,13 @@
     End Sub
 
     Public Overrides Sub Insersion()
-        If modificar Then
-
-        Else
-            Try
-                claseConexion.Insert("Cliente", DATOS)
-                father.CargarDatos()
-                Me.Dispose()
-            Catch ex As Exception
-                MsgBox("Ahh manco, no podes insertar")
-            End Try
-        End If
+        Try
+            claseConexion.Insert("Cliente", DATOS)
+            father.CargarDatos()
+            Me.Dispose()
+        Catch ex As Exception
+            MsgBox("Ahh manco, no podes insertar")
+        End Try
     End Sub
 
     Public Overrides Sub Activos_Visibles()

@@ -25,26 +25,51 @@
     End Sub
 
     Public Overrides Function Modificara() As Integer
-        Dim Nuevo As New Frm_EditarProducto()
-        Dim tmp As DataTable
-        Nuevo.MdiParent = Me.MdiParent
-        Nuevo.Text = "Detalle de Producto # "
-        If MyBase.Modificara() <> 0 Then
-            Try
-                tmp = BuscarDatos("idProducto =" & MyBase.Modificara())
+        Dim Valor As Integer = MyBase.Modificara()
+        If EstaAbierto("Detalle de Producto # " & Valor) Then
+        Else
+            Dim Nuevo As New Frm_EditarProducto()
+            Dim tmp As DataTable
+            Nuevo.ID = Valor
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.PADRE = Me
+            Nuevo.Text = "Detalle de Producto # "
+            If Valor <> 0 Then
+                tmp = BuscarDatos("idProducto =" & Valor)
                 Nuevo.Text += tmp.Rows(0)(0).ToString
                 Nuevo.txtCodigo.Text = tmp.Rows(0)(1).ToString
                 Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
-                Nuevo.spinnerPrecio.Value = (tmp.Rows(0)(3) * 100).ToString
-                Nuevo.spinnerISV.Value = tmp.Rows(0)(4).ToString
+                Nuevo.spinnerPrecio.Value = tmp.Rows(0)(3).ToString
+                Nuevo.spinnerISV.Value = (tmp.Rows(0)(4) * 100).ToString
                 Nuevo.txtDescripcion.Text = tmp.Rows(0)(5).ToString
                 Nuevo.Show()
                 Return 1
-            Catch ex As Exception
-                Return 0
-            End Try
+            End If
         End If
         Return 0
+    End Function
+
+    Public Overrides Function Ver() As Integer
+        Dim Valor As Integer = MyBase.Ver()
+        If EstaAbierto("Detalle de Producto # " & Valor) Then
+        Else
+            Dim Nuevo As New Frm_MostrarProducto()
+            Dim tmp As DataTable
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.Text = "Detalle de Cliente # "
+            If Valor <> 0 Then
+                tmp = BuscarDatos("idProducto =" & Valor)
+                Nuevo.Text += tmp.Rows(0)(0).ToString
+                Nuevo.txtCodigo.Text = tmp.Rows(0)(1).ToString
+                Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
+                Nuevo.spinnerPrecio.Value = tmp.Rows(0)(3).ToString
+                Nuevo.spinnerISV.Value = (tmp.Rows(0)(4) / 100).ToString
+                Nuevo.txtDescripcion.Text = tmp.Rows(0)(5).ToString
+                Nuevo.Show()
+                Return 1
+            End If
+            Return 0
+        End If
     End Function
 
     Public Function EstaAbierto(Myform As String) As Boolean

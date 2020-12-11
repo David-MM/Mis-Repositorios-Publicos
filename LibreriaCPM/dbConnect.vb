@@ -42,7 +42,7 @@ Public Class dbConnect
     Public Sub Update(Tabla As String, Lts_Columnas As ArrayList, Lts_Datos As ArrayList, where As String)
         Dim cadena As String = "update " & Tabla & " set "
         For index = 0 To (Lts_Datos.Count - 1)
-            cadena += Lts_Columnas(index).ToString & " = " & Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), " " & where, ",")
+            cadena += Lts_Columnas(index).ToString & " = " & Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), " " & where, " , ")
         Next
         comando = New SqlCommand(cadena, Conectar)
         comando.ExecuteNonQuery()

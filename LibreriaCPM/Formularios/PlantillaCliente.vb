@@ -33,7 +33,7 @@ Public Class PlantillaCliente
 
     End Sub
 
-    Private Sub LlenarDatos()
+    Public Sub LlenarDatos()
         Dates.Add("'" & txtRTN.Text & "'")
         Dates.Add("'" & txtNombre.Text & "'")
         Dates.Add(N_Descuento.Value / 100)

@@ -173,8 +173,6 @@ Public Class Frm_GRID_Padre
     End Function
 
     Private Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
-        If Modificara() = 0 Then
-            'Update()
-        End If
+        Modificara()
     End Sub
 End Class

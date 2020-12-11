@@ -45,3 +45,5 @@ C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaProducto.resources
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaProducto.resources

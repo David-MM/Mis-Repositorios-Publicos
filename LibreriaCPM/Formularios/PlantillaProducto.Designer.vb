@@ -64,9 +64,9 @@ Partial Class PlantillaProducto
         Me.lblISV.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.lblISV.Location = New System.Drawing.Point(23, 140)
         Me.lblISV.Name = "lblISV"
-        Me.lblISV.Size = New System.Drawing.Size(35, 20)
+        Me.lblISV.Size = New System.Drawing.Size(67, 20)
         Me.lblISV.TabIndex = 2
-        Me.lblISV.Text = "ISV"
+        Me.lblISV.Text = "ISV (%)"
         '
         'lblDescripcion
         '
@@ -119,9 +119,12 @@ Partial Class PlantillaProducto
         Me.spinnerPrecio.DecimalPlaces = 2
         Me.spinnerPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.spinnerPrecio.Location = New System.Drawing.Point(215, 105)
+        Me.spinnerPrecio.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
+        Me.spinnerPrecio.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.spinnerPrecio.Name = "spinnerPrecio"
         Me.spinnerPrecio.Size = New System.Drawing.Size(202, 27)
         Me.spinnerPrecio.TabIndex = 11
+        Me.spinnerPrecio.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'spinnerISV
         '

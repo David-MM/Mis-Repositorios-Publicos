@@ -23,34 +23,52 @@
     End Function
 
     Public Overrides Sub CrearInsert()
-        Dim Nuevo As New Frm_CrearCliente()
-        Nuevo.PADRE = Me
-        Nuevo.UPDATES = False
-        Nuevo.MdiParent = Me.MdiParent
-        Nuevo.Text = "Nuevo Cliente"
-        Nuevo.Show()
-        MyBase.CrearInsert()
+        If EstaAbierto("Nuevo Cliente") Then
+        Else
+            Dim Nuevo As New Frm_CrearCliente()
+            Nuevo.PADRE = Me
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.Text = "Nuevo Cliente"
+            Nuevo.Show()
+            MyBase.CrearInsert()
+        End If
     End Sub
 
     Public Overrides Function Ver() As Integer
-        Dim Nuevo As New Frm_MostrarCliente()
-        Dim tmp As DataTable
-        Nuevo.MdiParent = Me.MdiParent
-        Nuevo.Text = "Detalle de Cliente # "
-        If MyBase.Ver() <> 0 Then
-            tmp = BuscarDatos("idCliente =" & MyBase.Ver())
-            Nuevo.txtClienteID.Text = tmp.Rows(0)(0).ToString
-            Nuevo.Text += tmp.Rows(0)(0).ToString
-            Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString
-            Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
-            Nuevo.N_Descuento.Value = (tmp.Rows(0)(3) * 100).ToString
-            Nuevo.N_Credito.Value = tmp.Rows(0)(4).ToString
-            Nuevo.txtTelefono.Text = tmp.Rows(0)(5).ToString
-            Nuevo.txtCorreo.Text = tmp.Rows(0)(6).ToString
-            Nuevo.txtDireccion.Text = tmp.Rows(0)(7).ToString
-            Nuevo.Show()
-            Return 1
+        Dim Valor As Integer = MyBase.Ver()
+        If EstaAbierto("Nuevo Cliente") Then
+        Else
+            Dim Nuevo As New Frm_MostrarCliente()
+            Dim tmp As DataTable
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.Text = "Detalle de Cliente # "
+            If Valor <> 0 Then
+                tmp = BuscarDatos("idCliente =" & Valor)
+                Nuevo.txtClienteID.Text = tmp.Rows(0)(0).ToString
+                Nuevo.Text += tmp.Rows(0)(0).ToString
+                Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString
+                Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
+                Nuevo.N_Descuento.Value = (tmp.Rows(0)(3) * 100).ToString
+                Nuevo.N_Credito.Value = tmp.Rows(0)(4).ToString
+                Nuevo.txtTelefono.Text = tmp.Rows(0)(5).ToString
+                Nuevo.txtCorreo.Text = tmp.Rows(0)(6).ToString
+                Nuevo.txtDireccion.Text = tmp.Rows(0)(7).ToString
+                Nuevo.Show()
+                Return 1
+            End If
+            Return 0
         End If
-        Return 0
+    End Function
+
+    Public Function EstaAbierto(Myform As String) As Boolean
+        Dim objForm As Form
+        Dim blnAbierto As Boolean = False
+        For Each objForm In My.Application.OpenForms
+            If (Trim(objForm.Text) = Trim(Myform)) Then
+                objForm.BringToFront()
+                blnAbierto = True
+            End If
+        Next
+        Return blnAbierto
     End Function
 End Class
