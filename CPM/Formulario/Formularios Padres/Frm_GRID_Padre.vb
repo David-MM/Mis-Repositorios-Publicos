@@ -111,15 +111,14 @@ Public Class Frm_GRID_Padre
         End If
     End Sub
 
-    Public Function Modificara(modificar As Boolean) As Integer
-        'Tabla.SelectedRows.Count = 0
-        If modificar Then
+    Public Overridable Function Modificara() As Integer
+        If Tabla.SelectedRows.Count = 0 Then
             MsgBox("Selecciona una fila para Modificarla.", MsgBoxStyle.Critical, "Warnig")
             Return 0
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres modificar este registo?", MsgBoxStyle.Question, "Warnig")
-            If (x.ToString() = "OK") Then ' Si Then la variable x devuelver el boton Ok
+            Dim x = MsgBox("¿Seguro que quieres modificar este registo?", MsgBoxStyle.OkCancel, "Warnig")
+            If (x = 1) Then ' Si Then la variable x devuelver el boton Ok
                 Return i 'Retornaremos un valor
             Else
                 Return 0
@@ -156,6 +155,7 @@ Public Class Frm_GRID_Padre
 
     End Sub
 
+
     Private Sub Btn_Ver_Click(sender As Object, e As EventArgs) Handles Btn_Ver.Click
         If Ver() = 0 Then
             'MsgBox("No puedes ver el detalle")
@@ -171,4 +171,10 @@ Public Class Frm_GRID_Padre
             Return i 'Retornaremos un valor
         End If
     End Function
+
+    Private Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
+        If Modificara() = 0 Then
+            'Update()
+        End If
+    End Sub
 End Class

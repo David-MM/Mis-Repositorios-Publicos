@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnect.vb" />
+    <Compile Include="Formularios\PlantillaProducto.Designer.vb">
+      <DependentUpon>PlantillaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PlantillaProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Plantilla_Facturacion.Designer.vb">
       <DependentUpon>Plantilla_Facturacion.vb</DependentUpon>
     </Compile>
@@ -98,6 +104,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Formularios\PlantillaCliente.resx">
       <DependentUpon>PlantillaCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PlantillaProducto.resx">
+      <DependentUpon>PlantillaProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Plantilla_Facturacion.resx">
       <DependentUpon>Plantilla_Facturacion.vb</DependentUpon>

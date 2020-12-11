@@ -33,6 +33,7 @@ Partial Class Frm_Principal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.CrearProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -40,12 +41,12 @@ Partial Class Frm_Principal
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.InventarioMenuItem, Me.VentasToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.InventarioMenuItem, Me.VentasToolStripMenuItem, Me.CrearProductoToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
+        Me.MenuStrip.Size = New System.Drawing.Size(843, 30)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -71,13 +72,13 @@ Partial Class Frm_Principal
         'CrearFacturasToolStripMenuItem1
         '
         Me.CrearFacturasToolStripMenuItem1.Name = "CrearFacturasToolStripMenuItem1"
-        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(167, 26)
+        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.CrearFacturasToolStripMenuItem1.Text = "Clientes"
         '
         'Facturacion
         '
         Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Size = New System.Drawing.Size(167, 26)
+        Me.Facturacion.Size = New System.Drawing.Size(224, 26)
         Me.Facturacion.Text = "Facturación"
         '
         'StatusStrip
@@ -96,6 +97,12 @@ Partial Class Frm_Principal
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
         Me.ToolStripStatusLabel.Text = "Estado"
+        '
+        'CrearProductoToolStripMenuItem
+        '
+        Me.CrearProductoToolStripMenuItem.Name = "CrearProductoToolStripMenuItem"
+        Me.CrearProductoToolStripMenuItem.Size = New System.Drawing.Size(83, 26)
+        Me.CrearProductoToolStripMenuItem.Text = "Producto"
         '
         'Frm_Principal
         '
@@ -127,4 +134,5 @@ Partial Class Frm_Principal
     Friend WithEvents CrearFacturasToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Facturacion As ToolStripMenuItem
     Friend WithEvents InventarioMenuItem As ToolStripMenuItem
+    Friend WithEvents CrearProductoToolStripMenuItem As ToolStripMenuItem
 End Class

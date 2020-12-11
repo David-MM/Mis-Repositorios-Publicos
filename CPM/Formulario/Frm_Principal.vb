@@ -193,4 +193,31 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
+
+    Private Sub CrearProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearProductoToolStripMenuItem.Click
+        Dim grid As Frm_GRID_Producto
+        If EstaAbierto("Clientes") Then
+        Else
+            grid = New Frm_GRID_Producto()
+            grid.Text = "Producto"
+            grid.Titulo.Text = "Listado de Producto"
+            grid.Image.Image = CPM.My.Resources.paquete
+            grid.MdiParent = Me
+            grid.LISTA.Add("idProducto As '#'")
+            grid.LISTA.Add("Codigo As '# Codigo'")
+            grid.LISTA.Add("Nombre")
+            grid.LISTA.Add("P_Sugerido As Precio")
+            grid.LISTA.Add("ISV_Sugerido As ISV")
+            grid.LISTA.Add("Descripcion")
+            grid.ListCombo.Add("# Codigo")
+            grid.ListCombo.Add("Nombre")
+            grid.ListCombo.Add("Precio")
+            grid.ListCombo.Add("ISV")
+            grid.ListCombo.Add("Descripcion")
+            grid.NOMBRETABLA = "Producto"
+            grid.CAMPODELETE = "idProducto"
+            grid.WHERELOAD = "Estado_Delete=1"
+            grid.Show()
+        End If
+    End Sub
 End Class

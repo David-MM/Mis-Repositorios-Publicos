@@ -117,7 +117,7 @@ Partial Class Frm_GRID_Padre
         Me.Botones.Controls.Add(Me.Btn_Modificar)
         Me.Botones.Controls.Add(Me.Btn_Crear)
         Me.Botones.Location = New System.Drawing.Point(1059, 220)
-        Me.Botones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Botones.Margin = New System.Windows.Forms.Padding(4)
         Me.Botones.Name = "Botones"
         Me.Botones.Size = New System.Drawing.Size(188, 402)
         Me.Botones.TabIndex = 33
@@ -196,7 +196,7 @@ Partial Class Frm_GRID_Padre
         Me.Controls.Add(Me.Tabla)
         Me.Controls.Add(Me.Titulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_GRID_Padre"
         Me.Text = "Frm_GRID_Padre"
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).EndInit()

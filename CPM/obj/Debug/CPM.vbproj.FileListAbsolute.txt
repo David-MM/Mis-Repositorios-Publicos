@@ -85,3 +85,4 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
+D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
