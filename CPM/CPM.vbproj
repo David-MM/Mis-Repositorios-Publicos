@@ -91,10 +91,10 @@
     <Compile Include="Formulario\Factura\Frm_CrearFactura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Cliente.Designer.vb">
+    <Compile Include="Formulario\Cliente\Frm_GRID_Cliente.Designer.vb">
       <DependentUpon>Frm_GRID_Cliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Frm_GRID_Cliente.vb">
+    <Compile Include="Formulario\Cliente\Frm_GRID_Cliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario\Factura\Frm_GRID_Factura.Designer.vb">
@@ -103,16 +103,16 @@
     <Compile Include="Formulario\Factura\Frm_GRID_Factura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_CrearCliente.Designer.vb">
+    <Compile Include="Formulario\Cliente\Frm_CrearCliente.Designer.vb">
       <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_CrearCliente.vb">
+    <Compile Include="Formulario\Cliente\Frm_CrearCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_EditarCliente.Designer.vb">
+    <Compile Include="Formulario\Cliente\Frm_EditarCliente.Designer.vb">
       <DependentUpon>Frm_EditarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_EditarCliente.vb">
+    <Compile Include="Formulario\Cliente\Frm_EditarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario\Inventario\Frm_GRID_Inventario.Designer.vb">
@@ -145,10 +145,10 @@
     <Compile Include="Formulario\Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_MostrarCliente.Designer.vb">
+    <Compile Include="Formulario\Cliente\Frm_MostrarCliente.Designer.vb">
       <DependentUpon>Frm_MostrarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formulario\Inventario\Frm_MostrarCliente.vb">
+    <Compile Include="Formulario\Cliente\Frm_MostrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario\Producto\Frm_MostrarProducto.Designer.vb">
@@ -181,10 +181,10 @@
     <EmbeddedResource Include="Formulario\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulario\Inventario\Frm_CrearCliente.resx">
+    <EmbeddedResource Include="Formulario\Cliente\Frm_CrearCliente.resx">
       <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulario\Inventario\Frm_MostrarCliente.resx">
+    <EmbeddedResource Include="Formulario\Cliente\Frm_MostrarCliente.resx">
       <DependentUpon>Frm_MostrarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Producto\Frm_EditarProducto.resx">
