@@ -4,10 +4,12 @@
         txtCodigo.ReadOnly = True
         txtNombre.ReadOnly = True
         txtDescripcion.ReadOnly = True
-        spinnerISV.ReadOnly = True
-        spinnerPrecio.ReadOnly = True
+        spinnerISV.Visible = False
+        spinnerPrecio.Visible = False
         btnCancelar.Visible = False
         btnGuardar.Visible = False
+        txt_Isv.ReadOnly = True
+        txt_Precio.ReadOnly = True
     End Sub
 
     Private Sub Frm_MostrarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load

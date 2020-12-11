@@ -34,6 +34,10 @@ Partial Class PlantillaProducto
         Me.spinnerISV = New System.Windows.Forms.NumericUpDown()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.Precio = New System.Windows.Forms.Label()
+        Me.ISV = New System.Windows.Forms.Label()
+        Me.txt_Precio = New System.Windows.Forms.TextBox()
+        Me.txt_Isv = New System.Windows.Forms.TextBox()
         CType(Me.spinnerPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.spinnerISV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -97,9 +101,9 @@ Partial Class PlantillaProducto
         'btnGuardar
         '
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(69, 223)
+        Me.btnGuardar.Location = New System.Drawing.Point(79, 225)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(134, 57)
+        Me.btnGuardar.Size = New System.Drawing.Size(134, 55)
         Me.btnGuardar.TabIndex = 9
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
@@ -107,9 +111,9 @@ Partial Class PlantillaProducto
         'btnCancelar
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(236, 223)
+        Me.btnCancelar.Location = New System.Drawing.Point(255, 225)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(134, 57)
+        Me.btnCancelar.Size = New System.Drawing.Size(134, 55)
         Me.btnCancelar.TabIndex = 10
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -118,21 +122,24 @@ Partial Class PlantillaProducto
         '
         Me.spinnerPrecio.DecimalPlaces = 2
         Me.spinnerPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.spinnerPrecio.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.spinnerPrecio.Location = New System.Drawing.Point(215, 105)
         Me.spinnerPrecio.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
         Me.spinnerPrecio.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.spinnerPrecio.Name = "spinnerPrecio"
         Me.spinnerPrecio.Size = New System.Drawing.Size(202, 27)
         Me.spinnerPrecio.TabIndex = 11
+        Me.spinnerPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.spinnerPrecio.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'spinnerISV
         '
         Me.spinnerISV.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.spinnerISV.Location = New System.Drawing.Point(215, 138)
+        Me.spinnerISV.Location = New System.Drawing.Point(215, 137)
         Me.spinnerISV.Name = "spinnerISV"
         Me.spinnerISV.Size = New System.Drawing.Size(202, 27)
         Me.spinnerISV.TabIndex = 12
+        Me.spinnerISV.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lblCodigo
         '
@@ -152,11 +159,53 @@ Partial Class PlantillaProducto
         Me.txtCodigo.Size = New System.Drawing.Size(202, 27)
         Me.txtCodigo.TabIndex = 14
         '
+        'Precio
+        '
+        Me.Precio.AutoSize = True
+        Me.Precio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.Precio.Location = New System.Drawing.Point(225, 107)
+        Me.Precio.Name = "Precio"
+        Me.Precio.Size = New System.Drawing.Size(0, 20)
+        Me.Precio.TabIndex = 16
+        Me.Precio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ISV
+        '
+        Me.ISV.AutoSize = True
+        Me.ISV.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.ISV.Location = New System.Drawing.Point(122, 19)
+        Me.ISV.Name = "ISV"
+        Me.ISV.Size = New System.Drawing.Size(0, 20)
+        Me.ISV.TabIndex = 17
+        Me.ISV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txt_Precio
+        '
+        Me.txt_Precio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Precio.Location = New System.Drawing.Point(216, 104)
+        Me.txt_Precio.Name = "txt_Precio"
+        Me.txt_Precio.Size = New System.Drawing.Size(200, 27)
+        Me.txt_Precio.TabIndex = 18
+        Me.txt_Precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txt_Isv
+        '
+        Me.txt_Isv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Isv.Location = New System.Drawing.Point(216, 136)
+        Me.txt_Isv.Name = "txt_Isv"
+        Me.txt_Isv.Size = New System.Drawing.Size(200, 27)
+        Me.txt_Isv.TabIndex = 19
+        Me.txt_Isv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'PlantillaProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(451, 298)
+        Me.ClientSize = New System.Drawing.Size(469, 304)
+        Me.Controls.Add(Me.txt_Isv)
+        Me.Controls.Add(Me.txt_Precio)
+        Me.Controls.Add(Me.ISV)
+        Me.Controls.Add(Me.Precio)
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.lblCodigo)
         Me.Controls.Add(Me.spinnerISV)
@@ -190,4 +239,8 @@ Partial Class PlantillaProducto
     Public WithEvents txtDescripcion As Windows.Forms.TextBox
     Public WithEvents spinnerPrecio As Windows.Forms.NumericUpDown
     Public WithEvents spinnerISV As Windows.Forms.NumericUpDown
+    Public WithEvents Precio As Windows.Forms.Label
+    Public WithEvents ISV As Windows.Forms.Label
+    Public WithEvents txt_Precio As Windows.Forms.TextBox
+    Public WithEvents txt_Isv As Windows.Forms.TextBox
 End Class

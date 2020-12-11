@@ -233,6 +233,7 @@ Partial Class PlantillaCliente
         Me.N_Credito.Size = New System.Drawing.Size(214, 27)
         Me.N_Credito.TabIndex = 4
         Me.N_Credito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.N_Credito.ThousandsSeparator = True
         '
         'Button3
         '

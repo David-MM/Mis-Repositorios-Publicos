@@ -32,5 +32,7 @@ Public Class Frm_CrearProducto
         'lblProducoId.Visible = False
         'txtProductoId.Visible = False
         'MyBase.Activos_Visibles()
+        txt_Precio.Visible = False
+        txt_Isv.Visible = False
     End Sub
 End Class

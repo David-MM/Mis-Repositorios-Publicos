@@ -45,4 +45,10 @@ Public Class Frm_EditarProducto
             End If
         End Try
     End Sub
+
+    Public Overrides Sub Activos_Visibles()
+        txt_Precio.Visible = False
+        txt_Isv.Visible = False
+    End Sub
+
 End Class

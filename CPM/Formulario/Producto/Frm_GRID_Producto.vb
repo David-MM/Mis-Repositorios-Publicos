@@ -62,8 +62,8 @@
                 Nuevo.Text += tmp.Rows(0)(0).ToString
                 Nuevo.txtCodigo.Text = tmp.Rows(0)(1).ToString
                 Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
-                Nuevo.spinnerPrecio.Value = tmp.Rows(0)(3).ToString
-                Nuevo.spinnerISV.Value = (tmp.Rows(0)(4) / 100).ToString
+                Nuevo.txt_Precio.Text = "L. " & tmp.Rows(0)(3).ToString
+                Nuevo.txt_Isv.Text = (tmp.Rows(0)(4) * 100).ToString
                 Nuevo.txtDescripcion.Text = tmp.Rows(0)(5).ToString
                 Nuevo.Show()
                 Return 1
