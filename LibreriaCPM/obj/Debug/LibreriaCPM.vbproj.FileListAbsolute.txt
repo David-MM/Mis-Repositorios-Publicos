@@ -44,3 +44,5 @@ C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.Cor
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbprojAssemblyReference.cache
+C:\Users\Developer\Documents\Industria del Software\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaInventario.resources

@@ -33,12 +33,13 @@
     End Sub
 
     Public Overrides Function Ver() As Integer
+        Dim Valor As Integer = MyBase.Ver()
         Dim Nuevo As New Frm_MostrarCliente()
         Dim tmp As DataTable
         Nuevo.MdiParent = Me.MdiParent
         Nuevo.Text = "Detalle de Cliente # "
-        If MyBase.Ver() <> 0 Then
-            tmp = BuscarDatos("idCliente =" & MyBase.Ver())
+        If Valor <> 0 Then
+            tmp = BuscarDatos("idCliente =" & Valor)
             Nuevo.txtClienteID.Text = tmp.Rows(0)(0).ToString
             Nuevo.Text += tmp.Rows(0)(0).ToString
             Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString

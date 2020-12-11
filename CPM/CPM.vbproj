@@ -115,6 +115,12 @@
     <Compile Include="Formulario\Inventario\Frm_EditarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\Inventario\Frm_EditarInventario.Designer.vb">
+      <DependentUpon>Frm_EditarInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Inventario\Frm_EditarInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\Inventario\Frm_GRID_Inventario.Designer.vb">
       <DependentUpon>Frm_GRID_Inventario.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Inventario\Frm_CrearCliente.resx">
       <DependentUpon>Frm_CrearCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Inventario\Frm_EditarInventario.resx">
+      <DependentUpon>Frm_EditarInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Inventario\Frm_MostrarCliente.resx">
       <DependentUpon>Frm_MostrarCliente.vb</DependentUpon>
