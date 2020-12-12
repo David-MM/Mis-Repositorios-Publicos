@@ -127,7 +127,6 @@ Public Class Frm_Principal
             grid.FACTURAS = True
         End If
     End Sub
-
     Private Sub CrearFacturasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CrearFacturasToolStripMenuItem1.Click
         Dim grid As Frm_GRID_Cliente
         If EstaAbierto("Clientes") Then
@@ -159,7 +158,6 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
-
     Public Function EstaAbierto(Myform As String) As Boolean
         Dim objForm As Form
         Dim blnAbierto As Boolean = False
@@ -171,7 +169,6 @@ Public Class Frm_Principal
         Next
         Return blnAbierto
     End Function
-
     Private Sub Inicio_Inventario(sender As Object, e As EventArgs) Handles InventarioMenuItem.Click
         Dim grid As Frm_GRID_Inventario
         If EstaAbierto("Inventario") Then
@@ -193,7 +190,6 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
-
     Private Sub CrearProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearProductoToolStripMenuItem.Click
         Dim grid As Frm_GRID_Producto
         If EstaAbierto("Clientes") Then
@@ -219,5 +215,12 @@ Public Class Frm_Principal
             grid.WHERELOAD = "Estado_Delete=1"
             grid.Show()
         End If
+    End Sub
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        Dim rutaCompleta As String
+        rutaCompleta = My.Computer.FileSystem.CurrentDirectory
+        Dim rutaNueva As String
+        rutaNueva = rutaCompleta.TrimEnd("b", "i", "n", "\", "D", "e", "b", "u", "g") + "\Reporte"
+        MsgBox(rutaNueva)
     End Sub
 End Class
