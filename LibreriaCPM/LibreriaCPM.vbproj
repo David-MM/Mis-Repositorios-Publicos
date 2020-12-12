@@ -78,6 +78,10 @@
       <DependentUpon>PlantillaProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\PlantillaProducto.vb">
+    <Compile Include="Formularios\PlantillaInventario.Designer.vb">
+      <DependentUpon>PlantillaInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PlantillaInventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Plantilla_Facturacion.Designer.vb">
@@ -123,6 +127,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PlantillaReporteria.resx">
       <DependentUpon>PlantillaReporteria.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\PlantillaInventario.resx">
+      <DependentUpon>PlantillaInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Plantilla_Facturacion.resx">
       <DependentUpon>Plantilla_Facturacion.vb</DependentUpon>
