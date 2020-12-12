@@ -182,7 +182,11 @@ Public Class Frm_Principal
             grid.Btn_Crear.Visible = False
             grid.Btn_Eliminar.Visible = False
             grid.Btn_Ver.Visible = False
-            grid.Btn_Modificar.Text = "Aumentar E."
+            grid.Btn_Modificar.Text = "Aumentar Existencias"
+            Dim size As Size
+            size.Height = 70
+            size.Width = 176
+            grid.Btn_Modificar.Size = size
             grid.MdiParent = Me
             grid.Image.Image = CPM.My.Resources.Resources.inventario
             grid.LISTA.Add("I.idProducto As '#'")

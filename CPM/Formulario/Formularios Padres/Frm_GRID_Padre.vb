@@ -117,7 +117,7 @@ Public Class Frm_GRID_Padre
             Return 0
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres modificar este registo?", MsgBoxStyle.OkCancel, "Warnig")
+            Dim x = MessageBox.Show("¿Seguro que quieres modificar este registo?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             If (x = 1) Then ' Si Then la variable x devuelver el boton Ok
                 Return i 'Retornaremos un valor
             Else
