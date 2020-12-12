@@ -34,7 +34,7 @@ Public Class dbConnect
     Public Sub Insert(TablaColumnas As String, Lts_Datos As ArrayList)
         Dim cadena As String = "insert into " & TablaColumnas & " values ("
         For index = 0 To (Lts_Datos.Count - 1)
-            cadena += Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), ")", ", ")
+            cadena += Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), ")", ",")
         Next
         comando = New SqlCommand(cadena, Conectar)
         comando.ExecuteNonQuery()
@@ -42,7 +42,7 @@ Public Class dbConnect
     Public Sub Update(Tabla As String, Lts_Columnas As ArrayList, Lts_Datos As ArrayList, where As String)
         Dim cadena As String = "update " & Tabla & " set "
         For index = 0 To (Lts_Datos.Count - 1)
-            cadena += Lts_Columnas(index).ToString & " = " & Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), " " & where, ", ")
+            cadena += Lts_Columnas(index).ToString & " = " & Lts_Datos(index).ToString & IIf(index = (Lts_Datos.Count - 1), " " & where, " , ")
         Next
         comando = New SqlCommand(cadena, Conectar)
         comando.ExecuteNonQuery()
@@ -62,7 +62,7 @@ Public Class dbConnect
     Public Function Read(Tabla As String, Lts_Columnas As ArrayList, where As String) As DataTable
         Dim cadena As String = "Select "
         For index = 0 To (Lts_Columnas.Count - 1)
-            cadena += Lts_Columnas(index).ToString & IIf(index = (Lts_Columnas.Count - 1), " ", ", ")
+            cadena += Lts_Columnas(index).ToString & IIf(index = (Lts_Columnas.Count - 1), " ", ",")
         Next
 
         cadena += "From " & Tabla & " " & where

@@ -176,13 +176,9 @@ Public Class Frm_Principal
             grid = New Frm_GRID_Inventario()
             grid.Text = "Inventario"
             grid.Titulo.Text = "Inventario de Productos"
-            grid.Btn_Crear.Visible = False
-            grid.Btn_Eliminar.Visible = False
-            grid.Btn_Ver.Visible = False
-            grid.Btn_Modificar.Text = "Aumentar E."
+            grid.Botones.Visible = False
             grid.MdiParent = Me
             grid.Image.Image = CPM.My.Resources.Resources.inventario
-            grid.LISTA.Add("I.idProducto As '#'")
             grid.LISTA.Add("P.Codigo As 'Codigo Barra'")
             grid.LISTA.Add("P.Nombre As Producto")
             grid.LISTA.Add("I.Cantidad AS Existencia")
