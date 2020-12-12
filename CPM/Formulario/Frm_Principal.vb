@@ -127,6 +127,7 @@ Public Class Frm_Principal
             grid.FACTURAS = True
         End If
     End Sub
+
     Private Sub CrearFacturasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CrearFacturasToolStripMenuItem1.Click
         Dim grid As Frm_GRID_Cliente
         If EstaAbierto("Clientes") Then
@@ -158,6 +159,7 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
+
     Public Function EstaAbierto(Myform As String) As Boolean
         Dim objForm As Form
         Dim blnAbierto As Boolean = False
@@ -169,6 +171,7 @@ Public Class Frm_Principal
         Next
         Return blnAbierto
     End Function
+
     Private Sub Inicio_Inventario(sender As Object, e As EventArgs) Handles InventarioMenuItem.Click
         Dim grid As Frm_GRID_Inventario
         If EstaAbierto("Inventario") Then
@@ -176,9 +179,13 @@ Public Class Frm_Principal
             grid = New Frm_GRID_Inventario()
             grid.Text = "Inventario"
             grid.Titulo.Text = "Inventario de Productos"
-            grid.Botones.Visible = False
+            grid.Btn_Crear.Visible = False
+            grid.Btn_Eliminar.Visible = False
+            grid.Btn_Ver.Visible = False
+            grid.Btn_Modificar.Text = "Aumentar E."
             grid.MdiParent = Me
             grid.Image.Image = CPM.My.Resources.Resources.inventario
+            grid.LISTA.Add("I.idProducto As '#'")
             grid.LISTA.Add("P.Codigo As 'Codigo Barra'")
             grid.LISTA.Add("P.Nombre As Producto")
             grid.LISTA.Add("I.Cantidad AS Existencia")
@@ -190,12 +197,13 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
-    Private Sub CrearProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearProductoToolStripMenuItem.Click
+
+    Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
         Dim grid As Frm_GRID_Producto
-        If EstaAbierto("Clientes") Then
+        If EstaAbierto("Productos") Then
         Else
             grid = New Frm_GRID_Producto()
-            grid.Text = "Producto"
+            grid.Text = "Productos"
             grid.Titulo.Text = "Listado de Producto"
             grid.Image.Image = CPM.My.Resources.paquete
             grid.MdiParent = Me
@@ -216,7 +224,8 @@ Public Class Frm_Principal
             grid.Show()
         End If
     End Sub
-    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+
+    Private Sub ReporteriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteriaToolStripMenuItem.Click
         Dim rutaCompleta As String
         rutaCompleta = My.Computer.FileSystem.CurrentDirectory
         Dim rutaNueva As String
