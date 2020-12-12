@@ -47,7 +47,7 @@ Public Class PlantillaProducto
 
     Public Sub Incio()
         Activos_Visibles()
-        txtNombre.Select()
+        txtCodigo.Select()
     End Sub
 
     Public Function Validacion_Vacias() As Boolean
@@ -70,6 +70,22 @@ Public Class PlantillaProducto
             lblDescripcion.ForeColor = Drawing.Color.Black
         End If
 
+        If Len(Trim(txtCodigo.Text)) = 0 Then
+            txtCodigo.Select()
+            lblCodigo.ForeColor = Drawing.Color.Red
+            chequeo = False
+        Else
+            lblCodigo.ForeColor = Drawing.Color.Black
+        End If
+
+        If (spinnerPrecio.Value) = 0 Then
+            spinnerPrecio.Select()
+            lblPrecio.ForeColor = Drawing.Color.Red
+            chequeo = False
+        Else
+            lblPrecio.ForeColor = Drawing.Color.Black
+        End If
+
         Return chequeo
 
     End Function
@@ -86,7 +102,7 @@ Public Class PlantillaProducto
                 Return False
             End If
         Else
-            MsgBox("Imposible Guardar los Datos.\nTiene Campos Vacios.", MsgBoxStyle.Exclamation, "Warnig")
+            MsgBox("Imposible Guardar los Datos." & vbCrLf & "Tiene Campos Vacios.", MsgBoxStyle.Exclamation, "Warnig")
             Return False
         End If
     End Function

@@ -48,8 +48,8 @@
                 Nuevo.Text += tmp.Rows(0)(0).ToString
                 Nuevo.txtRTN.Text = tmp.Rows(0)(1).ToString
                 Nuevo.txtNombre.Text = tmp.Rows(0)(2).ToString
-                Nuevo.N_Descuento.Value = (tmp.Rows(0)(3) * 100).ToString
-                Nuevo.N_Credito.Value = tmp.Rows(0)(4).ToString
+                Nuevo.txtDescuento.Text = (tmp.Rows(0)(3) * 100).ToString
+                Nuevo.txtLimite.Text = tmp.Rows(0)(4).ToString
                 Nuevo.txtTelefono.Text = tmp.Rows(0)(5).ToString
                 Nuevo.txtCorreo.Text = tmp.Rows(0)(6).ToString
                 Nuevo.txtDireccion.Text = tmp.Rows(0)(7).ToString

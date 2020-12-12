@@ -24,10 +24,10 @@ Partial Class PlantillaCliente
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.MaskedTextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -42,6 +42,8 @@ Partial Class PlantillaCliente
         Me.N_Descuento = New System.Windows.Forms.NumericUpDown()
         Me.N_Credito = New System.Windows.Forms.NumericUpDown()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtDescuento = New System.Windows.Forms.TextBox()
+        Me.txtLimite = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.N_Descuento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.N_Credito, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,10 +61,10 @@ Partial Class PlantillaCliente
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtDireccion)
-        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtCorreo)
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
+        Me.GroupBox1.Controls.Add(Me.txtDireccion)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -72,6 +74,24 @@ Partial Class PlantillaCliente
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de Contacto"
+        '
+        'txtCorreo
+        '
+        Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorreo.Location = New System.Drawing.Point(224, 65)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(176, 27)
+        Me.txtCorreo.TabIndex = 12
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.BeepOnError = True
+        Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(224, 32)
+        Me.txtTelefono.Mask = "0000-0000"
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(176, 27)
+        Me.txtTelefono.TabIndex = 11
         '
         'txtDireccion
         '
@@ -90,22 +110,6 @@ Partial Class PlantillaCliente
         Me.Label6.Size = New System.Drawing.Size(81, 20)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Direccion"
-        '
-        'txtCorreo
-        '
-        Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.txtCorreo.Location = New System.Drawing.Point(224, 65)
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(176, 27)
-        Me.txtCorreo.TabIndex = 7
-        '
-        'txtTelefono
-        '
-        Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.txtTelefono.Location = New System.Drawing.Point(224, 32)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(176, 27)
-        Me.txtTelefono.TabIndex = 6
         '
         'Label7
         '
@@ -182,9 +186,9 @@ Partial Class PlantillaCliente
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.Label5.Location = New System.Drawing.Point(27, 154)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(137, 20)
+        Me.Label5.Size = New System.Drawing.Size(168, 20)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Limite de Credito"
+        Me.Label5.Text = "Limite de Credito (L.)"
         '
         'txtRTN
         '
@@ -246,6 +250,26 @@ Partial Class PlantillaCliente
         Me.Button3.Text = "Estado de cuentas"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'txtDescuento
+        '
+        Me.txtDescuento.Enabled = False
+        Me.txtDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescuento.Location = New System.Drawing.Point(227, 118)
+        Me.txtDescuento.Name = "txtDescuento"
+        Me.txtDescuento.Size = New System.Drawing.Size(215, 27)
+        Me.txtDescuento.TabIndex = 12
+        Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtLimite
+        '
+        Me.txtLimite.Enabled = False
+        Me.txtLimite.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLimite.Location = New System.Drawing.Point(227, 151)
+        Me.txtLimite.Name = "txtLimite"
+        Me.txtLimite.Size = New System.Drawing.Size(215, 27)
+        Me.txtLimite.TabIndex = 13
+        Me.txtLimite.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'PlantillaCliente
         '
         Me.AcceptButton = Me.Button1
@@ -253,6 +277,8 @@ Partial Class PlantillaCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Button2
         Me.ClientSize = New System.Drawing.Size(475, 453)
+        Me.Controls.Add(Me.txtLimite)
+        Me.Controls.Add(Me.txtDescuento)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.N_Credito)
         Me.Controls.Add(Me.N_Descuento)
@@ -298,5 +324,7 @@ Partial Class PlantillaCliente
     Public WithEvents Button3 As Windows.Forms.Button
     Public WithEvents txtDireccion As Windows.Forms.TextBox
     Public WithEvents txtCorreo As Windows.Forms.TextBox
-    Public WithEvents txtTelefono As Windows.Forms.TextBox
+    Public WithEvents txtTelefono As Windows.Forms.MaskedTextBox
+    Public WithEvents txtDescuento As Windows.Forms.TextBox
+    Public WithEvents txtLimite As Windows.Forms.TextBox
 End Class

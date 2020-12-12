@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.Text.RegularExpressions
+Imports System.Windows.Forms
 
 Public Class PlantillaCliente
     Private Dates As New ArrayList
@@ -73,7 +74,7 @@ Public Class PlantillaCliente
             Label3.ForeColor = Drawing.Color.Black
         End If
 
-        If Len(Trim(txtTelefono.Text)) = 0 Then
+        If Len(Trim(txtTelefono.Text)) <> 9 Then
             txtTelefono.Select()
             Label8.ForeColor = Drawing.Color.Red
             chequeo = False
@@ -107,13 +108,14 @@ Public Class PlantillaCliente
 
     Public Function Validaciones() As Boolean
         If Validacion_Vacias() Then
-            If N_Descuento.Value <= 70 And N_Descuento.Value >= 0 And N_Credito.Value >= 0 And N_Credito.Value <= 10000 Then
-                Return True
-            Else
+            If validar_Mail(LCase(txtCorreo.Text)) = False Then
+                MessageBox.Show("Dirección de correo electronico no valida, el correo debe tener el formato: nombre@dominio.com, " & " por favor seleccione un correo valido", "Validación de correo electronico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return False
+            Else
+                Return True
             End If
         Else
-            MsgBox("Imposible Guardar los Datos.\nTiene Campos Vacios.", MsgBoxStyle.Exclamation, "Warnig")
+            MsgBox("Imposible Guardar los Datos." & vbCrLf & "Tiene Campos Vacios.", MsgBoxStyle.Exclamation, "Warnig")
             Return False
         End If
     End Function
@@ -121,4 +123,10 @@ Public Class PlantillaCliente
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         MsgBox("En Proceso....")
     End Sub
+
+    Public Function validar_Mail(ByVal sMail As String) As Boolean
+        ' retorna true o false   
+        Return Regex.IsMatch(sMail, "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$")
+    End Function
+
 End Class

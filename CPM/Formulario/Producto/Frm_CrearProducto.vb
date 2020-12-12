@@ -19,12 +19,21 @@ Public Class Frm_CrearProducto
     Public Overrides Sub Insersion()
         Try
             claseConexion.Insert("Producto", DATOS)
+            Dim iD As New ArrayList
+            iD.Add("max(idProducto)")
+            Dim producto As Integer = claseConexion.Read("Producto", iD, "").Rows(0)(0).ToString()
+            iD.Clear()
+            iD.Add("'" & producto & "'")
+            iD.Add(0)
+            iD.Add(1)
+            claseConexion.Insert("Inventario", iD)
             father.CargarDatos()
             Me.Dispose()
         Catch ex As SqlException
             If (ex.Number = 2627) Then
                 MsgBox("Codigo o Nombre de producto ya existe", MsgBoxStyle.Critical, "Error")
             End If
+            MsgBox("Eror en la Insercion")
         End Try
     End Sub
 
