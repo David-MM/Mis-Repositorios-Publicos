@@ -19,7 +19,15 @@ Partial Class Frm_ReporteProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'Frm_ReporteProducto
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Name = "Frm_ReporteProducto"
+        Me.ResumeLayout(False)
+
     End Sub
 
 End Class

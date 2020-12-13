@@ -79,6 +79,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDatos\DBCPM.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCPM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\DBCPM.vb">
+      <DependentUpon>DBCPM.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\Cliente\Frm_ReporteCliente.Designer.vb">
       <DependentUpon>Frm_ReporteCliente.vb</DependentUpon>
     </Compile>
@@ -211,6 +219,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formulario\Cliente\Frm_ReporteCliente.resx">
+      <DependentUpon>Frm_ReporteCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\Formularios Padres\Frm_GRID_Padre.resx">
       <DependentUpon>Frm_GRID_Padre.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +243,9 @@
     <EmbeddedResource Include="Formulario\Producto\Frm_MostrarProducto.resx">
       <DependentUpon>Frm_MostrarProducto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Producto\Frm_ReporteProducto.resx">
+      <DependentUpon>Frm_ReporteProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -248,6 +262,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BaseDatos\DBCPM.xsc">
+      <DependentUpon>DBCPM.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDatos\DBCPM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCPM.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BaseDatos\DBCPM.xss">
+      <DependentUpon>DBCPM.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -259,9 +284,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LibreriaCPM\LibreriaCPM.vbproj">
       <Project>{11d1edeb-a8eb-4730-bac5-2f2ae4dd2472}</Project>

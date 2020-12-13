@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnect.vb" />
+    <Compile Include="Formularios\DBCPM.vb" />
     <Compile Include="Formularios\PlantillaInventario.Designer.vb">
       <DependentUpon>PlantillaInventario.vb</DependentUpon>
     </Compile>

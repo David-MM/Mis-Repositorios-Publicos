@@ -233,8 +233,10 @@ Public Class Frm_Principal
         Dim rptCliente As Frm_ReporteCliente
         If EstaAbierto("Reporte General") Then
         Else
+
             rptCliente = New Frm_ReporteCliente()
             Dim Reporte As New RPT_Cliente
+            rptCliente.MdiParent = Me
             rptCliente.Text = "Reporte General"
             rptCliente.ReportePrincipal.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             rptCliente.ReportePrincipal.ReportSource = Reporte
@@ -243,15 +245,16 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub ProductoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem1.Click
-        Dim rptCliente As Frm_ReporteProducto
+        Dim rptProducto As Frm_ReporteProducto
         If EstaAbierto("Reporte General Producto") Then
         Else
-            rptCliente = New Frm_ReporteProducto
+            rptProducto = New Frm_ReporteProducto
             Dim Reporte As New RPT_Producto
-            rptCliente.Text = "Reporte General Producto"
-            rptCliente.ReportePrincipal.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-            rptCliente.ReportePrincipal.ReportSource = Reporte
-            rptCliente.Show()
+            rptProducto.MdiParent = Me
+            rptProducto.Text = "Reporte General Producto"
+            rptProducto.ReportePrincipal.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            rptProducto.ReportePrincipal.ReportSource = Reporte
+            rptProducto.Show()
         End If
     End Sub
 End Class
