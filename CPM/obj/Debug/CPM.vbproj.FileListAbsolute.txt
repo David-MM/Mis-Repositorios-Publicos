@@ -10,22 +10,6 @@ C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\source\repos\CPM\CPM\obj\Debug\CPM.pdb
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe.config
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.pdb
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.xml
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.dll
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.pdb
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.xml
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Resources.resources
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.exe
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.xml
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.pdb
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe.config
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.exe
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\bin\Debug\CPM.pdb
@@ -63,9 +47,6 @@ C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.vbproj
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.pdb
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
 D:\Proyects\Visual Studio\source\repos\CPM\CMP-2020\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_EditarProducto.resources
 C:\Users\Developer\Documents\Industria del Software\CPM\CPM\obj\Debug\CPM.Frm_MostrarProducto.resources
@@ -152,8 +133,16 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.exe
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_ReporteCliente.resources
-C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_ReporteProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe.config
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.exe
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Shared.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.dll
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Web.dll
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -170,13 +159,22 @@ C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\Flash
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\stdole.dll
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\ShockwaveFlashObjects.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\LibreriaCPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbprojAssemblyReference.cache
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_ReporteCliente.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_GRID_Padre.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_Principal.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_CrearCliente.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarCliente.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_EditarInventario.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_EditarProducto.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarProducto.resources
 C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_ReporteProducto.resources
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Shared.dll
-C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Resources.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.GenerateResource.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CoreCompileInputs.cache
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.vbproj.CopyComplete
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.exe
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.xml
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.pdb
