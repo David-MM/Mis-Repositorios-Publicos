@@ -284,7 +284,9 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagenes\logo-andifar.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibreriaCPM\LibreriaCPM.vbproj">
       <Project>{11d1edeb-a8eb-4730-bac5-2f2ae4dd2472}</Project>
