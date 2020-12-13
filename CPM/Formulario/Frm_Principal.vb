@@ -98,31 +98,36 @@ Public Class Frm_Principal
         Dim grid As Frm_GRID_Factura
         If EstaAbierto("Factura") Then
         Else
+            'Se instancia el form
             grid = New Frm_GRID_Factura()
-            grid.Image.Image = CPM.My.Resources.factura
+            'Se establece como parte del contendor el menu
+            grid.MdiParent = Me
+            'Actualizamos mediante codigo las propiedades            
             grid.Text = "Factura"
             grid.Titulo.Text = "Listado de Facturas"
-            grid.MdiParent = Me
-            grid.LISTA.Add("F.idFactura As '# Factura'")
-            grid.LISTA.Add("F.Fecha")
-            grid.LISTA.Add("(SELECT C.RTN FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS RTN")
-            grid.LISTA.Add("(SELECT C.R_Social FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS Cliente")
-            grid.LISTA.Add("(SELECT ROUND(sum(FD.Precio*FD.Cantidad),2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as SubTotal")
-            grid.LISTA.Add("(SELECT ROUND(sum((FD.Precio*FD.Cantidad)*FD.Isv),2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as ISV")
-            grid.LISTA.Add("(F.Descuento)*(SELECT ROUND(sum(FD.Precio*FD.Cantidad),2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as Descuento")
-            grid.LISTA.Add("(SELECT ROUND(sum(FD.Cantidad*FD.Precio) +sum(FD.Cantidad*FD.Precio*FD.Isv)-sum(FD.Cantidad*FD.Precio)*F.Descuento,2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as Total")
-            grid.LISTA.Add("(case when Tipo='C' then 'Contado' when Tipo='R' then 'Credito' end) as Tipo")
-
+            grid.Tabla.RowHeadersVisible = False        'Con esta propiedad se elimina la primera columna del grid
+            grid.Btn_Modificar.Visible = False
+            grid.Btn_Eliminar.Text = "ANULAR"
+            grid.Image.Image = CPM.My.Resources.factura
             grid.ListCombo.Add("# Factura")
             grid.ListCombo.Add("Fecha")
             grid.ListCombo.Add("RTN")
             grid.ListCombo.Add("Cliente")
             grid.ListCombo.Add("Tipo")
+            'Carga de datos SQL
+            grid.LISTA.Add("F.idFactura As '# Factura'")
+            grid.LISTA.Add("F.Fecha")
+            grid.LISTA.Add("(SELECT C.RTN FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS RTN")
+            grid.LISTA.Add("(SELECT C.R_Social FROM Cliente as C WHERE C.idCliente=F.ClientesID) AS Cliente")
+            grid.LISTA.Add("(SELECT FORMAT(ROUND(sum(FD.Precio*FD.Cantidad),2),'#,###,###.00') FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as SubTotal")
+            grid.LISTA.Add("(SELECT FORMAT(ROUND(sum((FD.Precio*FD.Cantidad)*FD.Isv),2),'#,###,###.00') FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID) as ISV")
+            grid.LISTA.Add("FORMAT((F.Descuento)*(SELECT ROUND(sum(FD.Precio*FD.Cantidad),2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID),'#,###,###.00') as Descuento")
+            grid.LISTA.Add("FORMAT((SELECT ROUND(sum(FD.Cantidad*FD.Precio) +sum(FD.Cantidad*FD.Precio*FD.Isv)-sum(FD.Cantidad*FD.Precio)*F.Descuento,2) FROM FacturaDetalle AS FD WHERE F.idFactura=FD.FacturaID),'#,###,###.00') as Total")
+            grid.LISTA.Add("(case when Tipo='C' then 'Contado' when Tipo='R' then 'Credito' end) as Tipo")
             grid.NOMBRETABLA = "Factura AS F"
             grid.WHERELOAD = " F.Estado <> 'A'"
-            grid.Btn_Modificar.Visible = False
-            grid.Btn_Eliminar.Text = "Anular"
             grid.CAMPODELETE = "idFactura"
+
             grid.Show()
             grid.FACTURAS = True
         End If

@@ -1,5 +1,16 @@
 ﻿Public Class Frm_MostrarFactura
     Private Dates As DataTable
+    Private father As Frm_GRID_Factura
+    Public Id As Integer
+
+    Public Property PADRE As Frm_GRID_Factura
+        Get
+            Return father
+        End Get
+        Set(value As Frm_GRID_Factura)
+            father = value
+        End Set
+    End Property
 
     Property DATOS As DataTable
         Get
@@ -10,19 +21,18 @@
         End Set
     End Property
 
-    'Public Overrides Function LlenarDatos()
-    '    'Label25.Text = "Factura No. " & Dates.Rows(0)(0).ToString
-    '    'Text += Dates.Rows(0)(0).ToString
-    '    'Label14.Text = "Fecha " & Dates.Rows(0)(1).ToString
-    '    'TextBox1.Text = Dates.Rows(0)(2).ToString
-    '    'Dim Cliente As New ArrayList
-    '    'Cliente.Add(Dates.Rows(0)(3).ToString)
-    '    'ComboBox1.DataSource = Cliente
-    '    'ComboBox1.SelectedIndex = 0
+    'Public Overrides Sub LlenarDatos()
 
-    'End Function
+    'End Sub
+
 
     Public Overrides Sub Visibles_Activos()
 
     End Sub
+
+
+
+
+
+
 End Class

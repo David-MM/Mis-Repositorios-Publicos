@@ -10,9 +10,15 @@
             Case 3
                 Return MyBase.Buscar(" AND (SELECT C.R_Social FROM Cliente as C WHERE C.idCliente=F.ClientesID) Like'%" & Txt_Filtrar.Text & "%'")
             Case 4
-                Return MyBase.Buscar(" AND Tipo Like'%" & Txt_Filtrar.Text & "%'") 'Falta arreglar
+                If (Txt_Filtrar.Text.ToLower.Substring(0, Txt_Filtrar.Text.Length).Contains("co")) Then
+                    Return MyBase.Buscar(" AND Tipo Like'%C%'")
+                ElseIf (Txt_Filtrar.Text.ToLower.Substring(0, Txt_Filtrar.Text.Length).Contains("cr")) Then
+                    Return MyBase.Buscar(" AND Tipo like'%R%'")
+                Else
+                    Return MyBase.Buscar("")
+                End If
             Case Else
-                MsgBox("La cago en el switch compa xD", MsgBoxStyle.Critical, "Switch-Cliente")
+                MsgBox("Error", MsgBoxStyle.Critical, "Switch-Cliente")
         End Select
     End Function
 
@@ -24,23 +30,22 @@
             Nuevo.Text = "Nueva Factura"
             Nuevo.PADRE = Me
             Nuevo.Show()
-            'MyBase.CrearInsert()
         End If
     End Sub
 
     Public Overrides Function Ver() As Integer
-        MsgBox("En Proceso...")
-        'Dim Nuevo As New Frm_MostrarFactura()
-        'Dim tmp As DataTable
-        'Nuevo.MdiParent = Me.MdiParent
-        'Nuevo.Text = "Factura # "
-        'If MyBase.Ver() <> 0 Then
-        '    tmp = BuscarDatos("idFactura =" & MyBase.Ver())
-        '    Nuevo.DATOS = tmp
-        '    Nuevo.Show()
-        '    Return 1
-        'End If
-        'Return 0
+        MsgBox("Selecconaste. " & Tabla.CurrentRow.Cells(0).Value)
+        If EstaAbierto("Ver Factura") Then
+        Else
+            Dim Nuevo As New Frm_MostrarFactura()
+            Nuevo.MdiParent = Me.MdiParent
+            Nuevo.Text = "Nueva Factura"
+            Nuevo.PADRE = Me
+            Nuevo.Id = Tabla.CurrentRow.Cells(0).Value
+            Nuevo.Show()
+        End If
+
+
     End Function
 
     Public Function EstaAbierto(Myform As String) As Boolean
