@@ -175,6 +175,12 @@
     <Compile Include="Formulario\Producto\Frm_MostrarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\Producto\Frm_ReporteProducto.Designer.vb">
+      <DependentUpon>Frm_ReporteProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Producto\Frm_ReporteProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -195,6 +201,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RPT_Cliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RPT_Producto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Producto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -229,6 +241,10 @@
     <EmbeddedResource Include="Reportes\RPT_Cliente.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPT_Cliente.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RPT_Producto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_Producto.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

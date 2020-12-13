@@ -100,3 +100,4 @@ C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\LibreriaCPM\obj\De
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaInventario.resources
+C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaInventario.resources

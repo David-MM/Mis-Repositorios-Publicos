@@ -225,11 +225,29 @@ Public Class Frm_Principal
         End If
     End Sub
 
-    Private Sub ReporteriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteriaToolStripMenuItem.Click
-        Dim rutaCompleta As String
-        rutaCompleta = My.Computer.FileSystem.CurrentDirectory
-        Dim rutaNueva As String
-        rutaNueva = rutaCompleta.TrimEnd("b", "i", "n", "\", "D", "e", "b", "u", "g") + "\Reporte"
-        MsgBox(rutaNueva)
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        Dim rptCliente As Frm_ReporteCliente
+        If EstaAbierto("Reporte General") Then
+        Else
+            rptCliente = New Frm_ReporteCliente()
+            Dim Reporte As New RPT_Cliente
+            rptCliente.Text = "Reporte General"
+            rptCliente.ReportePrincipal.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            rptCliente.ReportePrincipal.ReportSource = Reporte
+            rptCliente.Show()
+        End If
+    End Sub
+
+    Private Sub ProductoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem1.Click
+        Dim rptCliente As Frm_ReporteProducto
+        If EstaAbierto("Reporte General Producto") Then
+        Else
+            rptCliente = New Frm_ReporteProducto
+            Dim Reporte As New RPT_Producto
+            rptCliente.Text = "Reporte General Producto"
+            rptCliente.ReportePrincipal.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            rptCliente.ReportePrincipal.ReportSource = Reporte
+            rptCliente.Show()
+        End If
     End Sub
 End Class

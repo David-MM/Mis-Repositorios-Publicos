@@ -30,11 +30,13 @@ Partial Class Frm_Principal
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearFacturasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Facturacion = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -42,85 +44,96 @@ Partial Class Frm_Principal
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.InventarioMenuItem, Me.VentasToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.ReporteriaToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.InventarioMenuItem, Me.VentasToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.ReporteToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
+        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
         'WindowsMenu
         '
         Me.WindowsMenu.Name = "WindowsMenu"
-        Me.WindowsMenu.Size = New System.Drawing.Size(141, 24)
+        Me.WindowsMenu.Size = New System.Drawing.Size(112, 20)
         Me.WindowsMenu.Text = "&Ventanas Abiertas"
         '
         'InventarioMenuItem
         '
         Me.InventarioMenuItem.Name = "InventarioMenuItem"
-        Me.InventarioMenuItem.Size = New System.Drawing.Size(89, 24)
+        Me.InventarioMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.InventarioMenuItem.Text = "Inventario"
         '
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearFacturasToolStripMenuItem1, Me.Facturacion})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.VentasToolStripMenuItem.Text = "&Ventas"
         '
         'CrearFacturasToolStripMenuItem1
         '
         Me.CrearFacturasToolStripMenuItem1.Name = "CrearFacturasToolStripMenuItem1"
-        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(167, 26)
+        Me.CrearFacturasToolStripMenuItem1.Size = New System.Drawing.Size(136, 22)
         Me.CrearFacturasToolStripMenuItem1.Text = "Clientes"
         '
         'Facturacion
         '
         Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Size = New System.Drawing.Size(167, 26)
+        Me.Facturacion.Size = New System.Drawing.Size(136, 22)
         Me.Facturacion.Text = "Facturación"
+        '
+        'ProductoToolStripMenuItem
+        '
+        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.ProductoToolStripMenuItem.Text = "Producto"
         '
         'StatusStrip
         '
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 532)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip.Size = New System.Drawing.Size(843, 26)
+        Me.StatusStrip.Size = New System.Drawing.Size(632, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'ProductoToolStripMenuItem
+        'ReporteToolStripMenuItem
         '
-        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(83, 24)
-        Me.ProductoToolStripMenuItem.Text = "Producto"
+        Me.ReporteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem, Me.ProductoToolStripMenuItem1})
+        Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
+        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
+        Me.ReporteToolStripMenuItem.Text = "Reporte General"
         '
-        'ReporteriaToolStripMenuItem
+        'ClienteToolStripMenuItem
         '
-        Me.ReporteriaToolStripMenuItem.Name = "ReporteriaToolStripMenuItem"
-        Me.ReporteriaToolStripMenuItem.Size = New System.Drawing.Size(93, 24)
-        Me.ReporteriaToolStripMenuItem.Text = "Reporteria"
+        Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClienteToolStripMenuItem.Text = "Cliente"
+        '
+        'ProductoToolStripMenuItem1
+        '
+        Me.ProductoToolStripMenuItem1.Name = "ProductoToolStripMenuItem1"
+        Me.ProductoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ProductoToolStripMenuItem1.Text = "Producto"
         '
         'Frm_Principal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 558)
+        Me.ClientSize = New System.Drawing.Size(632, 453)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Principal"
         Me.Text = "CPM_Modulo Ventas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -142,5 +155,7 @@ Partial Class Frm_Principal
     Friend WithEvents Facturacion As ToolStripMenuItem
     Friend WithEvents InventarioMenuItem As ToolStripMenuItem
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductoToolStripMenuItem1 As ToolStripMenuItem
 End Class

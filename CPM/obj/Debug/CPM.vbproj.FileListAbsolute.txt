@@ -149,3 +149,4 @@ C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\CPM\obj\Debug\CPM.
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\CPM\obj\Debug\CPM.pdb
 C:\Users\Developer\Documents\Industria del Software\Nuevo\CPM\CPM\obj\Debug\CPM.Frm_EditarInventario.resources
+C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_EditarInventario.resources
