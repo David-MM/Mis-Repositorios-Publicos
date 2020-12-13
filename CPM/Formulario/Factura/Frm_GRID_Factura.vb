@@ -54,4 +54,7 @@
         Next
         Return blnAbierto
     End Function
+    Public Sub Frm_GRID_Factura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

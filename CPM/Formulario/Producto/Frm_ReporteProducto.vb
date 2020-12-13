@@ -1,23 +1,19 @@
 ﻿Imports System.Data.SqlClient
+Imports LibreriaCPM
 
 Public Class Frm_ReporteProducto
+
+    Private claseConexion As New dbConnect
+    Public ReadOnly Property DATABASE As dbConnect
+        Get
+            Return claseConexion
+        End Get
+    End Property
     Private Sub Frm_ReporteProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim sqlConn As SqlConnection
-        Dim sqlDaCLiente As SqlDataAdapter
         Dim dsPc As New DBCPM
-        Dim strConn As String = "Server=" & "localhost" & "; DataBase=" & "CPM" & "; Integrated Security = True"
-        Dim StrCommCliente As String = "Select * From Producto"
-
         Try
-            'Crear los DataAdapters
-            sqlConn = New SqlConnection(strConn)
-            sqlDaCLiente = New SqlDataAdapter(StrCommCliente, sqlConn)
-
-            'Poblar las tablas del dataset desde los dataAdaperts
-            sqlDaCLiente.Fill(dsPc, "Producto")
-            'Poblar el informe con el dataSet y mostrarlo
             Dim info As New RPT_Producto
-            info.SetDataSource(dsPc)
+            info.SetDataSource(claseConexion.Reporte("Producto", "", dsPc))
             ReportePrincipal.ReportSource = info
         Catch ex As Exception
             MessageBox.Show(ex.ToString)

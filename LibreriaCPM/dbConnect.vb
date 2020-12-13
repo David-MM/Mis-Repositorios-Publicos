@@ -72,4 +72,12 @@ Public Class dbConnect
         adapter.Fill(t)
         Return t
     End Function
+    Public Function Reporte(Tabla As String, Where As String, Ds As DataSet) As DataSet
+        Dim cadena As String
+        cadena = "Select * From " & Tabla & IIf(Where = "", "", Where)
+        comando = New SqlCommand(cadena, Conectar)
+        Dim dato As New SqlDataAdapter(comando)
+        dato.Fill(Ds, Tabla)
+        Return Ds
+    End Function
 End Class
