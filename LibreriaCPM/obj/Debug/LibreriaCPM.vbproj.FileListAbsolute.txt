@@ -101,3 +101,26 @@ C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.Cop
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.dll
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.pdb
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\ShockwaveFlashObjects.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\stdole.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaInventario.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.PlantillaReporteria.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\obj\Debug\LibreriaCPM.vbproj.CopyComplete
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.Shared.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\LibreriaCPM\bin\Debug\FlashControlV71.dll

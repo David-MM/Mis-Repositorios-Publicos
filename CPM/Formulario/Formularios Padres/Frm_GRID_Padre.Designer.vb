@@ -56,7 +56,7 @@ Partial Class Frm_GRID_Padre
         Me.Txt_Filtrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Txt_Filtrar.Name = "Txt_Filtrar"
         Me.Txt_Filtrar.Size = New System.Drawing.Size(700, 34)
-        Me.Txt_Filtrar.TabIndex = 31
+        Me.Txt_Filtrar.TabIndex = 1
         '
         'Cb_Columnas
         '
@@ -68,7 +68,7 @@ Partial Class Frm_GRID_Padre
         Me.Cb_Columnas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cb_Columnas.Name = "Cb_Columnas"
         Me.Cb_Columnas.Size = New System.Drawing.Size(192, 37)
-        Me.Cb_Columnas.TabIndex = 30
+        Me.Cb_Columnas.TabIndex = 2
         '
         'Btn_Cerrar
         '
@@ -79,7 +79,7 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Cerrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Cerrar.Name = "Btn_Cerrar"
         Me.Btn_Cerrar.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Cerrar.TabIndex = 29
+        Me.Btn_Cerrar.TabIndex = 8
         Me.Btn_Cerrar.Text = "Cerrar"
         Me.Btn_Cerrar.UseVisualStyleBackColor = True
         '
@@ -97,7 +97,7 @@ Partial Class Frm_GRID_Padre
         Me.Tabla.RowHeadersWidth = 51
         Me.Tabla.RowTemplate.Height = 24
         Me.Tabla.Size = New System.Drawing.Size(1000, 551)
-        Me.Tabla.TabIndex = 23
+        Me.Tabla.TabIndex = 3
         '
         'Titulo
         '
@@ -130,7 +130,7 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Eliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Eliminar.Name = "Btn_Eliminar"
         Me.Btn_Eliminar.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Eliminar.TabIndex = 32
+        Me.Btn_Eliminar.TabIndex = 7
         Me.Btn_Eliminar.Text = "Eliminar"
         Me.Btn_Eliminar.UseVisualStyleBackColor = True
         '
@@ -142,7 +142,7 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Ver.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Ver.Name = "Btn_Ver"
         Me.Btn_Ver.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Ver.TabIndex = 31
+        Me.Btn_Ver.TabIndex = 6
         Me.Btn_Ver.Text = "Ver Detalle"
         Me.Btn_Ver.UseVisualStyleBackColor = True
         '
@@ -154,7 +154,7 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Modificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Modificar.Name = "Btn_Modificar"
         Me.Btn_Modificar.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Modificar.TabIndex = 30
+        Me.Btn_Modificar.TabIndex = 5
         Me.Btn_Modificar.Text = "Modificar"
         Me.Btn_Modificar.UseVisualStyleBackColor = True
         '
@@ -166,7 +166,7 @@ Partial Class Frm_GRID_Padre
         Me.Btn_Crear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Crear.Name = "Btn_Crear"
         Me.Btn_Crear.Size = New System.Drawing.Size(176, 44)
-        Me.Btn_Crear.TabIndex = 29
+        Me.Btn_Crear.TabIndex = 4
         Me.Btn_Crear.Text = "Crear"
         Me.Btn_Crear.UseVisualStyleBackColor = True
         '
@@ -197,6 +197,8 @@ Partial Class Frm_GRID_Padre
         Me.Controls.Add(Me.Titulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximumSize = New System.Drawing.Size(1287, 726)
+        Me.MinimumSize = New System.Drawing.Size(1287, 726)
         Me.Name = "Frm_GRID_Padre"
         Me.Text = "Frm_GRID_Padre"
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).EndInit()

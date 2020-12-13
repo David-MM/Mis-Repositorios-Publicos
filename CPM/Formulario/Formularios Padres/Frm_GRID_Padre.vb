@@ -75,7 +75,6 @@ Public Class Frm_GRID_Padre
 
     Private Sub Btn_Eliminar_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar.Click
         If factura Then
-            'CambiarEstado("'A'", campo_where)
             MsgBox("En Proceso...")
         Else
             Eliminar(nametabla, 0, campo_where)
@@ -89,9 +88,8 @@ Public Class Frm_GRID_Padre
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
             Dim x = MessageBox.Show("¿Seguro que quieres eliminar este registo?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
-            If (x = 2) Then ' Si Then la variable x devuelver el boton Cancelar
-                'MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
-                Return 'Retornaremos y no removeremos nada
+            If (x = 2) Then
+                Return
             End If
             claseConexion.Delete(ntabla, valor, "where " & campo_where & " = " & i)
         End If
@@ -128,6 +126,13 @@ Public Class Frm_GRID_Padre
 
     Public Sub CargarDatos()
         Tabla.DataSource = claseConexion.Read(nametabla, ListaColumnas, "where " & cuandoiniciar)
+        For Each Fila In Tabla.Rows.Cast(Of DataGridViewRow)()
+            For Each Columna In Tabla.Columns.Cast(Of DataGridViewColumn)()
+                If (IsNumeric(Fila.Cells(Columna.Index).Value)) Then
+                    Tabla.Columns(Columna.Index).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                End If
+            Next
+        Next
     End Sub
 
     Public Function BuscarDatos(where As String) As DataTable
@@ -175,4 +180,5 @@ Public Class Frm_GRID_Padre
     Private Sub Btn_Modificar_Click(sender As Object, e As EventArgs) Handles Btn_Modificar.Click
         Modificara()
     End Sub
+
 End Class

@@ -12,7 +12,7 @@ Public Class Plantilla_Facturacion
         Me.Close()
     End Sub
 
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs)
         Limpiar()
     End Sub
 
@@ -43,6 +43,17 @@ Public Class Plantilla_Facturacion
             CalcularResultados()
         End If
     End Sub
+    Private Sub Datos_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles Datos.RowsRemoved
+        CalcularResultados()
+    End Sub
+
+    Private Sub Btn_Imprimir_Click(sender As Object, e As EventArgs) Handles Btn_Imprimir.Click
+        FacturareImprimir()
+    End Sub
+
+    Private Sub cmbPago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPago.SelectedIndexChanged
+        Btn_Imprimir.Visible = IIf(cmbPago.SelectedIndex = 1, True, False)
+    End Sub
 #End Region
 
 #Region "Funciones herededas sobreescribibles"
@@ -70,9 +81,6 @@ Public Class Plantilla_Facturacion
 
     Public Overridable Function ValidarInsercionProducto()
         Dim Validar As Boolean = True
-        'Dim Subtotal As Double = 0
-        'Dim Impu As Double = 0
-        'Dim Descuento As Double = 0
         If Datos.Rows.Count > 0 Then 'Recorre el Grid y compara si el codigo ya esta agregado
             For Each Fila As DataGridViewRow In Datos.Rows
                 If Not Fila Is Nothing Then
@@ -85,24 +93,9 @@ Public Class Plantilla_Facturacion
             ListaColumnas.Add("Descripcion")
             ListaColumnas.Add("ISV_Sugerido")
             Datos.Rows.Add(cmbCodBarra.Text, cmbProducto.Text, claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(0).ToString,
-                           spnCantidad.Value, spnPrecio.Value,
-                           claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value,
-                           claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value + spnCantidad.Value * spnPrecio.Value)
-
-            'For Each Fila As DataGridViewRow In Datos.Rows
-            '    If Not Fila Is Nothing Then
-            '        Subtotal += Convert.ToDouble(Fila.Cells(4).Value) * Convert.ToDouble(Fila.Cells(3).Value)
-            '        Impu += Convert.ToDouble(Fila.Cells(5).Value)
-            '    End If
-            'Next
-            ''ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-            ''ListaColumnas.Add("Descuento_Sugerido")
-            'Descuento += Subtotal * DescuentoCli 'claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-            ''DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-            'txtSubtotal.Text = Subtotal
-            'txtISV.Text = Impu
-            'txtDesc.Text = Descuento
-            'txtTotal.Text = Subtotal + Impu - Descuento
+                           spnCantidad.Value, Format(spnPrecio.Value, "##,##0.00"),
+                           Format(claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value, "##,##0.00"),
+                           Format(claseConexion.Read("Producto", ListaColumnas, " where idproducto=" & cmbCodBarra.SelectedValue).Rows(0)(1).ToString * spnCantidad.Value * spnPrecio.Value + spnCantidad.Value * spnPrecio.Value), "##,##0.00")
             CalcularResultados()
         Else
             MessageBox.Show("Articulo ya añadido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -163,45 +156,56 @@ Public Class Plantilla_Facturacion
     End Function
 
     Public Overridable Function Guardar()
-        'Cabecera
-        ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-        ListaColumnas.Add("1") 'Pendiente
-        ListaColumnas.Add("'" & DateTime.Now & "'")
-        ListaColumnas.Add(cmbCli.SelectedValue)
-        ListaColumnas.Add(DescuentoCli)
-        ListaColumnas.Add(IIf(cmbPago.SelectedIndex = 0, "'R'", "'C'"))
-        ListaColumnas.Add(IIf(cmbPago.SelectedIndex = 0, "'G'", "'P'"))
 
-        claseConexion.Insert("Factura ", ListaColumnas)
+        If (Datos.Rows.Count > 1) Then
+            'Cabecera
+            ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+            ListaColumnas.Add("1") 'Pendiente
+            ListaColumnas.Add("'" & DateTime.Now & "'")
+            ListaColumnas.Add(cmbCli.SelectedValue)
+            ListaColumnas.Add(DescuentoCli)
+            ListaColumnas.Add(IIf(cmbPago.SelectedIndex = 0, "'R'", "'C'"))
+            ListaColumnas.Add(IIf(cmbPago.SelectedIndex = 0, "'G'", "'P'"))
 
-        'Detalle
-        For Each Fila As DataGridViewRow In Datos.Rows
-            If Not Fila Is Nothing Then
-                ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-                ListaColumnas.Add(FactN)
-                Dim A As New ArrayList
-                A.Add("idProducto")
-                A.Add("ISV_Sugerido")
-                ListaColumnas.Add(claseConexion.Read("Producto", A, "where Codigo='" & Fila.Cells(0).Value & "'").Rows(0)(0).ToString)
-                ListaColumnas.Add(Fila.Cells(4).Value)
-                ListaColumnas.Add(Fila.Cells(5).Value)
-                ListaColumnas.Add(claseConexion.Read("Producto", A, "where Codigo='" & Fila.Cells(0).Value & "'").Rows(0)(1).ToString)
+            claseConexion.Insert("Factura ", ListaColumnas)
 
-                claseConexion.Insert("FacturaDetalle ", ListaColumnas)
+            'Detalle
+            For Each Fila As DataGridViewRow In Datos.Rows
+                If Not Fila Is Nothing Then
+                    ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+                    ListaColumnas.Add(FactN)
+                    Dim A As New ArrayList
+                    A.Add("idProducto")
+                    A.Add("ISV_Sugerido")
+                    ListaColumnas.Add(claseConexion.Read("Producto", A, "where Codigo='" & Fila.Cells(0).Value & "'").Rows(0)(0).ToString)
+                    ListaColumnas.Add(Fila.Cells(4).Value)
+                    ListaColumnas.Add(Fila.Cells(5).Value)
+                    ListaColumnas.Add(claseConexion.Read("Producto", A, "where Codigo='" & Fila.Cells(0).Value & "'").Rows(0)(1).ToString)
 
-                'Actualizar Inventario
-                Dim Cambio As New ArrayList
-                Cambio.Add("Cantidad")
-                ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-                ListaColumnas.Add(claseConexion.Read("Inventario", Cambio, "where idProducto=" & cmbCodBarra.SelectedValue).Rows(0)(0).ToString() - Fila.Cells(3).Value)
-                claseConexion.Update("Inventario", Cambio, ListaColumnas, "where idProducto=" & cmbCodBarra.SelectedValue)
+                    claseConexion.Insert("FacturaDetalle ", ListaColumnas)
 
-            End If
-        Next
-        MessageBox.Show("Datos almacenados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Datos.Rows.Clear()
-        LlenarDatos()
-        ActualizarTabla()
+                    'Actualizar Inventario
+                    Dim Cambio As New ArrayList
+                    Cambio.Add("Cantidad")
+                    ListaColumnas.RemoveRange(0, ListaColumnas.Count)
+                    ListaColumnas.Add(claseConexion.Read("Inventario", Cambio, "where idProducto=" & cmbCodBarra.SelectedValue).Rows(0)(0).ToString() - Fila.Cells(3).Value)
+                    claseConexion.Update("Inventario", Cambio, ListaColumnas, "where idProducto=" & cmbCodBarra.SelectedValue)
+
+                End If
+            Next
+            MessageBox.Show("Datos almacenados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Datos.Rows.Clear()
+            LlenarDatos()
+            ActualizarTabla()
+        Else
+            MessageBox.Show("Factura sin datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Function
+
+    Public Overridable Function FacturareImprimir()
+        Guardar()
+        MsgBox("Reporte Salvaje aparece")
     End Function
 
 #End Region
@@ -239,19 +243,18 @@ Public Class Plantilla_Facturacion
                 Impu += Convert.ToDouble(Fila.Cells(5).Value)
             End If
         Next
-        'ListaColumnas.RemoveRange(0, ListaColumnas.Count)
-        'ListaColumnas.Add("Descuento_Sugerido")
-        Descuento += Subtotal * DescuentoCli 'claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-        'DescuentoCli = claseConexion.Read("Cliente", ListaColumnas, "Where idCliente=" & cmbCli.SelectedValue).Rows(0)(0).ToString
-        txtSubtotal.Text = Subtotal
-        txtISV.Text = Impu
-        txtDesc.Text = Descuento
-        txtTotal.Text = Subtotal + Impu - Descuento
+        Descuento += Subtotal * DescuentoCli
+        txtSubtotal.Text = Format(Subtotal, "##,##0.00")
+        txtISV.Text = Format(Impu, "##,##0.00")
+        txtDesc.Text = Format(Descuento, "##,##0.00")
+        txtTotal.Text = Format(Subtotal + Impu - Descuento, "##,##0.00")
     End Sub
 
     Public Function Consultar(Tabla As String, Columnas As ArrayList, where As String) As DataTable
         Return claseConexion.Read(Tabla, Columnas, "where " & where)
     End Function
+
+
 #End Region
 
 End Class

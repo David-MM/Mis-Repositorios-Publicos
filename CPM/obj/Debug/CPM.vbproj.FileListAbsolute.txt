@@ -152,3 +152,29 @@ C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.xml
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.pdb
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_ReporteCliente.resources
 C:\Users\aleon\Documents\GitHub\CPM\CPM\obj\Debug\CPM.Frm_ReporteProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Web.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\FlashControlV71.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\stdole.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\ShockwaveFlashObjects.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_ReporteCliente.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_EditarInventario.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_EditarProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_MostrarProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\obj\Debug\CPM.Frm_ReporteProducto.resources
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Shared.dll
+C:\Sosa\Universidad\2000 Industria del Software\Proyecto\CPM\CPM\bin\Debug\CrystalDecisions.Windows.Forms.dll
