@@ -88,8 +88,8 @@ Public Class Frm_GRID_Padre
             MsgBox("Selecciona una fila para Eliminarla", MsgBoxStyle.Critical, "Warnig")
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres eliminar este registo?", MsgBoxStyle.OkCancel, "**Warnig**")
-            If (x.ToString() = "Cancel") Then ' Si Then la variable x devuelver el boton Cancelar
+            Dim x = MessageBox.Show("¿Seguro que quieres eliminar este registo?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+            If (x = 2) Then ' Si Then la variable x devuelver el boton Cancelar
                 'MsgBox("Registros no Eliminado.", MsgBoxStyle.Information, "Informacion")
                 Return 'Retornaremos y no removeremos nada
             End If
@@ -117,7 +117,7 @@ Public Class Frm_GRID_Padre
             Return 0
         Else
             Dim i = Tabla.CurrentRow.Cells(0).Value
-            Dim x = MsgBox("¿Seguro que quieres modificar este registo?", MsgBoxStyle.OkCancel, "Warnig")
+            Dim x = MessageBox.Show("¿Seguro que quieres modificar este registo?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             If (x = 1) Then ' Si Then la variable x devuelver el boton Ok
                 Return i 'Retornaremos un valor
             Else

@@ -110,6 +110,7 @@ Partial Class PlantillaProducto
         '
         'btnCancelar
         '
+        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.Location = New System.Drawing.Point(255, 225)
         Me.btnCancelar.Name = "btnCancelar"
@@ -199,8 +200,10 @@ Partial Class PlantillaProducto
         '
         'PlantillaProducto
         '
+        Me.AcceptButton = Me.btnGuardar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(469, 304)
         Me.Controls.Add(Me.txt_Isv)
         Me.Controls.Add(Me.txt_Precio)
@@ -219,6 +222,7 @@ Partial Class PlantillaProducto
         Me.Controls.Add(Me.lblPrecio)
         Me.Controls.Add(Me.lblNombre)
         Me.Name = "PlantillaProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PlantillaProducto"
         CType(Me.spinnerPrecio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.spinnerISV, System.ComponentModel.ISupportInitialize).EndInit()

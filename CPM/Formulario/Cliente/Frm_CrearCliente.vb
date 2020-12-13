@@ -29,6 +29,8 @@
         Label1.Visible = False
         txtClienteID.Visible = False
         Button3.Visible = False
+        txtDescuento.Visible = False
+        txtLimite.Visible = False
         'MyBase.Activos_Visibles()
     End Sub
 End Class

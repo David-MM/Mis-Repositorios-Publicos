@@ -4,8 +4,8 @@
         txtClienteID.ReadOnly = True
         txtNombre.ReadOnly = True
         txtRTN.ReadOnly = True
-        N_Credito.ReadOnly = True
-        N_Descuento.ReadOnly = True
+        N_Credito.Visible = False
+        N_Descuento.Visible = False
         txtTelefono.ReadOnly = True
         txtDireccion.ReadOnly = True
         txtCorreo.ReadOnly = True
